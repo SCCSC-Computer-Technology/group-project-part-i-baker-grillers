@@ -3,16 +3,20 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAuthentication;
 
 namespace Baker_Grillers_Group_Project_Part_I
 {
     public partial class LoginForm : Form
     {
+        private string credentialsConnection = @"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\UserCredentials.mdf;Integrated Security=True;";
         public LoginForm()
         {
             InitializeComponent();
@@ -27,24 +31,47 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            //using a hard-coded login, replace later
-            if (emailTextBox.Text.Trim().ToLower() != "admin@sccsc.edu" ||
-                passwordTextBox.Text != "admin01")
+            /* Admin Credentials
+             * Email: admin@sccsc.edu
+             * Password: admin
+             */
+
+            if (string.IsNullOrWhiteSpace(emailTextBox.Text))
             {
-                MessageBox.Show("Invalid login info");
+                MessageBox.Show("Please enter an email");
+                return;
+            }
+            if(string.IsNullOrWhiteSpace(passwordTextBox.Text))
+            {
+                MessageBox.Show("Please enter a password");
                 return;
             }
 
-            DialogResult = DialogResult.OK;
-            this.Close();
+            if(Authenticator.IsValidCredentials(credentialsConnection, emailTextBox.Text, passwordTextBox.Text))
+            {
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void seePasswordButton_Click(object sender, EventArgs e)
         {
             //sets the password censor boolean to the opposite value
             passwordTextBox.UseSystemPasswordChar = !passwordTextBox.UseSystemPasswordChar;
+
             //set the image of the button to the corrosponding image
             seePasswordButton.BackgroundImage = (passwordTextBox.UseSystemPasswordChar) ? Resources.ClosedEye : Resources.OpenEye;
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void createAccountButton_Click(object sender, EventArgs e)
+        {
+            CreateAccountForm createAccountForm = new CreateAccountForm(credentialsConnection);
+            createAccountForm.ShowDialog();
         }
     }
 }
