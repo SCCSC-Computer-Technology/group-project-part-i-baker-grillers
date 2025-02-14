@@ -24,7 +24,7 @@ namespace UserAuthentication
                         //create and execute a SQL query
                         using (SqlCommand cmd = new SqlCommand("INSERT INTO CREDENTIALS VALUES(@email, @hashedPassword, @salt)", conn))
                         {
-                            byte[] hashedPassword = Authenticator.HashPassword(password, salt);
+                            byte[] hashedPassword = HashPassword(password, salt);
 
                             cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
                             cmd.Parameters.AddWithValue("@hashedPassword", hashedPassword);
@@ -72,7 +72,7 @@ namespace UserAuthentication
                         {
                             byte[] hashedPassword = Authenticator.HashPassword(password, salt);
 
-                            cmd.Parameters.AddWithValue("@email", email.ToLower());
+                            cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
                             cmd.Parameters.AddWithValue("@hashedPassword", hashedPassword);
                             cmd.Parameters.AddWithValue("@salt", salt);
 
@@ -117,7 +117,7 @@ namespace UserAuthentication
                         using (SqlCommand cmd = new SqlCommand("SELECT HashedPassword, Salt FROM Credentials WHERE Email = @email", conn))
                         {
                             //add the email from the textbox as the @email parameter
-                            cmd.Parameters.AddWithValue("@email", email.ToLower());
+                            cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
 
                             //execute the query and store the results in a reader
                             SqlDataReader reader = cmd.ExecuteReader();
@@ -182,7 +182,7 @@ namespace UserAuthentication
                         using (SqlCommand cmd = new SqlCommand($"SELECT {hashedPasswordColumn}, {saltColumn} FROM {tableName} WHERE {emailColumn}= @email", conn))
                         {
                             //add the email from the textbox as the @email parameter
-                            cmd.Parameters.AddWithValue("@email", email.ToLower());
+                            cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
 
                             //execute the query and store the results in a reader
                             SqlDataReader reader = cmd.ExecuteReader();

@@ -48,7 +48,8 @@ namespace Baker_Grillers_Group_Project_Part_I
                 return;
             }
 
-            if(Authenticator.IsValidCredentials(credentialsConnection, emailTextBox.Text.Trim(), passwordTextBox.Text))
+            //check if the credentials are valid
+            if(Authenticator.IsValidCredentials(credentialsConnection, emailTextBox.Text, passwordTextBox.Text))
             {
                 DialogResult = DialogResult.OK;
                 this.Close();

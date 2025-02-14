@@ -42,7 +42,7 @@ namespace Baker_Grillers_Group_Project_Part_I
                 return;
             }
             //generate salt
-            string salt = Guid.NewGuid().ToString().Replace('-', ' ');
+            string salt = Guid.NewGuid().ToString();
 
             //try to add the credentials and check if it was successful
             if(Authenticator.AddCredentials(Connection, emailTextBox.Text, passwordTextBox.Text, salt))
