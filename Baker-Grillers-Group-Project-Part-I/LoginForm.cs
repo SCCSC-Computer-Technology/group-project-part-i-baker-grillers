@@ -36,6 +36,7 @@ namespace Baker_Grillers_Group_Project_Part_I
              * Password: admin
              */
 
+            //check if the email or password boxes are empty
             if (string.IsNullOrWhiteSpace(emailTextBox.Text))
             {
                 MessageBox.Show("Please enter an email");
@@ -47,7 +48,7 @@ namespace Baker_Grillers_Group_Project_Part_I
                 return;
             }
 
-            if(Authenticator.IsValidCredentials(credentialsConnection, emailTextBox.Text, passwordTextBox.Text))
+            if(Authenticator.IsValidCredentials(credentialsConnection, emailTextBox.Text.Trim(), passwordTextBox.Text))
             {
                 DialogResult = DialogResult.OK;
                 this.Close();
@@ -65,6 +66,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            //closes the entire application
             Application.Exit();
         }
 

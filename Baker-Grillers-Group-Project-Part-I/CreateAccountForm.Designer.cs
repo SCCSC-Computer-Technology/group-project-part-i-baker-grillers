@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.closeButton = new System.Windows.Forms.Button();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.confirmPasswordTextBox = new System.Windows.Forms.TextBox();
             this.createAccountButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // closeButton
@@ -45,6 +47,7 @@
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 4;
             this.closeButton.Text = "&Close";
+            this.toolTip1.SetToolTip(this.closeButton, "Close this window");
             this.closeButton.UseVisualStyleBackColor = true;
             // 
             // emailTextBox
@@ -104,13 +107,16 @@
             this.createAccountButton.Size = new System.Drawing.Size(105, 39);
             this.createAccountButton.TabIndex = 3;
             this.createAccountButton.Text = "Create &Account";
+            this.toolTip1.SetToolTip(this.createAccountButton, "Create an account using the entered information");
             this.createAccountButton.UseVisualStyleBackColor = true;
             this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
             // 
             // CreateAccountForm
             // 
+            this.AcceptButton = this.createAccountButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.closeButton;
             this.ClientSize = new System.Drawing.Size(312, 243);
             this.Controls.Add(this.createAccountButton);
             this.Controls.Add(this.label2);
@@ -140,5 +146,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox confirmPasswordTextBox;
         private System.Windows.Forms.Button createAccountButton;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

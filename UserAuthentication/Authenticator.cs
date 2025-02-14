@@ -15,16 +15,18 @@ namespace UserAuthentication
         {
             try
             {
+                //open a connection to the DB
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     try
                     {
+                        //create and execute a SQL query
                         using (SqlCommand cmd = new SqlCommand("INSERT INTO CREDENTIALS VALUES(@email, @hashedPassword, @salt)", conn))
                         {
                             byte[] hashedPassword = Authenticator.HashPassword(password, salt);
 
-                            cmd.Parameters.AddWithValue("@email", email);
+                            cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
                             cmd.Parameters.AddWithValue("@hashedPassword", hashedPassword);
                             cmd.Parameters.AddWithValue("@salt", salt);
 
@@ -54,15 +56,18 @@ namespace UserAuthentication
             }
         }
 
+        //used if the table name is not "Credentials"
         public static bool AddCredentials(string connectionString, string email, string password, string salt, string tableName)
         {
             try
             {
+                //open a connection to the DB
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     try
                     {
+                        //create and execute a SQL query
                         using (SqlCommand cmd = new SqlCommand($"INSERT INTO {tableName} VALUES(@email, @hashedPassword, @salt)", conn))
                         {
                             byte[] hashedPassword = Authenticator.HashPassword(password, salt);
@@ -112,7 +117,7 @@ namespace UserAuthentication
                         using (SqlCommand cmd = new SqlCommand("SELECT HashedPassword, Salt FROM Credentials WHERE Email = @email", conn))
                         {
                             //add the email from the textbox as the @email parameter
-                            cmd.Parameters.AddWithValue("@email", email);
+                            cmd.Parameters.AddWithValue("@email", email.ToLower());
 
                             //execute the query and store the results in a reader
                             SqlDataReader reader = cmd.ExecuteReader();
@@ -177,7 +182,7 @@ namespace UserAuthentication
                         using (SqlCommand cmd = new SqlCommand($"SELECT {hashedPasswordColumn}, {saltColumn} FROM {tableName} WHERE {emailColumn}= @email", conn))
                         {
                             //add the email from the textbox as the @email parameter
-                            cmd.Parameters.AddWithValue("@email", email);
+                            cmd.Parameters.AddWithValue("@email", email.ToLower());
 
                             //execute the query and store the results in a reader
                             SqlDataReader reader = cmd.ExecuteReader();
@@ -230,16 +235,17 @@ namespace UserAuthentication
     
         public static byte[] HashPassword(string password)
         {
+            //instantiate a SHA256 object
             SHA256 sha = SHA256.Create();
 
+            //return the hashed password
             return sha.ComputeHash(Encoding.UTF8.GetBytes(password));
         }
 
         public static byte[] HashPassword(string password, string salt)
         {
-            SHA256 sha = SHA256.Create();
-
-            return sha.ComputeHash(Encoding.UTF8.GetBytes(password + salt));
+            //return the hashed salted password
+            return HashPassword(password + salt);
         }
     }
 }
