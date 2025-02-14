@@ -35,8 +35,10 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.emailLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
-            this.seePasswordButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.createAccountButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.seePasswordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // emailTextBox
@@ -68,7 +70,7 @@
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(187, 156);
+            this.cancelButton.Location = new System.Drawing.Point(174, 156);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(103, 55);
             this.cancelButton.TabIndex = 4;
@@ -95,6 +97,29 @@
             this.passwordLabel.TabIndex = 5;
             this.passwordLabel.Text = "Password";
             // 
+            // createAccountButton
+            // 
+            this.createAccountButton.Location = new System.Drawing.Point(65, 217);
+            this.createAccountButton.Name = "createAccountButton";
+            this.createAccountButton.Size = new System.Drawing.Size(103, 55);
+            this.createAccountButton.TabIndex = 5;
+            this.createAccountButton.Text = "&Create an account";
+            this.toolTip1.SetToolTip(this.createAccountButton, "Create a new account");
+            this.createAccountButton.UseVisualStyleBackColor = true;
+            this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
+            // 
+            // exitButton
+            // 
+            this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.exitButton.Location = new System.Drawing.Point(174, 217);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(103, 55);
+            this.exitButton.TabIndex = 6;
+            this.exitButton.Text = "E&xit";
+            this.toolTip1.SetToolTip(this.exitButton, "Click to exit the program");
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // seePasswordButton
             // 
             this.seePasswordButton.BackgroundImage = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.ClosedEye;
@@ -113,7 +138,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(361, 223);
+            this.ClientSize = new System.Drawing.Size(361, 307);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.createAccountButton);
             this.Controls.Add(this.seePasswordButton);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.emailLabel);
@@ -141,5 +168,7 @@
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Button seePasswordButton;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button createAccountButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }
