@@ -32,11 +32,25 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 //placeholder
                 MessageBox.Show("You have access to all of the features of this app :)");
+                loginButton.Visible = false;
             }
             else
             {
                 //placeholder
                 MessageBox.Show("You do not have access to all of the features of this app :(");
+                loginButton.Visible = true;
+            }
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                //placeholder
+                MessageBox.Show("You have access to all of the features of this app :)");
+                loginButton.Visible = false;
             }
         }
     }
