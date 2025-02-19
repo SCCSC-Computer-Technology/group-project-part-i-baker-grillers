@@ -29,7 +29,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             this.Close();
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private async void loginButton_Click(object sender, EventArgs e)
         {
             /* Admin Credentials
              * Email: admin@sccsc.edu
@@ -49,7 +49,8 @@ namespace Baker_Grillers_Group_Project_Part_I
             }
 
             //check if the credentials are valid
-            if(Authenticator.IsValidCredentials(credentialsConnection, emailTextBox.Text, passwordTextBox.Text))
+            bool isValid = await Task.Run(() => Authenticator.IsValidCredentials(credentialsConnection, emailTextBox.Text, passwordTextBox.Text));
+            if (isValid)
             {
                 DialogResult = DialogResult.OK;
                 this.Close();
@@ -75,6 +76,12 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
             CreateAccountForm createAccountForm = new CreateAccountForm(credentialsConnection);
             createAccountForm.ShowDialog();
+        }
+
+        private void forgotPasswordButton_Click(object sender, EventArgs e)
+        {
+            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm(credentialsConnection);
+            forgotPasswordForm.ShowDialog();
         }
     }
 }

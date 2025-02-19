@@ -30,14 +30,11 @@ namespace Baker_Grillers_Group_Project_Part_I
             //this decides if the user will have access to everything or not
             if(loginForm.ShowDialog() == DialogResult.OK)
             {
-                //placeholder
-                MessageBox.Show("You have access to all of the features of this app :)");
+                //placeholder for unlocking features
                 loginButton.Visible = false;
             }
             else
             {
-                //placeholder
-                MessageBox.Show("You do not have access to all of the features of this app :(");
                 loginButton.Visible = true;
             }
         }
@@ -48,8 +45,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
-                //placeholder
-                MessageBox.Show("You have access to all of the features of this app :)");
+                //placeholder for unlocking restrictions
                 loginButton.Visible = false;
             }
         }

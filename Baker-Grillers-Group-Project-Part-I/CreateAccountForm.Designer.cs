@@ -38,14 +38,16 @@
             this.confirmPasswordTextBox = new System.Windows.Forms.TextBox();
             this.createAccountButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.seePasswordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(228, 211);
+            this.closeButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.closeButton.Location = new System.Drawing.Point(255, 208);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
-            this.closeButton.TabIndex = 4;
+            this.closeButton.TabIndex = 5;
             this.closeButton.Text = "&Close";
             this.toolTip1.SetToolTip(this.closeButton, "Close this window");
             this.closeButton.UseVisualStyleBackColor = true;
@@ -105,11 +107,23 @@
             this.createAccountButton.Location = new System.Drawing.Point(100, 166);
             this.createAccountButton.Name = "createAccountButton";
             this.createAccountButton.Size = new System.Drawing.Size(105, 39);
-            this.createAccountButton.TabIndex = 3;
+            this.createAccountButton.TabIndex = 4;
             this.createAccountButton.Text = "Create &Account";
             this.toolTip1.SetToolTip(this.createAccountButton, "Create an account using the entered information");
             this.createAccountButton.UseVisualStyleBackColor = true;
             this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
+            // 
+            // seePasswordButton
+            // 
+            this.seePasswordButton.BackgroundImage = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.ClosedEye;
+            this.seePasswordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.seePasswordButton.Location = new System.Drawing.Point(279, 133);
+            this.seePasswordButton.Name = "seePasswordButton";
+            this.seePasswordButton.Size = new System.Drawing.Size(30, 30);
+            this.seePasswordButton.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.seePasswordButton, "Click to unhide/hide password");
+            this.seePasswordButton.UseVisualStyleBackColor = true;
+            this.seePasswordButton.Click += new System.EventHandler(this.seePasswordButton_Click);
             // 
             // CreateAccountForm
             // 
@@ -117,7 +131,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.closeButton;
-            this.ClientSize = new System.Drawing.Size(312, 243);
+            this.ClientSize = new System.Drawing.Size(342, 243);
+            this.Controls.Add(this.seePasswordButton);
             this.Controls.Add(this.createAccountButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.confirmPasswordTextBox);
@@ -147,5 +162,6 @@
         private System.Windows.Forms.TextBox confirmPasswordTextBox;
         private System.Windows.Forms.Button createAccountButton;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button seePasswordButton;
     }
 }
