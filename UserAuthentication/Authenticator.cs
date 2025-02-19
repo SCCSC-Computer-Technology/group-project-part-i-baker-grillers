@@ -2,18 +2,24 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace UserAuthentication
 {
     public class Authenticator
     {
-        public static bool AddCredentials(string connectionString, string email, string password, string salt)
+        
+        public async static Task<bool> AddCredentials(string connectionString, string email, string password, string salt)
         {
-            try
+            return await AddCredentials(connectionString, email, password, salt, "CREDENTIALS");
+
+            /*try
             {
                 //open a connection to the DB
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -53,11 +59,11 @@ namespace UserAuthentication
             {
                 MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
                 return false;
-            }
+            }*/
         }
 
         //used if the table name is not "Credentials"
-        public static bool AddCredentials(string connectionString, string email, string password, string salt, string tableName)
+        public async static Task<bool> AddCredentials(string connectionString, string email, string password, string salt, string tableName)
         {
             try
             {
@@ -102,72 +108,12 @@ namespace UserAuthentication
             }
         }
 
-        public static bool IsValidCredentials(string connectionString, string email, string password)
+        public async static Task<bool> IsValidCredentials(string connectionString, string email, string password)
         {
-            try
-            {
-                //instantiate a SQL connection object
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    //open the connect
-                    conn.Open();
-                    try
-                    {
-                        //instantiate a SQL command object with a query to get the hashed password and salt
-                        using (SqlCommand cmd = new SqlCommand("SELECT HashedPassword, Salt FROM Credentials WHERE Email = @email", conn))
-                        {
-                            //add the email from the textbox as the @email parameter
-                            cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
-
-                            //execute the query and store the results in a reader
-                            SqlDataReader reader = cmd.ExecuteReader();
-
-                            if (reader.HasRows)
-                            {
-                                //move to the first (and only) row in the reader
-                                reader.Read();
-
-                                //hash the entered password with the salt associated with the email
-                                byte[] passAndSalt = HashPassword(password, reader["Salt"].ToString());
-
-                                //get the hashed password from the user record
-                                byte[] hashedPass = (byte[])reader["HashedPassword"];
-                                reader.Close();
-
-
-                                //check if the entered password hash matches the one stored in the DB
-                                if (passAndSalt.SequenceEqual(hashedPass))
-                                {
-                                    return true;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Credentials do not match any existing user accounts");
-                                    return false;
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Credentials do not match any existing user accounts");
-                                return false;
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
-                        return false;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
-                return false;
-            }
+            return await IsValidCredentials(connectionString, email, password, "Credentials", "Email", "Salt", "HashedPassword");
         }
 
-        public static bool IsValidCredentials(string connectionString, string email, string password, string tableName, string emailColumn, string saltColumn, string hashedPasswordColumn)
+        public async static Task<bool> IsValidCredentials(string connectionString, string email, string password, string tableName, string emailColumn, string saltColumn, string hashedPasswordColumn)
         {
             try
             {

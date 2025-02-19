@@ -39,6 +39,7 @@
             this.createAccountButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.seePasswordButton = new System.Windows.Forms.Button();
+            this.forgotPasswordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // emailTextBox
@@ -58,7 +59,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(65, 156);
+            this.loginButton.Location = new System.Drawing.Point(71, 153);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(103, 55);
             this.loginButton.TabIndex = 3;
@@ -70,10 +71,10 @@
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(174, 156);
+            this.cancelButton.Location = new System.Drawing.Point(71, 214);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(103, 55);
-            this.cancelButton.TabIndex = 4;
+            this.cancelButton.TabIndex = 5;
             this.cancelButton.Text = "&Continue without logging in";
             this.toolTip1.SetToolTip(this.cancelButton, "Click to cancel the log in process (app features will be limited until login)");
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -99,10 +100,10 @@
             // 
             // createAccountButton
             // 
-            this.createAccountButton.Location = new System.Drawing.Point(65, 217);
+            this.createAccountButton.Location = new System.Drawing.Point(180, 153);
             this.createAccountButton.Name = "createAccountButton";
             this.createAccountButton.Size = new System.Drawing.Size(103, 55);
-            this.createAccountButton.TabIndex = 5;
+            this.createAccountButton.TabIndex = 4;
             this.createAccountButton.Text = "&Create an account";
             this.toolTip1.SetToolTip(this.createAccountButton, "Create a new account");
             this.createAccountButton.UseVisualStyleBackColor = true;
@@ -111,10 +112,10 @@
             // exitButton
             // 
             this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.exitButton.Location = new System.Drawing.Point(174, 217);
+            this.exitButton.Location = new System.Drawing.Point(276, 275);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(103, 55);
-            this.exitButton.TabIndex = 6;
+            this.exitButton.Size = new System.Drawing.Size(73, 30);
+            this.exitButton.TabIndex = 7;
             this.exitButton.Text = "E&xit";
             this.toolTip1.SetToolTip(this.exitButton, "Click to exit the program");
             this.exitButton.UseVisualStyleBackColor = true;
@@ -132,13 +133,25 @@
             this.seePasswordButton.UseVisualStyleBackColor = true;
             this.seePasswordButton.Click += new System.EventHandler(this.seePasswordButton_Click);
             // 
+            // forgotPasswordButton
+            // 
+            this.forgotPasswordButton.Location = new System.Drawing.Point(180, 214);
+            this.forgotPasswordButton.Name = "forgotPasswordButton";
+            this.forgotPasswordButton.Size = new System.Drawing.Size(103, 55);
+            this.forgotPasswordButton.TabIndex = 6;
+            this.forgotPasswordButton.Text = "&Forgot Password";
+            this.toolTip1.SetToolTip(this.forgotPasswordButton, "Click to log into the app using the entered information");
+            this.forgotPasswordButton.UseVisualStyleBackColor = true;
+            this.forgotPasswordButton.Click += new System.EventHandler(this.forgotPasswordButton_Click);
+            // 
             // LoginForm
             // 
             this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
-            this.ClientSize = new System.Drawing.Size(361, 307);
+            this.ClientSize = new System.Drawing.Size(361, 321);
+            this.Controls.Add(this.forgotPasswordButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.createAccountButton);
             this.Controls.Add(this.seePasswordButton);
@@ -170,5 +183,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button createAccountButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button forgotPasswordButton;
     }
 }
