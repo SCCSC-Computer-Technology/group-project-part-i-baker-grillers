@@ -1,0 +1,9 @@
+C:\Users\Michael\source\repos\SportsStatsAPIClient\bin\Debug\SportsStatsAPIClient.dll
+C:\Users\Michael\source\repos\SportsStatsAPIClient\bin\Debug\SportsStatsAPIClient.pdb
+C:\Users\Michael\source\repos\SportsStatsAPIClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Michael\source\repos\SportsStatsAPIClient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Michael\source\repos\SportsStatsAPIClient\obj\Debug\SportsStatsAPIClient.csproj.AssemblyReference.cache
+C:\Users\Michael\source\repos\SportsStatsAPIClient\obj\Debug\SportsStatsAPIClient.csproj.CoreCompileInputs.cache
+C:\Users\Michael\source\repos\SportsStatsAPIClient\obj\Debug\SportsSt.D16975E4.Up2Date
+C:\Users\Michael\source\repos\SportsStatsAPIClient\obj\Debug\SportsStatsAPIClient.dll
+C:\Users\Michael\source\repos\SportsStatsAPIClient\obj\Debug\SportsStatsAPIClient.pdb

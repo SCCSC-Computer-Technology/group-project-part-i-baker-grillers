@@ -142,5 +142,10 @@ namespace Baker_Grillers_Group_Project_Part_I
             //set the image of the button to the corrosponding image
             seePasswordButton.BackgroundImage = (passwordTextBox.UseSystemPasswordChar) ? Resources.ClosedEye : Resources.OpenEye;
         }
+
+        private void ForgotPasswordForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

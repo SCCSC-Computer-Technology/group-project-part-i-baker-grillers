@@ -1,0 +1,6 @@
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\UserAuthentication\bin\Debug\UserAuthentication.dll
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\UserAuthentication\bin\Debug\UserAuthentication.pdb
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\UserAuthentication\obj\Debug\UserAuthentication.csproj.AssemblyReference.cache
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\UserAuthentication\obj\Debug\UserAuthentication.csproj.CoreCompileInputs.cache
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\UserAuthentication\obj\Debug\UserAuthentication.dll
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\UserAuthentication\obj\Debug\UserAuthentication.pdb

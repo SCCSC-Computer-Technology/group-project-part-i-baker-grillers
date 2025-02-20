@@ -152,6 +152,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SportsStatsAPIClient\SportsStatsAPIClient.csproj">
+      <Project>{b5663343-0d33-4792-b39b-f8fa013f7c72}</Project>
+      <Name>SportsStatsAPIClient</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserAuthentication\UserAuthentication.csproj">
       <Project>{A81A149A-7CF0-44BE-95A3-F152120A8C4E}</Project>
       <Name>UserAuthentication</Name>
