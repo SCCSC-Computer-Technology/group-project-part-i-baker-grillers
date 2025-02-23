@@ -48,6 +48,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             //generate salt
             string salt = Guid.NewGuid().ToString();
 
+            createAccountButton.Enabled = false;
             //try to add the credentials and check if it was successful
             bool isSuccessful = await Task.Run(() => Authenticator.AddCredentials(Connection, email, password, salt));
             if (isSuccessful)
@@ -55,6 +56,11 @@ namespace Baker_Grillers_Group_Project_Part_I
                 MessageBox.Show("Account Created!");
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Something went wrong when trying to create an account.\nPlease try again.");
+            }
+            createAccountButton.Enabled = true;
         }
 
         private void seePasswordButton_Click(object sender, EventArgs e)

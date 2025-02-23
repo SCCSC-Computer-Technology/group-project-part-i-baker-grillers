@@ -42,6 +42,8 @@ namespace Baker_Grillers_Group_Project_Part_I
                 return;
             }
 
+            sendEmailButton.Enabled = false;
+
             //check if the email belongs to a registered account (ASYNC)
             isRegistered = await Task.Run(() => AccountUpdater.CheckForExistingEmail(connectionString, email));
 
@@ -62,6 +64,8 @@ namespace Baker_Grillers_Group_Project_Part_I
                 //store the email that was entered
                 lastEmail = email;
             }
+
+            sendEmailButton.Enabled = true;
 
             MessageBox.Show("If an account with the entered email exists, we have sent a code to reset your password\n\nOnce this window closes, the reset code will be invalid");
 
@@ -117,10 +121,14 @@ namespace Baker_Grillers_Group_Project_Part_I
                 return;
             }
 
+            resetPasswordButton.Enabled = false;
+
             //change the password and store the result as a boolean
             //true for changed, false for unchanged
             bool passwordChanged = await AccountUpdater.ChangePassword(connectionString, lastEmail, password, Guid.NewGuid().ToString());
             
+            resetPasswordButton.Enabled = true;
+
             //check if the password was changed
             if (passwordChanged)
             {

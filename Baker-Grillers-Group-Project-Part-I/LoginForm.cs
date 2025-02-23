@@ -48,6 +48,8 @@ namespace Baker_Grillers_Group_Project_Part_I
                 return;
             }
 
+            loginButton.Enabled = false;
+
             //check if the credentials are valid
             bool isValid = await Task.Run(() => Authenticator.IsValidCredentials(credentialsConnection, emailTextBox.Text, passwordTextBox.Text));
             if (isValid)
@@ -55,6 +57,7 @@ namespace Baker_Grillers_Group_Project_Part_I
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
+            loginButton.Enabled = true;
         }
 
         private void seePasswordButton_Click(object sender, EventArgs e)
