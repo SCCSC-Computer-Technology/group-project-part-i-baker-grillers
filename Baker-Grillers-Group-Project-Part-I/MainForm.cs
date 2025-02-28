@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace Baker_Grillers_Group_Project_Part_I
 {
     public partial class MainForm : Form
     {
+        public static SqlConnection conn { get; set; }
+        private static string connStr = @"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\BGSportsStatsDB.mdf;Integrated Security=True;";
+
         public MainForm()
         {
             InitializeComponent();
@@ -24,6 +28,8 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            conn = new SqlConnection(connStr);
+            Task.Run(conn.Open);
             //load the login form
             LoginForm loginForm = new LoginForm();
 
@@ -47,6 +53,14 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 //placeholder for unlocking restrictions
                 loginButton.Visible = false;
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (conn.State == ConnectionState.Open)
+            {
+                conn.Close();
             }
         }
     }
