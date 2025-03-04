@@ -138,7 +138,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Settings
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Email", (object) Program.CurrentSettingsUserEmail ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Email", Program.CurrentSettingsUserEmail);
                     cmd.Parameters.AddWithValue("@Font", fontComboBox.Text);
                     cmd.Parameters.AddWithValue("@Theme", themeComboBox.SelectedIndex);
                     cmd.Parameters.AddWithValue("@EnabledSports", GetEnabledSports());
