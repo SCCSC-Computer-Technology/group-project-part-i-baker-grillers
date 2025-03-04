@@ -8,6 +8,9 @@ namespace Baker_Grillers_Group_Project_Part_I
 {
     internal static class Program
     {
+
+        public static string CurrentSettingsUserEmail = "";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -14,7 +14,9 @@ namespace UserAuthentication
 {
     public class Authenticator
     {
-        
+
+        private const string GuestEmail = "guest@local.app";
+
         public async static Task<bool> AddCredentials(string connectionString, string email, string password, string salt)
         {
             return await AddCredentials(connectionString, email, password, salt, "CREDENTIALS");

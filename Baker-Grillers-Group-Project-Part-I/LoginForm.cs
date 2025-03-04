@@ -25,6 +25,9 @@ namespace Baker_Grillers_Group_Project_Part_I
         private void continueWithoutLoginButton_Click(object sender, EventArgs e)
         {
             //closes the login form with the cancel result
+
+            // Change current user email - for applying settings
+            Program.CurrentSettingsUserEmail = "guest@local.app";
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
@@ -55,6 +58,10 @@ namespace Baker_Grillers_Group_Project_Part_I
             if (isValid)
             {
                 DialogResult = DialogResult.OK;
+
+                // Change current user email - for applying settings
+                Program.CurrentSettingsUserEmail = emailTextBox.Text;
+
                 this.Close();
             }
             loginButton.Enabled = true;

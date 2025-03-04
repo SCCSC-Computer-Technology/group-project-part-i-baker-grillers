@@ -30,6 +30,7 @@
         {
             this.exitButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // exitButton
@@ -53,12 +54,23 @@
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // settingsButton
+            // 
+            this.settingsButton.Location = new System.Drawing.Point(626, 484);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(89, 23);
+            this.settingsButton.TabIndex = 2;
+            this.settingsButton.Text = "Settings";
+            this.settingsButton.UseVisualStyleBackColor = true;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.exitButton;
             this.ClientSize = new System.Drawing.Size(933, 519);
+            this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.exitButton);
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,6 +87,7 @@
 
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button settingsButton;
     }
 }
 

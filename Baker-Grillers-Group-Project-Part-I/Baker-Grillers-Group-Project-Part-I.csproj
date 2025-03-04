@@ -75,6 +75,12 @@
     <Compile Include="ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +95,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\GeneralSettingsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\GeneralSettingsUserControl.Designer.cs">
+      <DependentUpon>GeneralSettingsUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CreateAccountForm.resx">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -111,6 +126,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Settings\GeneralSettingsUserControl.resx">
+      <DependentUpon>GeneralSettingsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

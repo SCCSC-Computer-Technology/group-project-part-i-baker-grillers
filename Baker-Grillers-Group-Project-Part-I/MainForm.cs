@@ -49,5 +49,13 @@ namespace Baker_Grillers_Group_Project_Part_I
                 loginButton.Visible = false;
             }
         }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+
+            settingsForm.ShowDialog();
+
+        }
     }
 }
