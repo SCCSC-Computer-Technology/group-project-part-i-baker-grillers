@@ -19,7 +19,7 @@ namespace UserAuthentication
 
         public async static Task<bool> AddCredentials(string connectionString, string email, string password, string salt)
         {
-            return await AddCredentials(connectionString, email, password, salt, "CREDENTIALS");
+            return await AddCredentials(connectionString, email, password, salt, "USERCREDENTIAL");
 
             /*try
             {
@@ -30,7 +30,7 @@ namespace UserAuthentication
                     try
                     {
                         //create and execute a SQL query
-                        using (SqlCommand cmd = new SqlCommand("INSERT INTO CREDENTIALS VALUES(@email, @hashedPassword, @salt)", conn))
+                        using (SqlCommand cmd = new SqlCommand("INSERT INTO USERCREDENTIAL VALUES(@email, @hashedPassword, @salt)", conn))
                         {
                             byte[] hashedPassword = HashPassword(password, salt);
 
@@ -64,7 +64,7 @@ namespace UserAuthentication
             }*/
         }
 
-        //used if the table name is not "Credentials"
+        //used if the table name is not "UserCredential"
         public async static Task<bool> AddCredentials(string connectionString, string email, string password, string salt, string tableName)
         {
             try
@@ -112,7 +112,7 @@ namespace UserAuthentication
 
         public async static Task<bool> IsValidCredentials(string connectionString, string email, string password)
         {
-            return await IsValidCredentials(connectionString, email, password, "Credentials", "Email", "Salt", "HashedPassword");
+            return await IsValidCredentials(connectionString, email, password, "UserCredential", "Email", "Salt", "HashedPassword");
         }
 
         public async static Task<bool> IsValidCredentials(string connectionString, string email, string password, string tableName, string emailColumn, string saltColumn, string hashedPasswordColumn)

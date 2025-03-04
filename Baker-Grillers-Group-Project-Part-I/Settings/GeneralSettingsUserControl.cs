@@ -15,7 +15,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Settings
     public partial class GeneralSettingsUserControl : UserControl
     {
 
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\UserCredentials.mdf;Integrated Security=True";
+        private string connectionString = Program.credentialsConnection;
 
         public GeneralSettingsUserControl()
         {
@@ -41,7 +41,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Settings
                 string enabledSports = "Football,Basketball,Baseball,Soccer";
 
                 // Initialize query
-                string query = "SELECT Font, Theme, EnabledSports FROM Preference WHERE Email = @Email";
+                string query = "SELECT Font, Theme, EnabledSports FROM UserPreference WHERE Email = @Email";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -126,7 +126,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Settings
                 // If they do, then we overwrite them with the new preferences
                 // If not, create a new record.
                 string query = @"
-            MERGE INTO Preference AS target
+            MERGE INTO UserPreference AS target
             USING (VALUES (@Email, @Font, @Theme, @EnabledSports)) 
             AS source (Email, Font, Theme, EnabledSports)
             ON target.Email = source.Email

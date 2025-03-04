@@ -1,5 +1,3 @@
-C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\UserCredentials.mdf
-C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\UserCredentials_log.ldf
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\Baker-Grillers-Group-Project-Part-I.exe.config
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\Baker-Grillers-Group-Project-Part-I.exe
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\Baker-Grillers-Group-Project-Part-I.pdb
@@ -18,3 +16,5 @@ C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Gril
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker-Grillers-Group-Project-Part-I.pdb
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker_Grillers_Group_Project_Part_I.SettingsForm.resources
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker_Grillers_Group_Project_Part_I.Settings.GeneralSettingsUserControl.resources
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\BGSportsStatsDB.mdf
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\BGSportsStatsDB_log.ldf

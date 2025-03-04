@@ -10,6 +10,7 @@ namespace Baker_Grillers_Group_Project_Part_I
     {
 
         public static string CurrentSettingsUserEmail = "";
+        public static string credentialsConnection = @"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\BGSportsStatsDB.mdf;Integrated Security=True;";
 
         /// <summary>
         /// The main entry point for the application.

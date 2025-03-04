@@ -14,7 +14,7 @@ namespace UserAuthentication
     {
         public async static Task<bool> ChangePassword(string connection, string userEmail, string password, string salt)
         {
-            return await ChangePassword(connection, userEmail, password, salt, "Credentials", "Email", "HashedPassword", "Salt");
+            return await ChangePassword(connection, userEmail, password, salt, "UserCredential", "Email", "HashedPassword", "Salt");
         }
         public async static Task<bool> ChangePassword(string connection, string userEmail, string password, string salt, string tableName, string emailColumn, string passwordColumn, string saltColumn)
         {
@@ -53,7 +53,7 @@ namespace UserAuthentication
 
         public async static Task<bool> CheckForExistingEmail(string connection, string userEmail)
         {
-            return await CheckForExistingEmail(connection, userEmail, "Credentials", "Email");
+            return await CheckForExistingEmail(connection, userEmail, "UserCredential", "Email");
         }
         public async static Task<bool> CheckForExistingEmail(string connection, string userEmail, string tableName, string emailColumn)
         {
