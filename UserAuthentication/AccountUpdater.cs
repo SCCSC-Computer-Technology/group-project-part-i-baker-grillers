@@ -14,7 +14,7 @@ namespace UserAuthentication
     {
         public async static Task<bool> ChangePassword(SqlConnection conn, string userEmail, string password, string salt)
         {
-            return await ChangePassword(conn, userEmail, password, salt, "Credentials", "Email", "HashedPassword", "Salt");
+            return await ChangePassword(conn, userEmail, password, salt, "UserCredential", "Email", "HashedPassword", "Salt");
         }
         public async static Task<bool> ChangePassword(SqlConnection conn, string userEmail, string password, string salt, string tableName, string emailColumn, string passwordColumn, string saltColumn)
         {
@@ -52,7 +52,7 @@ namespace UserAuthentication
 
         public async static Task<bool> CheckForExistingEmail(SqlConnection conn, string userEmail)
         {
-            return await CheckForExistingEmail(conn, userEmail, "Credentials", "Email");
+            return await CheckForExistingEmail(conn, userEmail, "UserCredential", "Email");
         }
         public async static Task<bool> CheckForExistingEmail(SqlConnection conn, string userEmail, string tableName, string emailColumn)
         {
@@ -69,8 +69,20 @@ namespace UserAuthentication
                     using (SqlCommand cmd = new SqlCommand($"SELECT 1 FROM {tableName} WHERE {emailColumn} = @email", conn))
                     {
                         cmd.Parameters.AddWithValue("@email", userEmail);
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        return reader.HasRows;
+                        SqlDataReader reader = null;
+                        try
+                        {
+                           reader = cmd.ExecuteReader();
+                        }
+                        catch(Exception ex)
+                        {
+                            MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
+                            if (reader != null) reader.Close();
+                            return false;
+                        }
+                        bool emailFound = reader.HasRows;
+                        reader.Close();
+                        return emailFound;
                     }
                 }
                 catch (Exception ex)
