@@ -1,20 +1,3 @@
-<<<<<<< Updated upstream
-C:\Users\princ\source\repos\GroupProjectTesting\bin\Debug\GroupProjectTesting.exe.config
-C:\Users\princ\source\repos\GroupProjectTesting\bin\Debug\GroupProjectTesting.exe
-C:\Users\princ\source\repos\GroupProjectTesting\bin\Debug\GroupProjectTesting.pdb
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.csproj.AssemblyReference.cache
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.Football.resources
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.Login.resources
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.Properties.Resources.resources
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.WelcomeForm.resources
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.csproj.GenerateResource.cache
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.csproj.CoreCompileInputs.cache
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.exe
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.pdb
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.Baseball.resources
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.Basketball.resources
-C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.Soccer.resources
-=======
 C:\Users\princ\source\repos\GroupProjectTesting\bin\Debug\GroupProjectTesting.exe.config
 C:\Users\princ\source\repos\GroupProjectTesting\bin\Debug\GroupProjectTesting.exe
 C:\Users\princ\source\repos\GroupProjectTesting\bin\Debug\GroupProjectTesting.pdb
@@ -29,4 +12,3 @@ C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.ex
 C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.pdb
 C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.Basketball.resources
 C:\Users\princ\source\repos\GroupProjectTesting\obj\Debug\GroupProjectTesting.CSGO.resources
->>>>>>> Stashed changes
