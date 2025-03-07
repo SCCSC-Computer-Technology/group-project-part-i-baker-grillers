@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAuthentication;
 
 namespace Baker_Grillers_Group_Project_Part_I
 {
@@ -62,6 +63,12 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 conn.Close();
             }
+        }
+
+        private void csgoPictureBox_Click(object sender, EventArgs e)
+        {
+            CSGOForm csgoForm = new CSGOForm();
+            csgoForm.ShowDialog();
         }
     }
 }

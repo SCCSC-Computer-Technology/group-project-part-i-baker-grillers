@@ -20,7 +20,7 @@ namespace UserAuthentication
             return await AddCredentials(conn, email, password, salt, "UserCredential");
         }
 
-        //used if the table name is not "Credentials"
+        //used if the table name is not "BGSportsStatsDB"
         public async static Task<bool> AddCredentials(SqlConnection conn, string email, string password, string salt, string tableName)
         {
             try
@@ -80,9 +80,18 @@ namespace UserAuthentication
                     {
                         //add the email from the textbox as the @email parameter
                         cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
-
-                        //execute the query and store the results in a reader
-                        SqlDataReader reader = cmd.ExecuteReader();
+                        SqlDataReader reader = null;
+                        try
+                        {
+                            //execute the query and store the results in a reader
+                            reader = cmd.ExecuteReader();
+                        }
+                        catch(Exception ex)
+                        {
+                            MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
+                            if(reader != null) reader.Close();
+                            return false;
+                        }
 
                         if (reader.HasRows)
                         {
