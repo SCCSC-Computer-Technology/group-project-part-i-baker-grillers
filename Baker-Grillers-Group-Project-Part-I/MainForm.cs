@@ -16,7 +16,7 @@ namespace Baker_Grillers_Group_Project_Part_I
         private ContextMenuStrip userContextMenu;
         private ToolStripMenuItem logoutMenuItem;
 
-        Color buttonHighlightColor = Color.FromArgb(191, 228, 254);
+        Color buttonHighlightColor = Color.FromArgb(192, 255, 192);
         Color buttonDefaultColor = Color.White;
 
         string selectedNav = "players"; // players, statistics, teams, favorites
@@ -106,7 +106,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             if (selectedNav.Equals("players"))
             {
                 playersNavButton.BackColor = buttonHighlightColor;
-                // TODO: Change panel
+                
             } else
             {
                 playersNavButton.BackColor = Color.White;
@@ -140,44 +140,58 @@ namespace Baker_Grillers_Group_Project_Part_I
             }
         }
 
+        Color selectColor = Color.FromArgb(19, 94, 57);
+
         // Updates the background colors for the currently selected sidebar button
         public void SideBarItemSelected()
         {
+            csgoSideBarButton.ApplyImageColor = true;
+            nflSideBarButton.ApplyImageColor = true;
+            nbaSideBarButton.ApplyImageColor = true;
+            customSideBarButton.ApplyImageColor = true;
             if (selectedSport.Equals("csgo"))
             {
-                csgoSideBarButton.BackColor = buttonHighlightColor;
-                // TODO: Change panel
+                csgoSideBarButton.IsSelected = true;
+                csgoSideBarButton.ImageColor = Color.White;
+
             }
             else
             {
-                csgoSideBarButton.BackColor = buttonDefaultColor;
+                csgoSideBarButton.IsSelected = false;
+                csgoSideBarButton.ImageColor = selectColor;
+
             }
             if (selectedSport.Equals("nfl"))
             {
-                nflSideBarButton.BackColor = buttonHighlightColor;
+                nflSideBarButton.IsSelected = true;
+                nflSideBarButton.ImageColor = Color.White;
             }
             else
             {
-                nflSideBarButton.BackColor = buttonDefaultColor;
+                nflSideBarButton.IsSelected = false;
+                nflSideBarButton.ImageColor = selectColor;
             }
             if (selectedSport.Equals("nba"))
             {
-                nbaSideBarButton.BackColor = buttonHighlightColor;
-                // TODO: Change panel
+                nbaSideBarButton.IsSelected = true;
+                nbaSideBarButton.ImageColor = Color.White;
             }
             else
             {
-                nbaSideBarButton.BackColor = buttonDefaultColor;
+                nbaSideBarButton.IsSelected = false;
+                nbaSideBarButton.ImageColor = selectColor;
             }
             if (selectedSport.Equals("custom"))
             {
-                customSideBarButton.BackColor = buttonHighlightColor;
-                // TODO: Change panel
+                customSideBarButton.IsSelected = true;
+                customSideBarButton.ImageColor = Color.White;
             }
             else
             {
-                customSideBarButton.BackColor = buttonDefaultColor;
+                customSideBarButton.IsSelected = false;
+                customSideBarButton.ImageColor = selectColor;
             }
+            selectedSportLabel.Text = GetSportsLabel();
         }
 
         // <<< Side Bar Button Click Listeners >>>
@@ -302,6 +316,14 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
             SportPreferencesForm sportPreferencesForm = new SportPreferencesForm(selectedSport);
             sportPreferencesForm.ShowDialog();
+        }
+
+        private string GetSportsLabel()
+        {
+            if (selectedSport.Equals("nfl")) return "NFL";
+            if (selectedSport.Equals("nba")) return "NBA";
+            if (selectedSport.Equals("custom")) return "Custom";
+            return "CS:GO"; // default
         }
 
     }
