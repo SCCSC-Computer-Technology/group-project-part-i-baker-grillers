@@ -73,6 +73,16 @@ namespace Baker_Grillers_Group_Project_Part_I.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CSGOLogo {
+            get {
+                object obj = ResourceManager.GetObject("CSGOLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OpenEye {
             get {
                 object obj = ResourceManager.GetObject("OpenEye", resourceCulture);
