@@ -17,6 +17,7 @@ namespace Baker_Grillers_Group_Project_Part_I
         private ToolStripMenuItem logoutMenuItem;
 
         Color buttonHighlightColor = Color.FromArgb(192, 255, 192);
+        Color navButtonStandardBackColor = Color.FromArgb(245, 247, 245);
         Color buttonDefaultColor = Color.White;
 
         string selectedNav = "players"; // players, statistics, teams, favorites
@@ -34,11 +35,6 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             UpdateUserEmailLabel();
 
-        }
-
-        private void exitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void Login()
@@ -103,40 +99,48 @@ namespace Baker_Grillers_Group_Project_Part_I
         // Updates the background colors for the currently selected nav button
         public void NavigationItemSelected()
         {
-            if (selectedNav.Equals("players"))
-            {
-                playersNavButton.BackColor = buttonHighlightColor;
-                
-            } else
-            {
-                playersNavButton.BackColor = Color.White;
-            }
             if (selectedNav.Equals("teams"))
             {
                 teamsNavButton.BackColor = buttonHighlightColor;
+                teamsNavButton.IsSelected = true;
                 // TODO: Change panel
             }
             else
             {
-                teamsNavButton.BackColor = Color.White;
+                teamsNavButton.BackColor = navButtonStandardBackColor;
+                teamsNavButton.IsSelected = false;
                 // TODO: Change panel
             }
+            if (selectedNav.Equals("players"))
+            {
+                playersNavButton.BackColor = buttonHighlightColor;
+                playersNavButton.IsSelected = true;
+            } else
+            {
+                playersNavButton.BackColor = navButtonStandardBackColor;
+                playersNavButton.IsSelected = false;
+            }
+
             if (selectedNav.Equals("statistics"))
             {
                 statisticsNavButton.BackColor = buttonHighlightColor;
+                statisticsNavButton.IsSelected = true;
             }
             else
             {
-                statisticsNavButton.BackColor = Color.White;
+                statisticsNavButton.BackColor = navButtonStandardBackColor;
+                statisticsNavButton.IsSelected = false;
             }
             if (selectedNav.Equals("favorites"))
             {
                 favoritesNavButton.BackColor = buttonHighlightColor;
+                favoritesNavButton.IsSelected = true;
                 // TODO: Change panel
             }
             else
             {
-                favoritesNavButton.BackColor = Color.White;
+                favoritesNavButton.BackColor = navButtonStandardBackColor;
+                favoritesNavButton.IsSelected = false;
             }
         }
 
@@ -240,7 +244,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             NavigationItemSelected();
         }
 
-        private void favoritesTabButton_Click(object sender, EventArgs e)
+        private void favoritesNavButton_Click(object sender, EventArgs e)
         {
             selectedNav = "favorites";
             NavigationItemSelected();
@@ -299,7 +303,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 logoutMenuItem.Text = "Logout";
             }
-            userContextMenu.Show(userEmailLabel, new Point(0, (int)(userEmailLabel.Height / 1.5)));
+            userContextMenu.Show(userEmailLabel, new Point(100, (int)(userEmailLabel.Height / 1.5)));
         }
 
         private void userEmailLabel_Click(object sender, EventArgs e)
@@ -326,5 +330,9 @@ namespace Baker_Grillers_Group_Project_Part_I
             return "CS:GO"; // default
         }
 
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

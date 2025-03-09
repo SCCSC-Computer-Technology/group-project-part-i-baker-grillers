@@ -44,10 +44,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.navigationPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.favoritesNavButton = new System.Windows.Forms.Button();
-            this.teamsNavButton = new System.Windows.Forms.Button();
-            this.playersNavButton = new System.Windows.Forms.Button();
-            this.statisticsNavButton = new System.Windows.Forms.Button();
+            this.favoritesNavButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
+            this.statisticsNavButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
+            this.playersNavButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
+            this.teamsNavButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
             this.selectedSportLabel = new System.Windows.Forms.Label();
             this.contentPanel = new System.Windows.Forms.Panel();
             this.bottomPanel = new System.Windows.Forms.Panel();
@@ -76,7 +76,7 @@
             this.topPanel.Controls.Add(this.nameLabel);
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1013, 90);
+            this.topPanel.Size = new System.Drawing.Size(1155, 90);
             this.topPanel.TabIndex = 3;
             // 
             // dropdownLabel
@@ -84,7 +84,7 @@
             this.dropdownLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dropdownLabel.Font = new System.Drawing.Font("Calibri", 9.75F);
             this.dropdownLabel.ForeColor = System.Drawing.Color.White;
-            this.dropdownLabel.Location = new System.Drawing.Point(953, 0);
+            this.dropdownLabel.Location = new System.Drawing.Point(1095, 0);
             this.dropdownLabel.Name = "dropdownLabel";
             this.dropdownLabel.Size = new System.Drawing.Size(32, 90);
             this.dropdownLabel.TabIndex = 2;
@@ -97,7 +97,7 @@
             this.userEmailLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.userEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.userEmailLabel.ForeColor = System.Drawing.Color.White;
-            this.userEmailLabel.Location = new System.Drawing.Point(677, 0);
+            this.userEmailLabel.Location = new System.Drawing.Point(819, 0);
             this.userEmailLabel.Name = "userEmailLabel";
             this.userEmailLabel.Size = new System.Drawing.Size(270, 90);
             this.userEmailLabel.TabIndex = 1;
@@ -294,61 +294,132 @@
             this.navigationPanel.Controls.Add(this.selectedSportLabel);
             this.navigationPanel.Location = new System.Drawing.Point(250, 90);
             this.navigationPanel.Name = "navigationPanel";
-            this.navigationPanel.Size = new System.Drawing.Size(762, 70);
+            this.navigationPanel.Size = new System.Drawing.Size(904, 70);
             this.navigationPanel.TabIndex = 2;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.favoritesNavButton);
-            this.panel1.Controls.Add(this.teamsNavButton);
-            this.panel1.Controls.Add(this.playersNavButton);
             this.panel1.Controls.Add(this.statisticsNavButton);
+            this.panel1.Controls.Add(this.playersNavButton);
+            this.panel1.Controls.Add(this.teamsNavButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(210, 0);
+            this.panel1.Location = new System.Drawing.Point(233, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(552, 70);
+            this.panel1.Size = new System.Drawing.Size(671, 70);
             this.panel1.TabIndex = 4;
             // 
             // favoritesNavButton
             // 
-            this.favoritesNavButton.Location = new System.Drawing.Point(406, 10);
+            this.favoritesNavButton.ApplyImageColor = false;
+            this.favoritesNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.favoritesNavButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(114)))), ((int)(((byte)(77)))));
+            this.favoritesNavButton.BorderSize = 2;
+            this.favoritesNavButton.CornerRadius = 14;
+            this.favoritesNavButton.FlatAppearance.BorderSize = 0;
+            this.favoritesNavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.favoritesNavButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.favoritesNavButton.ForeColor = System.Drawing.Color.Black;
+            this.favoritesNavButton.Image = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.star1;
+            this.favoritesNavButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.favoritesNavButton.ImageColor = System.Drawing.Color.Black;
+            this.favoritesNavButton.ImagePadding = 5;
+            this.favoritesNavButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.favoritesNavButton.IsSelected = false;
+            this.favoritesNavButton.Location = new System.Drawing.Point(523, 5);
             this.favoritesNavButton.Name = "favoritesNavButton";
-            this.favoritesNavButton.Size = new System.Drawing.Size(121, 51);
-            this.favoritesNavButton.TabIndex = 10;
+            this.favoritesNavButton.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
+            this.favoritesNavButton.SelectedForeColor = System.Drawing.Color.Black;
+            this.favoritesNavButton.SelectedImageColor = System.Drawing.Color.White;
+            this.favoritesNavButton.Size = new System.Drawing.Size(139, 61);
+            this.favoritesNavButton.TabIndex = 16;
             this.favoritesNavButton.Text = "Favorites";
-            this.favoritesNavButton.UseVisualStyleBackColor = true;
-            this.favoritesNavButton.Click += new System.EventHandler(this.favoritesTabButton_Click);
-            // 
-            // teamsNavButton
-            // 
-            this.teamsNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.teamsNavButton.Location = new System.Drawing.Point(25, 10);
-            this.teamsNavButton.Name = "teamsNavButton";
-            this.teamsNavButton.Size = new System.Drawing.Size(121, 51);
-            this.teamsNavButton.TabIndex = 8;
-            this.teamsNavButton.Text = "Teams";
-            this.teamsNavButton.UseVisualStyleBackColor = false;
-            this.teamsNavButton.Click += new System.EventHandler(this.teamsNavButton_Click);
-            // 
-            // playersNavButton
-            // 
-            this.playersNavButton.Location = new System.Drawing.Point(152, 10);
-            this.playersNavButton.Name = "playersNavButton";
-            this.playersNavButton.Size = new System.Drawing.Size(121, 51);
-            this.playersNavButton.TabIndex = 7;
-            this.playersNavButton.Text = "Players";
-            this.playersNavButton.UseVisualStyleBackColor = true;
-            this.playersNavButton.Click += new System.EventHandler(this.playersNavButton_Click);
+            this.favoritesNavButton.UseVisualStyleBackColor = false;
+            this.favoritesNavButton.Click += new System.EventHandler(this.favoritesNavButton_Click);
             // 
             // statisticsNavButton
             // 
-            this.statisticsNavButton.Location = new System.Drawing.Point(279, 10);
+            this.statisticsNavButton.ApplyImageColor = false;
+            this.statisticsNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.statisticsNavButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(114)))), ((int)(((byte)(77)))));
+            this.statisticsNavButton.BorderSize = 2;
+            this.statisticsNavButton.CornerRadius = 14;
+            this.statisticsNavButton.FlatAppearance.BorderSize = 0;
+            this.statisticsNavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statisticsNavButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.statisticsNavButton.ForeColor = System.Drawing.Color.Black;
+            this.statisticsNavButton.Image = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.statistic;
+            this.statisticsNavButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.statisticsNavButton.ImageColor = System.Drawing.Color.Black;
+            this.statisticsNavButton.ImagePadding = 5;
+            this.statisticsNavButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.statisticsNavButton.IsSelected = false;
+            this.statisticsNavButton.Location = new System.Drawing.Point(377, 5);
             this.statisticsNavButton.Name = "statisticsNavButton";
-            this.statisticsNavButton.Size = new System.Drawing.Size(121, 51);
-            this.statisticsNavButton.TabIndex = 9;
+            this.statisticsNavButton.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
+            this.statisticsNavButton.SelectedForeColor = System.Drawing.Color.Black;
+            this.statisticsNavButton.SelectedImageColor = System.Drawing.Color.White;
+            this.statisticsNavButton.Size = new System.Drawing.Size(140, 61);
+            this.statisticsNavButton.TabIndex = 15;
             this.statisticsNavButton.Text = "Statistics";
-            this.statisticsNavButton.UseVisualStyleBackColor = true;
+            this.statisticsNavButton.UseVisualStyleBackColor = false;
             this.statisticsNavButton.Click += new System.EventHandler(this.statisticsNavButton_Click);
+            // 
+            // playersNavButton
+            // 
+            this.playersNavButton.ApplyImageColor = false;
+            this.playersNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.playersNavButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(114)))), ((int)(((byte)(77)))));
+            this.playersNavButton.BorderSize = 2;
+            this.playersNavButton.CornerRadius = 14;
+            this.playersNavButton.FlatAppearance.BorderSize = 0;
+            this.playersNavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playersNavButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.playersNavButton.ForeColor = System.Drawing.Color.Black;
+            this.playersNavButton.Image = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.list;
+            this.playersNavButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.playersNavButton.ImageColor = System.Drawing.Color.Black;
+            this.playersNavButton.ImagePadding = 5;
+            this.playersNavButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.playersNavButton.IsSelected = false;
+            this.playersNavButton.Location = new System.Drawing.Point(245, 5);
+            this.playersNavButton.Name = "playersNavButton";
+            this.playersNavButton.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
+            this.playersNavButton.SelectedForeColor = System.Drawing.Color.Black;
+            this.playersNavButton.SelectedImageColor = System.Drawing.Color.White;
+            this.playersNavButton.Size = new System.Drawing.Size(126, 61);
+            this.playersNavButton.TabIndex = 14;
+            this.playersNavButton.Text = "Players";
+            this.playersNavButton.UseVisualStyleBackColor = false;
+            this.playersNavButton.Click += new System.EventHandler(this.playersNavButton_Click);
+            // 
+            // teamsNavButton
+            // 
+            this.teamsNavButton.ApplyImageColor = false;
+            this.teamsNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(245)))));
+            this.teamsNavButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(114)))), ((int)(((byte)(77)))));
+            this.teamsNavButton.BorderSize = 2;
+            this.teamsNavButton.CornerRadius = 14;
+            this.teamsNavButton.FlatAppearance.BorderSize = 0;
+            this.teamsNavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.teamsNavButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.teamsNavButton.ForeColor = System.Drawing.Color.Black;
+            this.teamsNavButton.Image = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.trophy;
+            this.teamsNavButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.teamsNavButton.ImageColor = System.Drawing.Color.Black;
+            this.teamsNavButton.ImagePadding = 5;
+            this.teamsNavButton.ImageSize = new System.Drawing.Size(18, 18);
+            this.teamsNavButton.IsSelected = true;
+            this.teamsNavButton.Location = new System.Drawing.Point(113, 5);
+            this.teamsNavButton.Name = "teamsNavButton";
+            this.teamsNavButton.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(255)))), ((int)(((byte)(200)))));
+            this.teamsNavButton.SelectedForeColor = System.Drawing.Color.Black;
+            this.teamsNavButton.SelectedImageColor = System.Drawing.Color.White;
+            this.teamsNavButton.Size = new System.Drawing.Size(126, 61);
+            this.teamsNavButton.TabIndex = 13;
+            this.teamsNavButton.Text = "Teams";
+            this.teamsNavButton.UseVisualStyleBackColor = false;
+            this.teamsNavButton.Click += new System.EventHandler(this.teamsNavButton_Click);
             // 
             // selectedSportLabel
             // 
@@ -369,7 +440,7 @@
             this.contentPanel.Controls.Add(this.bottomPanel);
             this.contentPanel.Location = new System.Drawing.Point(250, 160);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(760, 530);
+            this.contentPanel.Size = new System.Drawing.Size(902, 530);
             this.contentPanel.TabIndex = 7;
             // 
             // bottomPanel
@@ -379,7 +450,7 @@
             this.bottomPanel.Controls.Add(this.buttonPanel);
             this.bottomPanel.Location = new System.Drawing.Point(0, 485);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(757, 45);
+            this.bottomPanel.Size = new System.Drawing.Size(899, 45);
             this.bottomPanel.TabIndex = 0;
             // 
             // buttonPanel
@@ -387,7 +458,7 @@
             this.buttonPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPanel.Controls.Add(this.exitButton);
             this.buttonPanel.Controls.Add(this.loginButton);
-            this.buttonPanel.Location = new System.Drawing.Point(513, 0);
+            this.buttonPanel.Location = new System.Drawing.Point(655, 0);
             this.buttonPanel.Name = "buttonPanel";
             this.buttonPanel.Size = new System.Drawing.Size(249, 42);
             this.buttonPanel.TabIndex = 0;
@@ -401,6 +472,7 @@
             this.exitButton.TabIndex = 4;
             this.exitButton.Text = "E&xit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // loginButton
             // 
@@ -410,6 +482,7 @@
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "&Login";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // contextMenuStrip1
             // 
@@ -421,7 +494,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 691);
+            this.ClientSize = new System.Drawing.Size(1153, 691);
             this.Controls.Add(this.navigationPanel);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.sidebarPanel);
@@ -456,10 +529,6 @@
         private System.Windows.Forms.Panel contentPanel;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button favoritesNavButton;
-        private System.Windows.Forms.Button teamsNavButton;
-        private System.Windows.Forms.Button playersNavButton;
-        private System.Windows.Forms.Button statisticsNavButton;
         private System.Windows.Forms.Panel settingsPanel;
         private System.Windows.Forms.Button sportsSettingsButton;
         private System.Windows.Forms.Button globalSettingsButton;
@@ -472,6 +541,10 @@
         private CustomElements.RoundedButton customSideBarButton;
         private CustomElements.RoundedButton nbaSideBarButton;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private CustomElements.RoundedButton teamsNavButton;
+        private CustomElements.RoundedButton statisticsNavButton;
+        private CustomElements.RoundedButton playersNavButton;
+        private CustomElements.RoundedButton favoritesNavButton;
     }
 }
 

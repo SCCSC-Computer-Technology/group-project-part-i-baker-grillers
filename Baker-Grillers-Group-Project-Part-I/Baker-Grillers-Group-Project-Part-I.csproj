@@ -189,9 +189,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>BGSportsStatsDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\statistic.png" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\trophy.png" />
     <None Include="Resources\football.png" />
     <None Include="Resources\basketball.png" />
     <Content Include="Resources\ball-of-basketball.png" />
+    <None Include="Resources\list.png" />
     <Content Include="Resources\pistol.png" />
     <None Include="Resources\pistol_white.png" />
   </ItemGroup>
