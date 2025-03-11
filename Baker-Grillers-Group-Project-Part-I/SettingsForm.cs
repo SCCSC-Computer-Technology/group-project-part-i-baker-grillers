@@ -46,8 +46,6 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
             this.Close();
             generalSettingsControl.SavePreferences();
-            // TODO: Need to save changes here. 
-
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

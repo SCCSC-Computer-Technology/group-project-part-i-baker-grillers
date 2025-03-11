@@ -11,15 +11,14 @@ namespace DataManager
         public string Font { get; set; }
         public int ThemeIndex { get; set; }
         public string EnabledSports { get; set; }
-    
 
-    // Constructor to match your usage
-    public GlobalSettings(string font, int themeIndex, string enabledSports)
+        public GlobalSettings(string font, int themeIndex, string enabledSports)
         {
             Font = font;
             ThemeIndex = themeIndex;
             EnabledSports = enabledSports;
         }
+
     }
 
 }

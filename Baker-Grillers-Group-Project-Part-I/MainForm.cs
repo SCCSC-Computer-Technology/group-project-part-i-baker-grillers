@@ -106,8 +106,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 teamsNavButton.BackColor = buttonHighlightColor;
                 teamsNavButton.IsSelected = true;
-
-                // Change panel
+                // Change active panel
                 TeamsTabControl teamsTabControl = new TeamsTabControl(Program.credentialsConnection, selectedSport);
                 contentPanel.Controls.Add(teamsTabControl);
             }
@@ -120,7 +119,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 playersNavButton.BackColor = buttonHighlightColor;
                 playersNavButton.IsSelected = true;
-                // Change panel
+                // Change active panel
                 PlayersTabControl playersTabControl = new PlayersTabControl(Program.credentialsConnection, selectedSport);
                 contentPanel.Controls.Add(playersTabControl);
             } else
@@ -143,7 +142,6 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 favoritesNavButton.BackColor = buttonHighlightColor;
                 favoritesNavButton.IsSelected = true;
-                // TODO: Change panel
             }
             else
             {
