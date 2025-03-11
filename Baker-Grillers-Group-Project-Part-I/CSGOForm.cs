@@ -614,6 +614,11 @@ namespace UserAuthentication
             PlayerFilterValue = -1;
             UpdatePlayersDataSource();
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

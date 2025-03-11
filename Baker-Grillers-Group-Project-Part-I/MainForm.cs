@@ -319,6 +319,8 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
             selectedNav = "statistics";
             NavigationItemSelected();
+            NFLForm nFLForm = new NFLForm();
+            nFLForm.ShowDialog();
         }
 
         private void favoritesNavButton_Click(object sender, EventArgs e)
