@@ -221,17 +221,18 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         }
 
+        // Launches applicable stats forms
         private void CustomList_ItemSelected(object sender, ItemSelectedEventArgs e)
         {
             if (selectedSport.Equals("csgo"))
             {
                 if (selectedNav.Equals("players"))
                 {
-                    CSGOForm csgoForm = new CSGOForm(null, e.ItemId); // Open player tab
+                    CSGOForm csgoForm = new CSGOForm(null, e.ItemId); // Open players stats form
                     csgoForm.Show();
                 } else if (selectedNav.Equals("teams"))
                 {
-                    CSGOForm csgoForm = new CSGOForm(e.ItemId, null); // Open player tab
+                    CSGOForm csgoForm = new CSGOForm(e.ItemId, null); // Open teams stats form
                     csgoForm.Show();
                 }
             }
@@ -239,12 +240,12 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 if (selectedNav.Equals("players"))
                 {
-                    NFLForm nflForm = new NFLForm(null, e.ItemId); // Open player tab
+                    NFLForm nflForm = new NFLForm(null, e.ItemId); // Open players stats form
                     nflForm.Show();
                 }
                 else if (selectedNav.Equals("teams"))
                 {
-                    NFLForm nflForm = new NFLForm(e.ItemId, null); // Open player tab
+                    NFLForm nflForm = new NFLForm(e.ItemId, null); // Open teams stats form
                     nflForm.Show();
                 }
             }
