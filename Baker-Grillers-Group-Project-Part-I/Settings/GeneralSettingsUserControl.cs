@@ -16,7 +16,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Settings
     public partial class GeneralSettingsUserControl : UserControl
     {
 
-        private string connectionString = Program.credentialsConnection;
+        private string connectionString = Program.connectionString;
         DataRepository dataRepository;
 
         public GeneralSettingsUserControl()
@@ -24,7 +24,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Settings
             InitializeComponent();
 
             // Initialize data
-            dataRepository = new DataRepository(Program.credentialsConnection);
+            dataRepository = new DataRepository(Program.connectionString);
 
             // Load settings
             LoadPreferences();

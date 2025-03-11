@@ -88,7 +88,7 @@ namespace DataManager
             }
         }
 
-        public DataTable GetTeamDataCSGO()
+        public DataTable GetTeamsDataCSGO()
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

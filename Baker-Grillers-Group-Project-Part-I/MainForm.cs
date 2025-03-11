@@ -1,18 +1,24 @@
-﻿using Baker_Grillers_Group_Project_Part_I.Navigation;
+﻿using Baker_Grillers_Group_Project_Part_I.Controls;
+using DataManager;
+using GroupProjectTesting;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UserAuthentication;
 
 namespace Baker_Grillers_Group_Project_Part_I
 {
     public partial class MainForm : Form
     {
+
+        public static SqlConnection conn { get; set; }
 
         private ContextMenuStrip userContextMenu;
         private ToolStripMenuItem logoutMenuItem;
@@ -24,19 +30,41 @@ namespace Baker_Grillers_Group_Project_Part_I
         string selectedNav = "teams"; // players, statistics, teams, favorites
         string selectedSport = "csgo"; // csgo, nfl, nba, custom
 
-        public MainForm()
+        bool triggerLogin;
+        DataRepository dataRepository;
+
+        public MainForm(bool triggerLogin)
         {
             InitializeComponent();
             InitializeDropDown();
+            this.selectedSport = selectedSport;
+            this.triggerLogin = triggerLogin;
+            dataRepository = new DataRepository(Program.connectionString);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Login();
+            // Begin connection
+            conn = new SqlConnection(Program.connectionString);
+
+            if (triggerLogin) Login();
 
             UpdateUserEmailLabel();
             NavigationItemSelected();
+            SideBarItemSelected();
+            
+        }
 
+        public void UpdateSelectedSport(string sport)
+        {
+            selectedSport = sport;
+            SideBarItemSelected();
+        }
+
+        private void ShowWelcome()
+        {
+            WelcomeForm welcomeForm = new WelcomeForm(this);
+            welcomeForm.ShowDialog();
         }
 
         private void Login()
@@ -55,6 +83,8 @@ namespace Baker_Grillers_Group_Project_Part_I
                 loginButton.Visible = true;
             }
             UpdateUserEmailLabel();
+
+            ShowWelcome();
         }
 
         // Perform logout
@@ -98,6 +128,39 @@ namespace Baker_Grillers_Group_Project_Part_I
             userEmailLabel.Text = currentUserEmail;
         }
 
+        /**
+         * Gets Teams data from the database
+         */
+        private DataTable LoadTeamsData()
+        {
+            switch (selectedSport)
+            {
+                case "csgo":
+                    return dataRepository.GetTeamsDataCSGO();
+                case "nfl":
+                    return dataRepository.GetTeamsDataNFL();
+                case "nba":
+                    return dataRepository.GetTeamsDataNBA();
+                default:
+                    return null;
+            }
+        }
+
+        private DataTable LoadPlayersData()
+        {
+            switch (selectedSport)
+            {
+                case "csgo":
+                    return dataRepository.GetPlayersDataCSGO();
+                case "nfl":
+                    return dataRepository.GetPlayersDataNFL();
+                case "nba":
+                    return dataRepository.GetPlayersDataNBA();
+                default:
+                    return null;
+            }
+        }
+
         // Updates the background colors for the currently selected nav button
         public void NavigationItemSelected()
         {
@@ -107,8 +170,9 @@ namespace Baker_Grillers_Group_Project_Part_I
                 teamsNavButton.BackColor = buttonHighlightColor;
                 teamsNavButton.IsSelected = true;
                 // Change active panel
-                TeamsTabControl teamsTabControl = new TeamsTabControl(Program.credentialsConnection, selectedSport);
-                contentPanel.Controls.Add(teamsTabControl);
+                CustomListControl enhancedListView = new CustomListControl();
+                enhancedListView.SetData(LoadTeamsData(), selectedSport);
+                contentPanel.Controls.Add(enhancedListView);
             }
             else
             {
@@ -120,8 +184,9 @@ namespace Baker_Grillers_Group_Project_Part_I
                 playersNavButton.BackColor = buttonHighlightColor;
                 playersNavButton.IsSelected = true;
                 // Change active panel
-                PlayersTabControl playersTabControl = new PlayersTabControl(Program.credentialsConnection, selectedSport);
-                contentPanel.Controls.Add(playersTabControl);
+                CustomListControl enhancedListView = new CustomListControl();
+                enhancedListView.SetData(LoadPlayersData(), selectedSport);
+                contentPanel.Controls.Add(enhancedListView);
             } else
             {
                 playersNavButton.BackColor = navButtonStandardBackColor;
@@ -148,6 +213,8 @@ namespace Baker_Grillers_Group_Project_Part_I
                 favoritesNavButton.BackColor = navButtonStandardBackColor;
                 favoritesNavButton.IsSelected = false;
             }
+            // Change active panel
+
         }
 
         Color selectColor = Color.FromArgb(19, 94, 57);
@@ -256,8 +323,14 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void favoritesNavButton_Click(object sender, EventArgs e)
         {
-            selectedNav = "favorites";
-            NavigationItemSelected();
+            //selectedNav = "favorites";
+            //NavigationItemSelected();
+
+
+            // Testing
+
+            CSGOForm csgoForm = new CSGOForm();
+            csgoForm.ShowDialog();
         }
 
         private void InitializeDropDown()
@@ -342,7 +415,8 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Restart();
         }
+
     }
 }

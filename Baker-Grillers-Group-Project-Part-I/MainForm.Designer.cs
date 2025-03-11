@@ -52,7 +52,7 @@
             this.contentPanel = new System.Windows.Forms.Panel();
             this.bottomPanel = new System.Windows.Forms.Panel();
             this.buttonPanel = new System.Windows.Forms.Panel();
-            this.exitButton = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -455,23 +455,23 @@
             // buttonPanel
             // 
             this.buttonPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPanel.Controls.Add(this.exitButton);
+            this.buttonPanel.Controls.Add(this.logoutButton);
             this.buttonPanel.Controls.Add(this.loginButton);
             this.buttonPanel.Location = new System.Drawing.Point(655, 0);
             this.buttonPanel.Name = "buttonPanel";
             this.buttonPanel.Size = new System.Drawing.Size(249, 42);
             this.buttonPanel.TabIndex = 0;
             // 
-            // exitButton
+            // logoutButton
             // 
-            this.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.exitButton.Location = new System.Drawing.Point(141, 9);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(81, 25);
-            this.exitButton.TabIndex = 4;
-            this.exitButton.Text = "E&xit";
-            this.exitButton.UseVisualStyleBackColor = true;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.logoutButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.logoutButton.Location = new System.Drawing.Point(141, 9);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(81, 25);
+            this.logoutButton.TabIndex = 4;
+            this.logoutButton.Text = "&Exit";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // loginButton
             // 
@@ -533,7 +533,7 @@
         private System.Windows.Forms.Button globalSettingsButton;
         private System.Windows.Forms.Panel bottomPanel;
         private System.Windows.Forms.Panel buttonPanel;
-        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button loginButton;
         private CustomElements.RoundedButton csgoSideBarButton;
         private CustomElements.RoundedButton nflSideBarButton;

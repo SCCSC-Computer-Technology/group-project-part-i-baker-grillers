@@ -16,6 +16,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 {
     public partial class LoginForm : Form
     {
+        //private string connectionString = @"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Users.mdf;Integrated Security=True;";
         public LoginForm()
         {
             InitializeComponent();
@@ -23,10 +24,10 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void continueWithoutLoginButton_Click(object sender, EventArgs e)
         {
-            //closes the login form with the cancel result
-
             // Change current user email - for applying settings
             Program.CurrentSettingsUserEmail = "guest@local.app";
+
+            //closes the login form with the cancel result
             DialogResult = DialogResult.Cancel;
             this.Close();
         }
@@ -53,14 +54,13 @@ namespace Baker_Grillers_Group_Project_Part_I
             loginButton.Enabled = false;
 
             //check if the credentials are valid
-            bool isValid = await Task.Run(() => Authenticator.IsValidCredentials(Program.credentialsConnection, emailTextBox.Text, passwordTextBox.Text));
+            bool isValid = await Task.Run(() => Authenticator.IsValidCredentials(MainForm.conn, emailTextBox.Text, passwordTextBox.Text));
             if (isValid)
             {
+                // Set user email
+                Program.CurrentSettingsUserEmail = emailTextBox.Text.ToLower();
+
                 DialogResult = DialogResult.OK;
-
-                // Change current user email - for applying settings
-                Program.CurrentSettingsUserEmail = emailTextBox.Text;
-
                 this.Close();
             }
             loginButton.Enabled = true;
@@ -83,13 +83,13 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void createAccountButton_Click(object sender, EventArgs e)
         {
-            CreateAccountForm createAccountForm = new CreateAccountForm(Program.credentialsConnection);
+            CreateAccountForm createAccountForm = new CreateAccountForm();
             createAccountForm.ShowDialog();
         }
 
         private void forgotPasswordButton_Click(object sender, EventArgs e)
         {
-            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm(Program.credentialsConnection);
+            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
             forgotPasswordForm.ShowDialog();
         }
 

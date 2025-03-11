@@ -15,11 +15,11 @@ namespace Baker_Grillers_Group_Project_Part_I
 {
     public partial class CreateAccountForm : Form
     {
-        private string Connection;
-        public CreateAccountForm(string connection)
+        //private string Connection;
+        public CreateAccountForm()
         {
             InitializeComponent();
-            Connection = connection;
+            //Connection = connection;
         }
 
         private async void createAccountButton_Click(object sender, EventArgs e)
@@ -50,7 +50,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             createAccountButton.Enabled = false;
             //try to add the credentials and check if it was successful
-            bool isSuccessful = await Task.Run(() => Authenticator.AddCredentials(Connection, email, password, salt));
+            bool isSuccessful = await Task.Run(() => Authenticator.AddCredentials(MainForm.conn, email, password, salt));
             if (isSuccessful)
             {
                 MessageBox.Show("Account Created!");
