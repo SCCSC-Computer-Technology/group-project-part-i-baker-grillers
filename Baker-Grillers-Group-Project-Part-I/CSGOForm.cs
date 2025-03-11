@@ -29,11 +29,19 @@ namespace UserAuthentication
         private int PlayerFilterOperator = -1;
         private decimal PlayerFilterValue = -1;
 
-        public CSGOForm()
+        // Fields for initial team/player IDs
+        private int? initialTeamId = null;
+        private int? initialPlayerId = null;
+
+        public CSGOForm(int? initialTeamId = null, int? initialPlayerId = null)
         {
             InitializeComponent();
             playerSortComboBox.SelectedIndex = 0;
             teamSortComboBox.SelectedIndex = 0;
+
+            // Set initial ids
+            this.initialTeamId = initialTeamId;
+            this.initialPlayerId = initialPlayerId;
         }
 
         private void CSGOForm_Load(object sender, EventArgs e)
@@ -57,6 +65,17 @@ namespace UserAuthentication
             csgoPlayerSelectComboBox.DisplayMember = "PlayerName";
             csgoPlayerTeamsListBox.ValueMember = "TeamID";
             csgoPlayerTeamsListBox.DisplayMember = "TeamName";
+
+            if (initialTeamId.HasValue)
+            {
+                tabControl.SelectedIndex = 0; // Select teams tab
+                csgoTeamSelectComboBox.SelectedValue = initialTeamId.Value;
+            }
+            else if (initialPlayerId.HasValue)
+            {
+                tabControl.SelectedIndex = 1; // Select players tab
+                csgoPlayerSelectComboBox.SelectedValue = initialPlayerId.Value;
+            }
 
         }
 

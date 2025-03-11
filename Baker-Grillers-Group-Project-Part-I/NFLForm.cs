@@ -29,11 +29,19 @@ namespace UserAuthentication
         private int PlayerFilterOperator = -1;
         private decimal PlayerFilterValue = -1;
 
-        public NFLForm()
+        // Fields for initial team/player IDs
+        private int? initialTeamId = null;
+        private int? initialPlayerId = null;
+
+        public NFLForm(int? initialTeamId = null, int? initialPlayerId = null)
         {
             InitializeComponent();
             playerSortComboBox.SelectedIndex = 0;
             teamSortComboBox.SelectedIndex = 0;
+
+            // Set initial ids
+            this.initialTeamId = initialTeamId;
+            this.initialPlayerId = initialPlayerId;
         }
 
         private void NFLForm_Load(object sender, EventArgs e)
@@ -57,6 +65,17 @@ namespace UserAuthentication
             nflPlayerSelectComboBox.DisplayMember = "FullName";
             nflPlayerTeamsListBox.ValueMember = "TeamID";
             nflPlayerTeamsListBox.DisplayMember = "TeamName";
+
+            if (initialTeamId.HasValue)
+            {
+                tabControl.SelectedIndex = 0; // Select teams tab
+                nflTeamSelectComboBox.SelectedValue = initialTeamId.Value;
+            }
+            else if (initialPlayerId.HasValue)
+            {
+                tabControl.SelectedIndex = 1; // Select players tab
+                nflPlayerSelectComboBox.SelectedValue = initialPlayerId.Value;
+            }
 
         }
 
@@ -103,7 +122,7 @@ namespace UserAuthentication
 
                 // Calculate win percentage
                 double totalGames = stats.Wins + stats.Losses + stats.Ties;
-                double winPercentage = totalGames > 0 ? (double)stats.Wins / totalGames : 0;
+                double winPercentage = totalGames > 0 ? (double) stats.Wins / totalGames : 0;
                 teamWinPercentage.Text = winPercentage.ToString("P2"); // Format as percentage
 
                 teamTouchdowns.Text = stats.TotalTD.ToString();

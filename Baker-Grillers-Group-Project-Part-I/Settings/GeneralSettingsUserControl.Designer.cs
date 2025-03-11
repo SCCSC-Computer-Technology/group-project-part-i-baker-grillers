@@ -115,9 +115,8 @@
             // 
             this.enabledSportsCheckedListBox.FormattingEnabled = true;
             this.enabledSportsCheckedListBox.Items.AddRange(new object[] {
+            "CSGO",
             "Football",
-            "Basketball",
-            "Baseball",
             "Soccer"});
             this.enabledSportsCheckedListBox.Location = new System.Drawing.Point(6, 51);
             this.enabledSportsCheckedListBox.Name = "enabledSportsCheckedListBox";

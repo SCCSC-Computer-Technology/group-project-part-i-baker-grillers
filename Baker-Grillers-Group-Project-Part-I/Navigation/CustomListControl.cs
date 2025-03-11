@@ -3,6 +3,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.ComponentModel;
+using UserAuthentication;
 
 namespace Baker_Grillers_Group_Project_Part_I.Controls
 {
@@ -23,6 +24,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
 
         private void SetupEvents()
         {
+
             // Double click
             this.gridView.CellDoubleClick += GridView_CellDoubleClick;
 

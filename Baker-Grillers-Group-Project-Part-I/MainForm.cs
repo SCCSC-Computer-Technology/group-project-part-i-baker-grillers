@@ -22,10 +22,11 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private ContextMenuStrip userContextMenu;
         private ToolStripMenuItem logoutMenuItem;
+        private CustomListControl enhancedListView;
 
         Color buttonHighlightColor = Color.FromArgb(192, 255, 192);
         Color navButtonStandardBackColor = Color.FromArgb(245, 247, 245);
-        Color buttonDefaultColor = Color.White;
+        Color selectColor = Color.FromArgb(19, 94, 57);
 
         string selectedNav = "teams"; // players, statistics, teams, favorites
         string selectedSport = "csgo"; // csgo, nfl, nba, custom
@@ -171,8 +172,9 @@ namespace Baker_Grillers_Group_Project_Part_I
                 teamsNavButton.BackColor = buttonHighlightColor;
                 teamsNavButton.IsSelected = true;
                 // Change active panel
-                CustomListControl enhancedListView = new CustomListControl();
+                enhancedListView = new CustomListControl();
                 enhancedListView.SetData(LoadTeamsData(), selectedSport);
+                enhancedListView.ItemSelected += CustomList_ItemSelected;
                 contentPanel.Controls.Add(enhancedListView);
             }
             else
@@ -185,8 +187,9 @@ namespace Baker_Grillers_Group_Project_Part_I
                 playersNavButton.BackColor = buttonHighlightColor;
                 playersNavButton.IsSelected = true;
                 // Change active panel
-                CustomListControl enhancedListView = new CustomListControl();
+                enhancedListView = new CustomListControl();
                 enhancedListView.SetData(LoadPlayersData(), selectedSport);
+                enhancedListView.ItemSelected += CustomList_ItemSelected;
                 contentPanel.Controls.Add(enhancedListView);
             } else
             {
@@ -218,7 +221,34 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         }
 
-        Color selectColor = Color.FromArgb(19, 94, 57);
+        private void CustomList_ItemSelected(object sender, ItemSelectedEventArgs e)
+        {
+            if (selectedSport.Equals("csgo"))
+            {
+                if (selectedNav.Equals("players"))
+                {
+                    CSGOForm csgoForm = new CSGOForm(null, e.ItemId); // Open player tab
+                    csgoForm.Show();
+                } else if (selectedNav.Equals("teams"))
+                {
+                    CSGOForm csgoForm = new CSGOForm(e.ItemId, null); // Open player tab
+                    csgoForm.Show();
+                }
+            }
+            else if (selectedSport.Equals("nfl"))
+            {
+                if (selectedNav.Equals("players"))
+                {
+                    NFLForm nflForm = new NFLForm(null, e.ItemId); // Open player tab
+                    nflForm.Show();
+                }
+                else if (selectedNav.Equals("teams"))
+                {
+                    NFLForm nflForm = new NFLForm(e.ItemId, null); // Open player tab
+                    nflForm.Show();
+                }
+            }
+        }
 
         // Updates the background colors for the currently selected sidebar button
         public void SideBarItemSelected()
