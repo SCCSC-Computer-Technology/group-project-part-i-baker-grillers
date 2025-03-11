@@ -46,15 +46,15 @@ namespace UserAuthentication
             nflTeamSelectComboBox.ValueMember = "TeamID";
             nflTeamSelectComboBox.DisplayMember = "TeamName";
             nflTeamPlayersListBox.ValueMember = "PlayerID";
-            nflTeamPlayersListBox.DisplayMember = "FirstName";
+            nflTeamPlayersListBox.DisplayMember = "FullName";
 
             //set properties for the player tab
             UpdatePlayersDataSource();
             nflPlayerTeamsBindingSource.DataSource = db.NflTeams;
             nflPlayerListBox.ValueMember = "PlayerID";
-            nflPlayerListBox.DisplayMember = "FirstName";
+            nflPlayerListBox.DisplayMember = "FullName";
             nflPlayerSelectComboBox.ValueMember = "PlayerID";
-            nflPlayerSelectComboBox.DisplayMember = "FirstName";
+            nflPlayerSelectComboBox.DisplayMember = "FullName";
             nflPlayerTeamsListBox.ValueMember = "TeamID";
             nflPlayerTeamsListBox.DisplayMember = "TeamName";
 
@@ -436,30 +436,7 @@ namespace UserAuthentication
                             break;
                     }
                     break;
-                case 1: // Touchdown passes
-                    switch (PlayerFilterOperator)
-                    {
-                        case 0: // Less than
-                            matchedRecords = db.NflPlayerCareerPassStats
-                                .Where(y => y.TdPasses < PlayerFilterValue)
-                                .Select(y => y.PlayerID);
-                            break;
-                        case 1: // Equal to
-                            matchedRecords = db.NflPlayerCareerPassStats
-                                .Where(y => y.TdPasses == PlayerFilterValue)
-                                .Select(y => y.PlayerID);
-                            break;
-                        case 2: // Greater than
-                            matchedRecords = db.NflPlayerCareerPassStats
-                                .Where(y => y.TdPasses > PlayerFilterValue)
-                                .Select(y => y.PlayerID);
-                            break;
-                        default: // All, default
-                            matchedRecords = db.NflPlayerCareerPassStats.Select(x => x.PlayerID);
-                            break;
-                    }
-                    break;
-                case 2: // Interceptions
+                case 1: // Interceptions
                     switch (PlayerFilterOperator)
                     {
                         case 0: // Less than
@@ -475,6 +452,29 @@ namespace UserAuthentication
                         case 2: // Greater than
                             matchedRecords = db.NflPlayerCareerPassStats
                                 .Where(y => y.Interceptions > PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        default: // All, default
+                            matchedRecords = db.NflPlayerCareerPassStats.Select(x => x.PlayerID);
+                            break;
+                    }
+                    break;
+                case 2: // Touchdown passes
+                    switch (PlayerFilterOperator)
+                    {
+                        case 0: // Less than
+                            matchedRecords = db.NflPlayerCareerPassStats
+                                .Where(y => y.TdPasses < PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 1: // Equal to
+                            matchedRecords = db.NflPlayerCareerPassStats
+                                .Where(y => y.TdPasses == PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 2: // Greater than
+                            matchedRecords = db.NflPlayerCareerPassStats
+                                .Where(y => y.TdPasses > PlayerFilterValue)
                                 .Select(y => y.PlayerID);
                             break;
                         default: // All, default
@@ -578,6 +578,98 @@ namespace UserAuthentication
                             break;
                     }
                     break;
+                case 7: // Longest pass
+                    switch (PlayerFilterOperator)
+                    {
+                        case 0: // Less than
+                            matchedRecords = db.NflPlayerCareerPassStats
+                                .Where(y => y.LongestPass.HasValue && y.LongestPass < PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 1: // Equal to
+                            matchedRecords = db.NflPlayerCareerPassStats
+                                .Where(y => y.LongestPass.HasValue && y.LongestPass == PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 2: // Greater than
+                            matchedRecords = db.NflPlayerCareerPassStats
+                                .Where(y => y.LongestPass.HasValue && y.LongestPass > PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        default: // All, default
+                            matchedRecords = db.NflPlayerCareerPassStats.Select(x => x.PlayerID);
+                            break;
+                    }
+                    break;
+                case 8: // Rush attempts
+                    switch (PlayerFilterOperator)
+                    {
+                        case 0: // Less than
+                            matchedRecords = db.NflPlayerCareerRushStats
+                                .Where(y => y.RushAttempts < PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 1: // Equal to
+                            matchedRecords = db.NflPlayerCareerRushStats
+                                .Where(y => y.RushAttempts == PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 2: // Greater than
+                            matchedRecords = db.NflPlayerCareerRushStats
+                                .Where(y => y.RushAttempts > PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        default: // All, default
+                            matchedRecords = db.NflPlayerCareerRushStats.Select(x => x.PlayerID);
+                            break;
+                    }
+                    break;
+                case 9: // Receptions
+                    switch (PlayerFilterOperator)
+                    {
+                        case 0: // Less than
+                            matchedRecords = db.NflPlayerCareerReceiveStats
+                                .Where(y => y.Receptions.HasValue && y.Receptions < PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 1: // Equal to
+                            matchedRecords = db.NflPlayerCareerReceiveStats
+                                .Where(y => y.Receptions.HasValue && y.Receptions == PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 2: // Greater than
+                            matchedRecords = db.NflPlayerCareerReceiveStats
+                                .Where(y => y.Receptions.HasValue && y.Receptions > PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        default: // All, default
+                            matchedRecords = db.NflPlayerCareerReceiveStats.Select(x => x.PlayerID);
+                            break;
+                    }
+                    break;
+                case 10: // Rush 1st Downs
+                    switch (PlayerFilterOperator)
+                    {
+                        case 0: // Less than
+                            matchedRecords = db.NflPlayerCareerRushStats
+                                .Where(y => y.RushFirstdowns.HasValue && y.RushFirstdowns < PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 1: // Equal to
+                            matchedRecords = db.NflPlayerCareerRushStats
+                                .Where(y => y.RushFirstdowns.HasValue && y.RushFirstdowns == PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        case 2: // Greater than
+                            matchedRecords = db.NflPlayerCareerRushStats
+                                .Where(y => y.RushFirstdowns.HasValue && y.RushFirstdowns > PlayerFilterValue)
+                                .Select(y => y.PlayerID);
+                            break;
+                        default: // All, default
+                            matchedRecords = db.NflPlayerCareerRushStats.Select(x => x.PlayerID);
+                            break;
+                    }
+                    break;
                 default: // No filter
                     // Combine tables
                     var passStatsPlayers = db.NflPlayerCareerPassStats.Select(x => x.PlayerID);
@@ -624,7 +716,7 @@ namespace UserAuthentication
             // Filter by...
             switch (TeamFilterField)
             {
-                case 0: // Year
+                case 0: // Wins
                     switch (TeamFilterOperator)
                     {
                         case 0: // Less than
@@ -642,14 +734,64 @@ namespace UserAuthentication
                                 .Where(y => y.SeasonYear == currentSeason && y.Wins > TeamFilterValue)
                                 .Select(y => y.TeamID);
                             break;
-                        default: // Default, all
+                        default: // All, default
                             matchedRecords = db.NflTeamSeasonStats
                                 .Where(y => y.SeasonYear == currentSeason)
                                 .Select(x => x.TeamID);
                             break;
                     }
                     break;
-                case 1: // Win percentage
+                case 1: // Losses
+                    switch (TeamFilterOperator)
+                    {
+                        case 0: // Less than
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.Losses < TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        case 1: // Equal to
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.Losses == TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        case 2: // Greater than
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.Losses > TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        default: // All, default
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason)
+                                .Select(x => x.TeamID);
+                            break;
+                    }
+                    break;
+                case 2: // Ties
+                    switch (TeamFilterOperator)
+                    {
+                        case 0: // Less than
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.Ties < TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        case 1: // Equal to
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.Ties == TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        case 2: // Greater than
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.Ties > TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        default: // All, default
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason)
+                                .Select(x => x.TeamID);
+                            break;
+                    }
+                    break;
+                case 3: // Wins percentage
                     switch (TeamFilterOperator)
                     {
                         case 0: // Less than
@@ -680,75 +822,28 @@ namespace UserAuthentication
                             break;
                     }
                     break;
-                case 2: // Total touchdowns
+                case 4: // Rushing yards
                     switch (TeamFilterOperator)
                     {
                         case 0: // Less than
                             matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason && y.TotalTD < TeamFilterValue)
+                                .Where(y => y.SeasonYear == currentSeason &&
+                                       y.RushYards.HasValue && y.RushYards < TeamFilterValue)
                                 .Select(y => y.TeamID);
                             break;
                         case 1: // Equal to
                             matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason && y.TotalTD == TeamFilterValue)
+                                .Where(y => y.SeasonYear == currentSeason &&
+                                       y.RushYards.HasValue && y.RushYards == TeamFilterValue)
                                 .Select(y => y.TeamID);
                             break;
                         case 2: // Greater than
                             matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason && y.TotalTD > TeamFilterValue)
-                                .Select(y => y.TeamID);
-                            break;
-                        default: // Default , all
-                            matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason)
-                                .Select(x => x.TeamID);
-                            break;
-                    }
-                    break;
-                case 3: // Rushing touchdowns
-                    switch (TeamFilterOperator)
-                    {
-                        case 0: // Less than
-                            matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason && y.RushingTD < TeamFilterValue)
-                                .Select(y => y.TeamID);
-                            break;
-                        case 1: // Equal to
-                            matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason && y.RushingTD == TeamFilterValue)
-                                .Select(y => y.TeamID);
-                            break;
-                        case 2: // Greater than
-                            matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason && y.RushingTD > TeamFilterValue)
+                                .Where(y => y.SeasonYear == currentSeason &&
+                                       y.RushYards.HasValue && y.RushYards > TeamFilterValue)
                                 .Select(y => y.TeamID);
                             break;
                         default: // All, default
-                            matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason)
-                                .Select(x => x.TeamID);
-                            break;
-                    }
-                    break;
-                case 4: // Receiving touchdowns
-                    switch (TeamFilterOperator)
-                    {
-                        case 0: // Less than
-                            matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason && y.ReceivingTD < TeamFilterValue)
-                                .Select(y => y.TeamID);
-                            break;
-                        case 1: // Equal to
-                            matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason && y.ReceivingTD == TeamFilterValue)
-                                .Select(y => y.TeamID);
-                            break;
-                        case 2: // Greater than
-                            matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason && y.ReceivingTD > TeamFilterValue)
-                                .Select(y => y.TeamID);
-                            break;
-                        default: // Default, all
                             matchedRecords = db.NflTeamSeasonStats
                                 .Where(y => y.SeasonYear == currentSeason)
                                 .Select(x => x.TeamID);
@@ -783,25 +878,72 @@ namespace UserAuthentication
                             break;
                     }
                     break;
-                case 6: // Rushing yards
+                case 6: // Total touchdowns
                     switch (TeamFilterOperator)
                     {
                         case 0: // Less than
                             matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason &&
-                                       y.RushYards.HasValue && y.RushYards < TeamFilterValue)
+                                .Where(y => y.SeasonYear == currentSeason && y.TotalTD < TeamFilterValue)
                                 .Select(y => y.TeamID);
                             break;
                         case 1: // Equal to
                             matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason &&
-                                       y.RushYards.HasValue && y.RushYards == TeamFilterValue)
+                                .Where(y => y.SeasonYear == currentSeason && y.TotalTD == TeamFilterValue)
                                 .Select(y => y.TeamID);
                             break;
                         case 2: // Greater than
                             matchedRecords = db.NflTeamSeasonStats
-                                .Where(y => y.SeasonYear == currentSeason &&
-                                       y.RushYards.HasValue && y.RushYards > TeamFilterValue)
+                                .Where(y => y.SeasonYear == currentSeason && y.TotalTD > TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        default: // Default , all
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason)
+                                .Select(x => x.TeamID);
+                            break;
+                    }
+                    break;
+                case 7: // Receiving touchdowns
+                    switch (TeamFilterOperator)
+                    {
+                        case 0: // Less than
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.ReceivingTD < TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        case 1: // Equal to
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.ReceivingTD == TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        case 2: // Greater than
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.ReceivingTD > TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        default: // Default, all
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason)
+                                .Select(x => x.TeamID);
+                            break;
+                    }
+                    break;
+                case 8: // Rushing touchdowns
+                    switch (TeamFilterOperator)
+                    {
+                        case 0: // Less than
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.RushingTD < TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        case 1: // Equal to
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.RushingTD == TeamFilterValue)
+                                .Select(y => y.TeamID);
+                            break;
+                        case 2: // Greater than
+                            matchedRecords = db.NflTeamSeasonStats
+                                .Where(y => y.SeasonYear == currentSeason && y.RushingTD > TeamFilterValue)
                                 .Select(y => y.TeamID);
                             break;
                         default: // All, default
@@ -855,6 +997,7 @@ namespace UserAuthentication
         {
             this.Close();
         }
+
     }
 }
 

@@ -64,6 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BGSportsStatsDB.cs">
+      <DependentUpon>BGSportsStatsDB.dbml</DependentUpon>
+    </Compile>
     <Compile Include="BGSportsStatsDB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,6 +78,7 @@
     <Compile Include="CreateAccountForm.Designer.cs">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\NflPlayerFullName.cs" />
     <Compile Include="NFLForm.cs">
       <SubType>Form</SubType>
     </Compile>

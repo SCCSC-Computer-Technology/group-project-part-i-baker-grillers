@@ -58,6 +58,7 @@ namespace Baker_Grillers_Group_Project_Part_I
         public void UpdateSelectedSport(string sport)
         {
             selectedSport = sport;
+            NavigationItemSelected();
             SideBarItemSelected();
         }
 
