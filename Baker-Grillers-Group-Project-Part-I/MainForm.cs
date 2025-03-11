@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Baker_Grillers_Group_Project_Part_I.Navigation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,7 @@ namespace Baker_Grillers_Group_Project_Part_I
         Color navButtonStandardBackColor = Color.FromArgb(245, 247, 245);
         Color buttonDefaultColor = Color.White;
 
-        string selectedNav = "players"; // players, statistics, teams, favorites
+        string selectedNav = "teams"; // players, statistics, teams, favorites
         string selectedSport = "csgo"; // csgo, nfl, nba, custom
 
         public MainForm()
@@ -34,6 +35,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             Login();
 
             UpdateUserEmailLabel();
+            NavigationItemSelected();
 
         }
 
@@ -99,22 +101,28 @@ namespace Baker_Grillers_Group_Project_Part_I
         // Updates the background colors for the currently selected nav button
         public void NavigationItemSelected()
         {
+            contentPanel.Controls.Clear();
             if (selectedNav.Equals("teams"))
             {
                 teamsNavButton.BackColor = buttonHighlightColor;
                 teamsNavButton.IsSelected = true;
-                // TODO: Change panel
+
+                // Change panel
+                TeamsTabControl teamsTabControl = new TeamsTabControl(Program.credentialsConnection, selectedSport);
+                contentPanel.Controls.Add(teamsTabControl);
             }
             else
             {
                 teamsNavButton.BackColor = navButtonStandardBackColor;
                 teamsNavButton.IsSelected = false;
-                // TODO: Change panel
             }
             if (selectedNav.Equals("players"))
             {
                 playersNavButton.BackColor = buttonHighlightColor;
                 playersNavButton.IsSelected = true;
+                // Change panel
+                PlayersTabControl playersTabControl = new PlayersTabControl(Program.credentialsConnection, selectedSport);
+                contentPanel.Controls.Add(playersTabControl);
             } else
             {
                 playersNavButton.BackColor = navButtonStandardBackColor;
@@ -204,24 +212,28 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
             selectedSport = "csgo";
             SideBarItemSelected();
+            NavigationItemSelected();
         }
 
         private void nflSideBarButton_Click(object sender, EventArgs e)
         {
             selectedSport = "nfl";
             SideBarItemSelected();
+            NavigationItemSelected();
         }
 
         private void nbaSideBarButton_Click(object sender, EventArgs e)
         {
             selectedSport = "nba";
             SideBarItemSelected();
+            NavigationItemSelected();
         }
 
         private void customSideBarButton_Click(object sender, EventArgs e)
         {
             selectedSport = "custom";
             SideBarItemSelected();
+            NavigationItemSelected();
         }
 
         // <<< Nav/Top Bar Button Click Listeners >>>

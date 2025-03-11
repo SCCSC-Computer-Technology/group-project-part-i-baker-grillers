@@ -12,10 +12,6 @@ C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Gril
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker-Grillers-Group-Project-Part-I.csproj.CoreCompileInputs.cache
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\BGSportsStatsDB.mdf
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\BGSportsStatsDB_log.ldf
-C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\BGSportsStats2DB.mdf
-C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\BGSportsStats2DB_log.ldf
-C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\BGSportsStatsDB2.mdf
-C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\BGSportsStatsDB2_log.ldf
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\Baker-Grillers-Group-Project-Part-I.exe.config
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\Baker-Grillers-Group-Project-Part-I.exe
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\Baker-Grillers-Group-Project-Part-I.pdb
@@ -26,3 +22,5 @@ C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Gril
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker-Gr.0CAFB242.Up2Date
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker-Grillers-Group-Project-Part-I.exe
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker-Grillers-Group-Project-Part-I.pdb
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker_Grillers_Group_Project_Part_I.Navigation.PlayersTabControl.resources
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker_Grillers_Group_Project_Part_I.Navigation.TeamsTabControl.resources

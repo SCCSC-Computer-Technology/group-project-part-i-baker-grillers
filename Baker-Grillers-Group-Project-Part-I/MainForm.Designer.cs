@@ -61,7 +61,6 @@
             this.settingsPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.contentPanel.SuspendLayout();
             this.bottomPanel.SuspendLayout();
             this.buttonPanel.SuspendLayout();
             this.SuspendLayout();
@@ -437,10 +436,10 @@
             this.contentPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.contentPanel.Controls.Add(this.bottomPanel);
-            this.contentPanel.Location = new System.Drawing.Point(250, 160);
+            this.contentPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.contentPanel.Location = new System.Drawing.Point(250, 165);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(902, 530);
+            this.contentPanel.Size = new System.Drawing.Size(902, 479);
             this.contentPanel.TabIndex = 7;
             // 
             // bottomPanel
@@ -448,7 +447,7 @@
             this.bottomPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bottomPanel.Controls.Add(this.buttonPanel);
-            this.bottomPanel.Location = new System.Drawing.Point(0, 485);
+            this.bottomPanel.Location = new System.Drawing.Point(250, 645);
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Size = new System.Drawing.Size(899, 45);
             this.bottomPanel.TabIndex = 0;
@@ -495,6 +494,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 691);
+            this.Controls.Add(this.bottomPanel);
             this.Controls.Add(this.navigationPanel);
             this.Controls.Add(this.contentPanel);
             this.Controls.Add(this.sidebarPanel);
@@ -510,7 +510,6 @@
             this.settingsPanel.ResumeLayout(false);
             this.navigationPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.contentPanel.ResumeLayout(false);
             this.bottomPanel.ResumeLayout(false);
             this.buttonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
