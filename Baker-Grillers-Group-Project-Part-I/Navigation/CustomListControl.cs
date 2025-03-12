@@ -1,4 +1,12 @@
-﻿using System;
+﻿/* Group Project Part 1
+ * Team Name: Baker - Grillers
+ * Members: Thomas Speich, Ashley Smith, Michael Lee
+ * CPT-206-A01S-2025 Spring Smester: Adv Event-Driven Program
+ * 
+ * Custom List Controls
+ */
+
+using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;

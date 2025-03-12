@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -106,6 +106,12 @@
     <Compile Include="Navigation\CustomListControl.Designer.cs">
       <DependentUpon>CustomListControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="NBAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBAForm.Designer.cs">
+      <DependentUpon>NBAForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Navigation\CustomListControl.resx">
       <DependentUpon>CustomListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NBAForm.resx">
+      <DependentUpon>NBAForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -225,6 +234,7 @@
     <Content Include="Resources\football.png" />
     <Content Include="Resources\list.png" />
     <Content Include="Resources\New Fans cheering.png" />
+    <None Include="Resources\New-Video-game-controller.png" />
     <Content Include="Resources\pistol.png" />
     <Content Include="Resources\pistol_white.png" />
     <Content Include="Resources\star.png" />

@@ -1,4 +1,12 @@
-﻿using Baker_Grillers_Group_Project_Part_I.Controls;
+﻿/* Group Project Part 1
+ * Team Name: Baker - Grillers
+ * Members: Thomas Speich, Ashley Smith, Michael Lee
+ * CPT-206-A01S-2025 Spring Smester: Adv Event-Driven Program
+ * 
+ * Main Form
+ */
+
+using Baker_Grillers_Group_Project_Part_I.Controls;
 using DataManager;
 using GroupProjectTesting;
 using System;
@@ -329,8 +337,8 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             // Testing
 
-            CSGOForm csgoForm = new CSGOForm();
-            csgoForm.ShowDialog();
+            NBAForm nbaForm = new NBAForm();
+            nbaForm.ShowDialog();
         }
 
         private void InitializeDropDown()

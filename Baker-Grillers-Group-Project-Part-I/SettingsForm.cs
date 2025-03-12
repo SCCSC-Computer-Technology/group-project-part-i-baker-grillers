@@ -1,4 +1,12 @@
-﻿using Baker_Grillers_Group_Project_Part_I.Settings;
+﻿/* Group Project Part 1
+ * Team Name: Baker - Grillers
+ * Members: Thomas Speich, Ashley Smith, Michael Lee
+ * CPT-206-A01S-2025 Spring Smester: Adv Event-Driven Program
+ * 
+ * Settings Form
+ */
+
+using Baker_Grillers_Group_Project_Part_I.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
