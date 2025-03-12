@@ -17,11 +17,11 @@ namespace Baker_Grillers_Group_Project_Part_I
     {
 
         private GeneralSettingsUserControl generalSettingsControl;
-        Form form;
-        public SettingsForm(Form form)
+        MainForm mainForm;
+        public SettingsForm(MainForm mainForm)
         {
             InitializeComponent();
-            this.form = form;
+            this.mainForm = mainForm;
         }
 
         private void SettingsForm_Load(object sender, EventArgs e)
@@ -50,8 +50,9 @@ namespace Baker_Grillers_Group_Project_Part_I
             this.Close();
             generalSettingsControl.SavePreferences();
             DataRepository dataRepository = new DataRepository(Program.connectionString);
-            SettingsUtil.SetFormTheme(form, dataRepository, Program.CurrentSettingsUserEmail);
+            SettingsUtil.SetFormTheme(mainForm, dataRepository, Program.CurrentSettingsUserEmail);
             SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
+            mainForm.UpdateEnableSports();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)

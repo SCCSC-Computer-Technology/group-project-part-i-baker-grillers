@@ -22,7 +22,6 @@ namespace GroupProjectTesting
     public partial class WelcomeForm : Form
     {
 
-        bool triggerLogin;
         MainForm mainForm;
         public WelcomeForm(MainForm mainForm)
         {
@@ -34,7 +33,7 @@ namespace GroupProjectTesting
 
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
-            if (triggerLogin) Login();
+
         }
 
         //Shows Football form
@@ -82,43 +81,22 @@ namespace GroupProjectTesting
             Application.Restart();
         }
 
-        private void Login()
-        {
-            //load the login form
-            LoginForm loginForm = new LoginForm();
-
-            //this decides if the user will have access to everything or not
-            if (loginForm.ShowDialog() == DialogResult.OK)
-            {
-                //placeholder for unlocking features
-                //loginButton.Visible = false;
-            }
-            else
-            {
-                //loginButton.Visible = true;
-            }
-            //UpdateUserEmailLabel();
-        }
-
         public void OpenCSGO()
         {
-            MainForm mainForm = new MainForm(false);
-            mainForm.Show();
             mainForm.UpdateSelectedSport("csgo");
+            this.Dispose();
         }
 
         public void OpenNBA()
         {
-            MainForm mainForm = new MainForm(false);
-            mainForm.Show();
             mainForm.UpdateSelectedSport("nba");
+            this.Dispose();
         }
 
         public void OpenFootball()
         {
-            MainForm mainForm = new MainForm(false);
-            mainForm.Show();
             mainForm.UpdateSelectedSport("nfl");
+            this.Dispose();
         }
 
     }

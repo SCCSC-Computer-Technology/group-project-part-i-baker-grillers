@@ -48,12 +48,13 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.statisticsNavButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
             this.playersNavButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
             this.teamsNavButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
-            this.nbaSideBarButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
-            this.nflSideBarButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
             this.csgoSideBarButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
+            this.nflSideBarButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
+            this.nbaSideBarButton = new Baker_Grillers_Group_Project_Part_I.CustomElements.RoundedButton();
             this.topPanel.SuspendLayout();
             this.sidebarPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
@@ -61,6 +62,7 @@
             this.panel1.SuspendLayout();
             this.bottomPanel.SuspendLayout();
             this.buttonPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // topPanel
@@ -120,10 +122,8 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.sidebarPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sidebarPanel.Controls.Add(this.nbaSideBarButton);
-            this.sidebarPanel.Controls.Add(this.nflSideBarButton);
-            this.sidebarPanel.Controls.Add(this.csgoSideBarButton);
             this.sidebarPanel.Controls.Add(this.settingsPanel);
+            this.sidebarPanel.Controls.Add(this.flowLayoutPanel1);
             this.sidebarPanel.Controls.Add(this.label1);
             this.sidebarPanel.Location = new System.Drawing.Point(0, 89);
             this.sidebarPanel.Name = "sidebarPanel";
@@ -263,6 +263,17 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.csgoSideBarButton);
+            this.flowLayoutPanel1.Controls.Add(this.nflSideBarButton);
+            this.flowLayoutPanel1.Controls.Add(this.nbaSideBarButton);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 69);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(250, 412);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
             // statisticsNavButton
             // 
             this.statisticsNavButton.ApplyImageColor = false;
@@ -347,33 +358,34 @@
             this.teamsNavButton.UseVisualStyleBackColor = false;
             this.teamsNavButton.Click += new System.EventHandler(this.teamsNavButton_Click);
             // 
-            // nbaSideBarButton
+            // csgoSideBarButton
             // 
-            this.nbaSideBarButton.ApplyImageColor = true;
-            this.nbaSideBarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(247)))), ((int)(((byte)(235)))));
-            this.nbaSideBarButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(83)))));
-            this.nbaSideBarButton.BorderSize = 2;
-            this.nbaSideBarButton.CornerRadius = 14;
-            this.nbaSideBarButton.FlatAppearance.BorderSize = 0;
-            this.nbaSideBarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nbaSideBarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.nbaSideBarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(94)))), ((int)(((byte)(57)))));
-            this.nbaSideBarButton.Image = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.basketball;
-            this.nbaSideBarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.nbaSideBarButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(94)))), ((int)(((byte)(57)))));
-            this.nbaSideBarButton.ImagePadding = 5;
-            this.nbaSideBarButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.nbaSideBarButton.IsSelected = false;
-            this.nbaSideBarButton.Location = new System.Drawing.Point(9, 209);
-            this.nbaSideBarButton.Name = "nbaSideBarButton";
-            this.nbaSideBarButton.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.nbaSideBarButton.SelectedForeColor = System.Drawing.Color.White;
-            this.nbaSideBarButton.SelectedImageColor = System.Drawing.Color.White;
-            this.nbaSideBarButton.Size = new System.Drawing.Size(226, 62);
-            this.nbaSideBarButton.TabIndex = 11;
-            this.nbaSideBarButton.Text = "NBA";
-            this.nbaSideBarButton.UseVisualStyleBackColor = false;
-            this.nbaSideBarButton.Click += new System.EventHandler(this.nbaSideBarButton_Click);
+            this.csgoSideBarButton.ApplyImageColor = false;
+            this.csgoSideBarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(247)))), ((int)(((byte)(235)))));
+            this.csgoSideBarButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(83)))));
+            this.csgoSideBarButton.BorderSize = 2;
+            this.csgoSideBarButton.CornerRadius = 14;
+            this.csgoSideBarButton.FlatAppearance.BorderSize = 0;
+            this.csgoSideBarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.csgoSideBarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.csgoSideBarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(94)))), ((int)(((byte)(57)))));
+            this.csgoSideBarButton.Image = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.pistol_white;
+            this.csgoSideBarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.csgoSideBarButton.ImageColor = System.Drawing.Color.White;
+            this.csgoSideBarButton.ImagePadding = 5;
+            this.csgoSideBarButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.csgoSideBarButton.IsSelected = true;
+            this.csgoSideBarButton.Location = new System.Drawing.Point(11, 5);
+            this.csgoSideBarButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.csgoSideBarButton.Name = "csgoSideBarButton";
+            this.csgoSideBarButton.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.csgoSideBarButton.SelectedForeColor = System.Drawing.Color.White;
+            this.csgoSideBarButton.SelectedImageColor = System.Drawing.Color.White;
+            this.csgoSideBarButton.Size = new System.Drawing.Size(226, 62);
+            this.csgoSideBarButton.TabIndex = 1;
+            this.csgoSideBarButton.Text = "CS:GO";
+            this.csgoSideBarButton.UseVisualStyleBackColor = false;
+            this.csgoSideBarButton.Click += new System.EventHandler(this.csgoSideBarButton_Click);
             // 
             // nflSideBarButton
             // 
@@ -392,7 +404,8 @@
             this.nflSideBarButton.ImagePadding = 5;
             this.nflSideBarButton.ImageSize = new System.Drawing.Size(24, 24);
             this.nflSideBarButton.IsSelected = false;
-            this.nflSideBarButton.Location = new System.Drawing.Point(11, 142);
+            this.nflSideBarButton.Location = new System.Drawing.Point(11, 75);
+            this.nflSideBarButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.nflSideBarButton.Name = "nflSideBarButton";
             this.nflSideBarButton.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.nflSideBarButton.SelectedForeColor = System.Drawing.Color.White;
@@ -403,33 +416,34 @@
             this.nflSideBarButton.UseVisualStyleBackColor = false;
             this.nflSideBarButton.Click += new System.EventHandler(this.nflSideBarButton_Click);
             // 
-            // csgoSideBarButton
+            // nbaSideBarButton
             // 
-            this.csgoSideBarButton.ApplyImageColor = false;
-            this.csgoSideBarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(247)))), ((int)(((byte)(235)))));
-            this.csgoSideBarButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(83)))));
-            this.csgoSideBarButton.BorderSize = 2;
-            this.csgoSideBarButton.CornerRadius = 14;
-            this.csgoSideBarButton.FlatAppearance.BorderSize = 0;
-            this.csgoSideBarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.csgoSideBarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.csgoSideBarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(94)))), ((int)(((byte)(57)))));
-            this.csgoSideBarButton.Image = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.pistol_white;
-            this.csgoSideBarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.csgoSideBarButton.ImageColor = System.Drawing.Color.White;
-            this.csgoSideBarButton.ImagePadding = 5;
-            this.csgoSideBarButton.ImageSize = new System.Drawing.Size(24, 24);
-            this.csgoSideBarButton.IsSelected = true;
-            this.csgoSideBarButton.Location = new System.Drawing.Point(11, 74);
-            this.csgoSideBarButton.Name = "csgoSideBarButton";
-            this.csgoSideBarButton.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.csgoSideBarButton.SelectedForeColor = System.Drawing.Color.White;
-            this.csgoSideBarButton.SelectedImageColor = System.Drawing.Color.White;
-            this.csgoSideBarButton.Size = new System.Drawing.Size(226, 62);
-            this.csgoSideBarButton.TabIndex = 1;
-            this.csgoSideBarButton.Text = "CS:GO";
-            this.csgoSideBarButton.UseVisualStyleBackColor = false;
-            this.csgoSideBarButton.Click += new System.EventHandler(this.csgoSideBarButton_Click);
+            this.nbaSideBarButton.ApplyImageColor = true;
+            this.nbaSideBarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(247)))), ((int)(((byte)(235)))));
+            this.nbaSideBarButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(148)))), ((int)(((byte)(83)))));
+            this.nbaSideBarButton.BorderSize = 2;
+            this.nbaSideBarButton.CornerRadius = 14;
+            this.nbaSideBarButton.FlatAppearance.BorderSize = 0;
+            this.nbaSideBarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nbaSideBarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.nbaSideBarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(94)))), ((int)(((byte)(57)))));
+            this.nbaSideBarButton.Image = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.basketball;
+            this.nbaSideBarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nbaSideBarButton.ImageColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(94)))), ((int)(((byte)(57)))));
+            this.nbaSideBarButton.ImagePadding = 5;
+            this.nbaSideBarButton.ImageSize = new System.Drawing.Size(24, 24);
+            this.nbaSideBarButton.IsSelected = false;
+            this.nbaSideBarButton.Location = new System.Drawing.Point(11, 145);
+            this.nbaSideBarButton.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.nbaSideBarButton.Name = "nbaSideBarButton";
+            this.nbaSideBarButton.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.nbaSideBarButton.SelectedForeColor = System.Drawing.Color.White;
+            this.nbaSideBarButton.SelectedImageColor = System.Drawing.Color.White;
+            this.nbaSideBarButton.Size = new System.Drawing.Size(226, 62);
+            this.nbaSideBarButton.TabIndex = 11;
+            this.nbaSideBarButton.Text = "NBA";
+            this.nbaSideBarButton.UseVisualStyleBackColor = false;
+            this.nbaSideBarButton.Click += new System.EventHandler(this.nbaSideBarButton_Click);
             // 
             // MainForm
             // 
@@ -454,6 +468,7 @@
             this.panel1.ResumeLayout(false);
             this.bottomPanel.ResumeLayout(false);
             this.buttonPanel.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -484,6 +499,7 @@
         private CustomElements.RoundedButton teamsNavButton;
         private CustomElements.RoundedButton statisticsNavButton;
         private CustomElements.RoundedButton playersNavButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

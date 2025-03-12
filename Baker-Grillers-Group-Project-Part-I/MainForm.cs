@@ -51,11 +51,13 @@ namespace Baker_Grillers_Group_Project_Part_I
             // Begin connection
             conn = new SqlConnection(Program.connectionString);
 
-            if (triggerLogin) Login();
+            if (triggerLogin) Login(true);
 
             UpdateUserEmailLabel();
             NavigationItemSelected();
             SideBarItemSelected();
+
+            UpdateEnableSports();
             
         }
 
@@ -72,7 +74,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             welcomeForm.ShowDialog();
         }
 
-        private void Login()
+        private void Login(bool shouldShowWelcome)
         {
             //load the login form
             LoginForm loginForm = new LoginForm();
@@ -81,15 +83,18 @@ namespace Baker_Grillers_Group_Project_Part_I
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
                 //placeholder for unlocking features
-                loginButton.Visible = false;
+                loginButton.Visible = false;   
             }
             else
             {
                 loginButton.Visible = true;
             }
             UpdateUserEmailLabel();
-
-            ShowWelcome();
+            UpdateEnableSports();
+            if (shouldShowWelcome)
+            {
+                ShowWelcome();
+            }
         }
 
         // Perform logout
@@ -355,8 +360,8 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
             selectedNav = "statistics";
             NavigationItemSelected();
-            NFLForm nFLForm = new NFLForm();
-            nFLForm.ShowDialog();
+            //NBAForm NBAForm = new NBAForm();
+            //NBAForm.ShowDialog();
         }
 
         private void favoritesNavButton_Click(object sender, EventArgs e)
@@ -404,7 +409,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             if (Program.CurrentSettingsUserEmail.Equals("guest@local.app")) // User is a guest
             {
-                Login();
+                Login(false);
             }
             else
             {
@@ -451,6 +456,35 @@ namespace Baker_Grillers_Group_Project_Part_I
             if (selectedSport.Equals("nba")) return "NBA";
             if (selectedSport.Equals("custom")) return "Custom";
             return "CS:GO"; // default
+        }
+
+        public void UpdateEnableSports()
+        {
+            string enabledSports = dataRepository.GetGlobalSettings(Program.CurrentSettingsUserEmail).EnabledSports;
+            if (enabledSports.Contains("CSGO"))
+            {
+                csgoSideBarButton.Visible = true;
+            }
+            else
+            {
+                csgoSideBarButton.Visible = false;
+            }
+            if (enabledSports.Contains("Football"))
+            {
+                nflSideBarButton.Visible = true;
+            }
+            else
+            {
+                nflSideBarButton.Visible = false;
+            }
+            if (enabledSports.Contains("Basketball"))
+            {
+                nbaSideBarButton.Visible = true;
+            }
+            else
+            {
+                nbaSideBarButton.Visible = false;
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)

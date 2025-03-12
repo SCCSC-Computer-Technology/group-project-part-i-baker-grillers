@@ -128,6 +128,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
                         case "nfl":
                             gridView.Columns["WinPercentage"].HeaderText = "Win %";
                             gridView.Columns["TotalTD"].HeaderText = "Total TDs";
+                            gridView.Columns["WinPercentage"].DefaultCellStyle.Format = "P2";
                             break;
                         case "nba":
                             gridView.Columns["TeamAbbr"].HeaderText = "Abbr.";
@@ -135,6 +136,8 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
                             gridView.Columns["FGPercentage"].HeaderText = "Field Goal %";
                             gridView.Columns["ThreePtPercentage"].HeaderText = "3 Point %";
                             gridView.Columns["TotalRebounds"].HeaderText = "Rebounds";
+                            gridView.Columns["FGPercentage"].DefaultCellStyle.Format = "F1";
+                            gridView.Columns["ThreePtPercentage"].DefaultCellStyle.Format = "F1";
                             break;
                     }
                 }
@@ -154,10 +157,20 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
                             gridView.Columns["TotalRounds"].HeaderText = "Rounds Played";
                             break;
                         case "nfl":
-
+                            gridView.Columns["PassingYards"].HeaderText = "Passing Yards";
+                            gridView.Columns["TdPasses"].HeaderText = "Touchdown Passes";
+                            gridView.Columns["RushYards"].HeaderText = "Rush Yards";
+                            gridView.Columns["RushTds"].HeaderText = "Rush Touchdowns";
+                            gridView.Columns["ReceivingYards"].HeaderText = "Receiving Yards";
+                            gridView.Columns["ReceivingTds"].HeaderText = "Receiving Touchdowns";
                             break;
                         case "nba":
-
+                            gridView.Columns["TotalPoints"].HeaderText = "Points";
+                            gridView.Columns["TotalRebounds"].HeaderText = "Rebounds";
+                            gridView.Columns["FieldGoalPercentage"].HeaderText = "Field Goal %";
+                            gridView.Columns["ThreePointPercentage"].HeaderText = "3 Point %";
+                            gridView.Columns["FieldGoalPercentage"].DefaultCellStyle.Format = "F1";
+                            gridView.Columns["ThreePointPercentage"].DefaultCellStyle.Format = "F1";
                             break;
                     }
                 }

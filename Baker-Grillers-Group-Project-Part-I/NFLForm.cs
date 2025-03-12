@@ -46,6 +46,8 @@ namespace UserAuthentication
             this.initialPlayerId = initialPlayerId;
             DataRepository dataRepository = new DataRepository(Program.connectionString);
             SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
+
+
         }
 
         private void NFLForm_Load(object sender, EventArgs e)

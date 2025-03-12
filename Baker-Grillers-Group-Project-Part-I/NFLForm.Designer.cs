@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.teamReceivingTouchdowns = new System.Windows.Forms.Label();
+            this.teamRushingTouchdowns = new System.Windows.Forms.Label();
             this.teamRushingYardsLabel = new System.Windows.Forms.Label();
             this.teamRushingYards = new System.Windows.Forms.Label();
             this.teamPassingYardsLabel = new System.Windows.Forms.Label();
             this.teamPassingYards = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.teamReceivingTouchdowns = new System.Windows.Forms.Label();
             this.teamRushingTouchdownsLabel = new System.Windows.Forms.Label();
-            this.teamRushingTouchdowns = new System.Windows.Forms.Label();
             this.teamTouchdownsLabel = new System.Windows.Forms.Label();
             this.teamTouchdowns = new System.Windows.Forms.Label();
             this.nflTeamPlayersListBox = new System.Windows.Forms.ListBox();
@@ -199,6 +199,30 @@
             this.tabPage1.Text = "Teams";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // teamReceivingTouchdowns
+            // 
+            this.teamReceivingTouchdowns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.teamReceivingTouchdowns.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.teamReceivingTouchdowns.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.teamReceivingTouchdowns.Location = new System.Drawing.Point(516, 251);
+            this.teamReceivingTouchdowns.Name = "teamReceivingTouchdowns";
+            this.teamReceivingTouchdowns.Size = new System.Drawing.Size(113, 20);
+            this.teamReceivingTouchdowns.TabIndex = 45;
+            this.teamReceivingTouchdowns.Text = "NULL";
+            this.teamReceivingTouchdowns.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // teamRushingTouchdowns
+            // 
+            this.teamRushingTouchdowns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.teamRushingTouchdowns.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.teamRushingTouchdowns.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.teamRushingTouchdowns.Location = new System.Drawing.Point(331, 274);
+            this.teamRushingTouchdowns.Name = "teamRushingTouchdowns";
+            this.teamRushingTouchdowns.Size = new System.Drawing.Size(113, 20);
+            this.teamRushingTouchdowns.TabIndex = 43;
+            this.teamRushingTouchdowns.Text = "NULL";
+            this.teamRushingTouchdowns.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // teamRushingYardsLabel
             // 
             this.teamRushingYardsLabel.AutoSize = true;
@@ -249,18 +273,6 @@
             this.label17.TabIndex = 44;
             this.label17.Text = "Receiving Touchdowns";
             // 
-            // teamReceivingTouchdowns
-            // 
-            this.teamReceivingTouchdowns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.teamReceivingTouchdowns.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.teamReceivingTouchdowns.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamReceivingTouchdowns.Location = new System.Drawing.Point(516, 251);
-            this.teamReceivingTouchdowns.Name = "teamReceivingTouchdowns";
-            this.teamReceivingTouchdowns.Size = new System.Drawing.Size(113, 20);
-            this.teamReceivingTouchdowns.TabIndex = 45;
-            this.teamReceivingTouchdowns.Text = "NULL";
-            this.teamReceivingTouchdowns.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // teamRushingTouchdownsLabel
             // 
             this.teamRushingTouchdownsLabel.AutoSize = true;
@@ -269,18 +281,6 @@
             this.teamRushingTouchdownsLabel.Size = new System.Drawing.Size(184, 23);
             this.teamRushingTouchdownsLabel.TabIndex = 42;
             this.teamRushingTouchdownsLabel.Text = "Rushing Touchdowns";
-            // 
-            // teamRushingTouchdowns
-            // 
-            this.teamRushingTouchdowns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.teamRushingTouchdowns.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.teamRushingTouchdowns.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamRushingTouchdowns.Location = new System.Drawing.Point(331, 274);
-            this.teamRushingTouchdowns.Name = "teamRushingTouchdowns";
-            this.teamRushingTouchdowns.Size = new System.Drawing.Size(113, 20);
-            this.teamRushingTouchdowns.TabIndex = 43;
-            this.teamRushingTouchdowns.Text = "NULL";
-            this.teamRushingTouchdowns.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // teamTouchdownsLabel
             // 
@@ -761,7 +761,7 @@
             // playerLongestPassLabel
             // 
             this.playerLongestPassLabel.AutoSize = true;
-            this.playerLongestPassLabel.Location = new System.Drawing.Point(520, 265);
+            this.playerLongestPassLabel.Location = new System.Drawing.Point(522, 265);
             this.playerLongestPassLabel.Name = "playerLongestPassLabel";
             this.playerLongestPassLabel.Size = new System.Drawing.Size(121, 23);
             this.playerLongestPassLabel.TabIndex = 46;
@@ -772,7 +772,7 @@
             this.playerLongestPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.playerLongestPass.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.playerLongestPass.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.playerLongestPass.Location = new System.Drawing.Point(523, 280);
+            this.playerLongestPass.Location = new System.Drawing.Point(525, 280);
             this.playerLongestPass.Name = "playerLongestPass";
             this.playerLongestPass.Size = new System.Drawing.Size(111, 20);
             this.playerLongestPass.TabIndex = 47;
