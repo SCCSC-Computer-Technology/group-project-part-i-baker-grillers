@@ -1,4 +1,5 @@
 ﻿using Baker_Grillers_Group_Project_Part_I.Controls;
+using Baker_Grillers_Group_Project_Part_I.Settings;
 using DataManager;
 using GroupProjectTesting;
 using System;
@@ -41,6 +42,8 @@ namespace Baker_Grillers_Group_Project_Part_I
             this.selectedSport = selectedSport;
             this.triggerLogin = triggerLogin;
             dataRepository = new DataRepository(Program.connectionString);
+
+            SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -111,7 +114,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            SettingsForm settingsForm = new SettingsForm();
+            SettingsForm settingsForm = new SettingsForm(this);
 
             settingsForm.ShowDialog();
 
@@ -175,6 +178,7 @@ namespace Baker_Grillers_Group_Project_Part_I
                 enhancedListView = new CustomListControl();
                 enhancedListView.SetData(LoadTeamsData(), selectedSport);
                 enhancedListView.ItemSelected += CustomList_ItemSelected;
+                enhancedListView.Dock = DockStyle.Fill;
                 contentPanel.Controls.Add(enhancedListView);
             }
             else
@@ -190,6 +194,7 @@ namespace Baker_Grillers_Group_Project_Part_I
                 enhancedListView = new CustomListControl();
                 enhancedListView.SetData(LoadPlayersData(), selectedSport);
                 enhancedListView.ItemSelected += CustomList_ItemSelected;
+                enhancedListView.Dock = DockStyle.Fill;
                 contentPanel.Controls.Add(enhancedListView);
             } else
             {
@@ -207,7 +212,7 @@ namespace Baker_Grillers_Group_Project_Part_I
                 statisticsNavButton.BackColor = navButtonStandardBackColor;
                 statisticsNavButton.IsSelected = false;
             }
-            if (selectedNav.Equals("favorites"))
+            /*if (selectedNav.Equals("favorites"))
             {
                 favoritesNavButton.BackColor = buttonHighlightColor;
                 favoritesNavButton.IsSelected = true;
@@ -216,8 +221,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 favoritesNavButton.BackColor = navButtonStandardBackColor;
                 favoritesNavButton.IsSelected = false;
-            }
-            // Change active panel
+            }*/
 
         }
 
@@ -257,7 +261,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             csgoSideBarButton.ApplyImageColor = true;
             nflSideBarButton.ApplyImageColor = true;
             nbaSideBarButton.ApplyImageColor = true;
-            customSideBarButton.ApplyImageColor = true;
+            //customSideBarButton.ApplyImageColor = true;
             if (selectedSport.Equals("csgo"))
             {
                 csgoSideBarButton.IsSelected = true;
@@ -290,7 +294,7 @@ namespace Baker_Grillers_Group_Project_Part_I
                 nbaSideBarButton.IsSelected = false;
                 nbaSideBarButton.ImageColor = selectColor;
             }
-            if (selectedSport.Equals("custom"))
+            /*if (selectedSport.Equals("custom"))
             {
                 customSideBarButton.IsSelected = true;
                 customSideBarButton.ImageColor = Color.White;
@@ -299,7 +303,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 customSideBarButton.IsSelected = false;
                 customSideBarButton.ImageColor = selectColor;
-            }
+            }*/
             selectedSportLabel.Text = GetSportsLabel();
         }
 
@@ -363,8 +367,10 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             // Testing
 
-            CSGOForm csgoForm = new CSGOForm();
-            csgoForm.ShowDialog();
+            //CSGOForm csgoForm = new CSGOForm();
+            //csgoForm.ShowDialog();
+            NBAForm nBAForm = new NBAForm();
+            nBAForm.ShowDialog();
         }
 
         private void InitializeDropDown()
@@ -452,5 +458,9 @@ namespace Baker_Grillers_Group_Project_Part_I
             Application.Restart();
         }
 
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

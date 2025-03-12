@@ -26,3 +26,4 @@ C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Gril
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\Baker-Grillers-Group-Project-Part-I.exe.config
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\bin\Debug\Baker-Grillers-Group-Project-Part-I.pdb
 C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\Baker-Gr.0CAFB242.Up2Date
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\Baker-Grillers-Group-Project-Part-I\obj\Debug\UserAuthentication.NBAForm.resources

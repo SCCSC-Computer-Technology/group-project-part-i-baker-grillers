@@ -5,6 +5,8 @@
  */
 
 using Baker_Grillers_Group_Project_Part_I;
+using Baker_Grillers_Group_Project_Part_I.Settings;
+using DataManager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +28,8 @@ namespace GroupProjectTesting
         {
             InitializeComponent();
             this.mainForm = mainForm;
+            DataRepository dataRepository = new DataRepository(Program.connectionString);
+            SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
         }
 
         private void WelcomeForm_Load(object sender, EventArgs e)
@@ -36,47 +40,38 @@ namespace GroupProjectTesting
         //Shows Football form
         private void btnFootBall_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm(false);
-            mainForm.Show();
-            mainForm.UpdateSelectedSport("nfl");
+            OpenFootball();
         }
 
         //Shows Basketball form
         private void btnBasketBall_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm(false);
-            mainForm.Show();
-            mainForm.UpdateSelectedSport("nba");
+            OpenNBA();
         }
 
         //Shows CSGO (E-sport) Form
         private void btnCSGO_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm(false);
-            mainForm.Show();
-            mainForm.UpdateSelectedSport("csgo");
+            OpenCSGO();
         }
 
         /*The Drop Down Menu "Sports" takes them to the selected sport form*/
         //Goes to the Football form
         private void footballToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Football groupFootballForm = new Football();
-            //groupFootballForm.ShowDialog();
+            OpenFootball();
         }
 
         //Goes to the Basketball form
         private void basketballToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Basketball groupBasketballForm = new Basketball();
-            //groupBasketballForm.ShowDialog();
+            OpenNBA();
         }
 
         //Goes to the CSGO (E-sport) form
         private void cSGOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //CSGO groupCSGOForm = new CSGO();
-            //groupCSGOForm.ShowDialog();
+            OpenCSGO();
         }
 
 
@@ -103,6 +98,27 @@ namespace GroupProjectTesting
                 //loginButton.Visible = true;
             }
             //UpdateUserEmailLabel();
+        }
+
+        public void OpenCSGO()
+        {
+            MainForm mainForm = new MainForm(false);
+            mainForm.Show();
+            mainForm.UpdateSelectedSport("csgo");
+        }
+
+        public void OpenNBA()
+        {
+            MainForm mainForm = new MainForm(false);
+            mainForm.Show();
+            mainForm.UpdateSelectedSport("nba");
+        }
+
+        public void OpenFootball()
+        {
+            MainForm mainForm = new MainForm(false);
+            mainForm.Show();
+            mainForm.UpdateSelectedSport("nfl");
         }
 
     }

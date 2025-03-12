@@ -19,7 +19,7 @@ namespace DataManager
             // Defaults
             string font = "Microsoft Sans Serif";
             int themeIndex = 2; // Use system theme
-            string enabledSports = "Football,Basketball,Baseball,Soccer";
+            string enabledSports = "CSGO,Football,Basketball";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

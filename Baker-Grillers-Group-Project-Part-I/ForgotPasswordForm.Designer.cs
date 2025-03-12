@@ -37,12 +37,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.sendPanel = new System.Windows.Forms.Panel();
             this.resetPanel = new System.Windows.Forms.Panel();
+            this.seePasswordButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.resetPasswordButton = new System.Windows.Forms.Button();
             this.confirmPasswordTextBox = new System.Windows.Forms.TextBox();
-            this.seePasswordButton = new System.Windows.Forms.Button();
             this.sendPanel.SuspendLayout();
             this.resetPanel.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             // 
             this.emailTextBox.Location = new System.Drawing.Point(11, 25);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(156, 22);
+            this.emailTextBox.Size = new System.Drawing.Size(156, 30);
             this.emailTextBox.TabIndex = 0;
             // 
             // sendEmailButton
@@ -88,7 +88,7 @@
             // 
             this.resetCodeTextBox.Location = new System.Drawing.Point(210, 25);
             this.resetCodeTextBox.Name = "resetCodeTextBox";
-            this.resetCodeTextBox.Size = new System.Drawing.Size(156, 22);
+            this.resetCodeTextBox.Size = new System.Drawing.Size(156, 30);
             this.resetCodeTextBox.TabIndex = 2;
             // 
             // label1
@@ -96,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(8, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.Size = new System.Drawing.Size(58, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Email";
             // 
@@ -105,7 +105,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(207, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 15);
+            this.label2.Size = new System.Drawing.Size(108, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Reset Code";
             // 
@@ -136,11 +136,22 @@
             this.resetPanel.TabIndex = 8;
             this.resetPanel.Visible = false;
             // 
+            // seePasswordButton
+            // 
+            this.seePasswordButton.BackgroundImage = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.ClosedEye;
+            this.seePasswordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.seePasswordButton.Location = new System.Drawing.Point(268, 71);
+            this.seePasswordButton.Name = "seePasswordButton";
+            this.seePasswordButton.Size = new System.Drawing.Size(30, 30);
+            this.seePasswordButton.TabIndex = 2;
+            this.seePasswordButton.UseVisualStyleBackColor = true;
+            this.seePasswordButton.Click += new System.EventHandler(this.seePasswordButton_Click);
+            // 
             // passwordTextBox
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(107, 32);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(156, 22);
+            this.passwordTextBox.Size = new System.Drawing.Size(156, 30);
             this.passwordTextBox.TabIndex = 0;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
@@ -149,7 +160,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(103, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 15);
+            this.label3.Size = new System.Drawing.Size(164, 23);
             this.label3.TabIndex = 6;
             this.label3.Text = "Confirm Password";
             // 
@@ -158,7 +169,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(104, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 15);
+            this.label4.Size = new System.Drawing.Size(186, 23);
             this.label4.TabIndex = 5;
             this.label4.Text = "Enter New Password";
             // 
@@ -176,24 +187,13 @@
             // 
             this.confirmPasswordTextBox.Location = new System.Drawing.Point(106, 76);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
-            this.confirmPasswordTextBox.Size = new System.Drawing.Size(156, 22);
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(156, 30);
             this.confirmPasswordTextBox.TabIndex = 1;
             this.confirmPasswordTextBox.UseSystemPasswordChar = true;
             // 
-            // seePasswordButton
-            // 
-            this.seePasswordButton.BackgroundImage = global::Baker_Grillers_Group_Project_Part_I.Properties.Resources.ClosedEye;
-            this.seePasswordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.seePasswordButton.Location = new System.Drawing.Point(268, 71);
-            this.seePasswordButton.Name = "seePasswordButton";
-            this.seePasswordButton.Size = new System.Drawing.Size(30, 30);
-            this.seePasswordButton.TabIndex = 2;
-            this.seePasswordButton.UseVisualStyleBackColor = true;
-            this.seePasswordButton.Click += new System.EventHandler(this.seePasswordButton_Click);
-            // 
             // ForgotPasswordForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 206);
             this.Controls.Add(this.resetPanel);
@@ -204,6 +204,7 @@
             this.Name = "ForgotPasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgotPasswordForm";
+            this.Load += new System.EventHandler(this.ForgotPasswordForm_Load);
             this.sendPanel.ResumeLayout(false);
             this.sendPanel.PerformLayout();
             this.resetPanel.ResumeLayout(false);

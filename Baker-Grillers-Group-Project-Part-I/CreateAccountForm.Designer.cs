@@ -56,7 +56,7 @@
             // 
             this.emailTextBox.Location = new System.Drawing.Point(33, 37);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(240, 22);
+            this.emailTextBox.Size = new System.Drawing.Size(240, 30);
             this.emailTextBox.TabIndex = 0;
             // 
             // emailLabel
@@ -64,7 +64,7 @@
             this.emailLabel.AutoSize = true;
             this.emailLabel.Location = new System.Drawing.Point(30, 19);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(100, 15);
+            this.emailLabel.Size = new System.Drawing.Size(154, 23);
             this.emailLabel.TabIndex = 2;
             this.emailLabel.Text = "Enter Your Email";
             // 
@@ -73,7 +73,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(30, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 15);
+            this.label1.Size = new System.Drawing.Size(143, 23);
             this.label1.TabIndex = 4;
             this.label1.Text = "Enter Password";
             // 
@@ -81,7 +81,7 @@
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(33, 90);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(240, 22);
+            this.passwordTextBox.Size = new System.Drawing.Size(240, 30);
             this.passwordTextBox.TabIndex = 1;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
@@ -90,7 +90,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(30, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 15);
+            this.label2.Size = new System.Drawing.Size(164, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "Confirm Password";
             // 
@@ -98,7 +98,7 @@
             // 
             this.confirmPasswordTextBox.Location = new System.Drawing.Point(33, 138);
             this.confirmPasswordTextBox.Name = "confirmPasswordTextBox";
-            this.confirmPasswordTextBox.Size = new System.Drawing.Size(240, 22);
+            this.confirmPasswordTextBox.Size = new System.Drawing.Size(240, 30);
             this.confirmPasswordTextBox.TabIndex = 2;
             this.confirmPasswordTextBox.UseSystemPasswordChar = true;
             // 
@@ -128,7 +128,7 @@
             // CreateAccountForm
             // 
             this.AcceptButton = this.createAccountButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.closeButton;
             this.ClientSize = new System.Drawing.Size(342, 243);
@@ -146,6 +146,7 @@
             this.Name = "CreateAccountForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Account";
+            this.Load += new System.EventHandler(this.CreateAccountForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,6 @@
 ﻿using Baker_Grillers_Group_Project_Part_I;
+using Baker_Grillers_Group_Project_Part_I.Settings;
+using DataManager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +44,8 @@ namespace UserAuthentication
             // Set initial ids
             this.initialTeamId = initialTeamId;
             this.initialPlayerId = initialPlayerId;
+            DataRepository dataRepository = new DataRepository(Program.connectionString);
+            SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
         }
 
         private void NFLForm_Load(object sender, EventArgs e)

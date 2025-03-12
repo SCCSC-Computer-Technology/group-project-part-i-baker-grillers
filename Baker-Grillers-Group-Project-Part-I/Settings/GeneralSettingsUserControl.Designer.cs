@@ -117,7 +117,7 @@
             this.enabledSportsCheckedListBox.Items.AddRange(new object[] {
             "CSGO",
             "Football",
-            "Soccer"});
+            "Basketball"});
             this.enabledSportsCheckedListBox.Location = new System.Drawing.Point(6, 51);
             this.enabledSportsCheckedListBox.Name = "enabledSportsCheckedListBox";
             this.enabledSportsCheckedListBox.Size = new System.Drawing.Size(187, 96);

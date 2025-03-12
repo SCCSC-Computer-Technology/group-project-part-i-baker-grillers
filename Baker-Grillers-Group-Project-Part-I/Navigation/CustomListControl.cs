@@ -31,10 +31,17 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
             // Change cursor when hovering over rows to indicate they're clickable
             this.gridView.CellMouseEnter += GridView_CellMouseEnter;
             this.gridView.CellMouseLeave += GridView_CellMouseLeave;
-            this.gridView.EnableHeadersVisualStyles = false;
 
             // Visual feedback on row selection
             this.gridView.SelectionChanged += GridView_SelectionChanged;
+
+            // Hack to remove a persistent blue color on the grid
+            this.gridView.ClearSelection();
+            gridView.EnableHeadersVisualStyles = false;
+            Color headerColor = Color.FromArgb(221, 255, 230);
+            gridView.ColumnHeadersDefaultCellStyle.BackColor = headerColor; // Light gray
+            gridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = headerColor;
+            gridView.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
         // Custom row styling on selection
@@ -44,7 +51,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
             {
                 if (row.Selected)
                 {
-                    row.DefaultCellStyle.BackColor = Color.FromArgb(221, 255, 230);
+                    //row.DefaultCellStyle.BackColor = Color.FromArgb(221, 255, 230);
                     row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(191, 255, 214);
                     row.DefaultCellStyle.SelectionForeColor = Color.Black;
                 }
@@ -158,17 +165,20 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
 
                 // Customize grid
                 gridView.RowTemplate.Height = 30;
-                gridView.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10F);
+                //gridView.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10F);
                 gridView.DefaultCellStyle.Padding = new Padding(5);
-                gridView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-                gridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
-                gridView.EnableHeadersVisualStyles = false;
+                //gridView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+                //gridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
 
                 // Enable alternatign colors
                 gridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(248, 248, 248);
             }
         }
 
+        private void gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
     /// <summary>
