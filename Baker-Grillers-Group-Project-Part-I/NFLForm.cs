@@ -35,6 +35,9 @@ namespace UserAuthentication
         private int? initialTeamId = null;
         private int? initialPlayerId = null;
 
+        // Field for year
+        private int selectedTeamYear = DateTime.Now.Year - 1;
+
         public NFLForm(int? initialTeamId = null, int? initialPlayerId = null)
         {
             InitializeComponent();
@@ -83,6 +86,9 @@ namespace UserAuthentication
                 nflPlayerSelectComboBox.SelectedValue = initialPlayerId.Value;
             }
 
+            // Setup years
+            PopulateTeamYearComboBox();
+
         }
 
         private void teamSelectComboBox_SelectedValueChanged(object sender, EventArgs e)
@@ -110,7 +116,7 @@ namespace UserAuthentication
             }
 
             // Get current season
-            int currentSeason = DateTime.Now.Year - 1;
+            int currentSeason = selectedTeamYear;
 
             // Select all players
             nflTeamPlayersBindingSource.DataSource = db.NflPlayers.Where(x => x.TeamID == teamID).ToList();
@@ -733,7 +739,7 @@ namespace UserAuthentication
         {
             IQueryable<int> matchedRecords;
 
-            int currentSeason = DateTime.Now.Year - 1;
+            int currentSeason = selectedTeamYear;
 
             // In case we need more precision
             double filterValueDouble = Convert.ToDouble(TeamFilterValue);
@@ -1023,6 +1029,51 @@ namespace UserAuthentication
             this.Close();
         }
 
+        private void PopulateTeamYearComboBox()
+        {
+            // Get all distinct years from the database
+            var availableYears = db.NflTeamSeasonStats
+                .Select(x => x.SeasonYear)
+                .Distinct()
+                .OrderByDescending(y => y)
+                .ToList();
+
+            // If no years found, add the current year
+            if (availableYears.Count == 0)
+            {
+                availableYears.Add(DateTime.Now.Year - 1);
+            }
+
+            // Populate the combo box
+            teamSeasonYearComboBox.DataSource = availableYears;
+
+            // Set default to current season
+            int currentSeason = DateTime.Now.Year - 1;
+            if (availableYears.Contains(currentSeason))
+            {
+                teamSeasonYearComboBox.SelectedItem = currentSeason;
+            }
+            else if (availableYears.Count > 0)
+            {
+                teamSeasonYearComboBox.SelectedItem = availableYears[0];
+            }
+        }
+
+        private void teamSeasonYearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (teamSeasonYearComboBox.SelectedItem != null)
+            {
+                selectedTeamYear = (int)teamSeasonYearComboBox.SelectedItem;
+
+                // Refresh data
+                if (nflTeamSelectComboBox.SelectedValue != null)
+                {
+                    teamSelectComboBox_SelectedValueChanged(nflTeamSelectComboBox, EventArgs.Empty);
+                }
+
+                UpdateTeamsDataSource();
+            }
+        }
     }
 }
 

@@ -358,22 +358,27 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void statisticsNavButton_Click(object sender, EventArgs e)
         {
-            selectedNav = "statistics";
-            NavigationItemSelected();
-            //NBAForm NBAForm = new NBAForm();
-            //NBAForm.ShowDialog();
+            //selectedNav = "statistics";
+            //NavigationItemSelected();
+            switch(selectedSport)
+            {
+                case "csgo":
+                    CSGOForm csgoForm = new CSGOForm();
+                    csgoForm.ShowDialog();
+                    break;
+                case "nfl":
+                    NFLForm nflForm = new NFLForm();
+                    nflForm.ShowDialog();
+                    break;
+                case "nba":
+                    NBAForm nBAForm = new NBAForm();
+                    nBAForm.ShowDialog();
+                    break;
+            }
         }
 
         private void favoritesNavButton_Click(object sender, EventArgs e)
         {
-            //selectedNav = "favorites";
-            //NavigationItemSelected();
-
-
-            // Testing
-
-            //CSGOForm csgoForm = new CSGOForm();
-            //csgoForm.ShowDialog();
             NBAForm nBAForm = new NBAForm();
             nBAForm.ShowDialog();
         }
@@ -496,5 +501,6 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
 
         }
+
     }
 }

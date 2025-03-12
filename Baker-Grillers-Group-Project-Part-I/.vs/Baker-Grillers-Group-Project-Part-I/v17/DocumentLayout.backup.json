@@ -3,28 +3,37 @@
   "WorkspaceRootPath": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|c:\\users\\michael\\documents\\github\\group-project-part-i-baker-grillers\\baker-grillers-group-project-part-i\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_MICHAEL_DOCUMENTS_GITHUB_GROUP_PROJECT_PART_I_BAKER_GRILLERS_BAKER_GRILLERS_GROUP_PROJECT_PART_I_BGSPORTSSTATSDB.MDF/True/SqlTable/dbo.UserCredential.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\navigation\\customlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:navigation\\customlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A81A149A-7CF0-44BE-95A3-F152120A8C4E}|..\\UserAuthentication\\UserAuthentication.csproj|c:\\users\\michael\\documents\\github\\group-project-part-i-baker-grillers\\userauthentication\\authenticator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|c:\\users\\michael\\documents\\github\\group-project-part-i-baker-grillers\\baker-grillers-group-project-part-i\\navigation\\customlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:navigation\\customlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A81A149A-7CF0-44BE-95A3-F152120A8C4E}|..\\UserAuthentication\\UserAuthentication.csproj|c:\\users\\michael\\documents\\github\\group-project-part-i-baker-grillers\\userauthentication\\accountupdater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|c:\\users\\michael\\documents\\github\\group-project-part-i-baker-grillers\\baker-grillers-group-project-part-i\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\extensions\\nbaplayerfullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:extensions\\nbaplayerfullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\navigation\\customlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:navigation\\customlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\navigation\\customlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:navigation\\customlistcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\settings\\generalsettingsusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:settings\\generalsettingsusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,11 +44,52 @@
       "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|c:\\users\\michael\\documents\\github\\group-project-part-i-baker-grillers\\baker-grillers-group-project-part-i\\nflform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\nflform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:nflform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\nflform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:nflform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B01CA8CB-4801-48C4-8398-021B85C9BC3E}|..\\DataManager\\DataManager.csproj|c:\\users\\michael\\documents\\github\\group-project-part-i-baker-grillers\\datamanager\\datarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\csgoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:csgoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\csgoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:csgoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\nbaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:nbaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\nbaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:nbaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\nbaform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:nbaform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\navigation\\customlistcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,19 +100,7 @@
       "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:settings\\settingsutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\csgoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:csgoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B01CA8CB-4801-48C4-8398-021B85C9BC3E}|..\\DataManager\\DataManager.csproj|c:\\users\\michael\\documents\\github\\group-project-part-i-baker-grillers\\datamanager\\globalsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\csgoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:csgoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\createaccountform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,19 +127,7 @@
       "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:sportpreferencesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\settings\\generalsettingsusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:settings\\generalsettingsusercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\extensions\\nbaplayerfullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:extensions\\nbaplayerfullname.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_MICHAEL_DOCUMENTS_GITHUB_GROUP_PROJECT_PART_I_BAKER_GRILLERS_BAKER_GRILLERS_GROUP_PROJECT_PART_I_BGSPORTSSTATSDB.MDF/True/SqlTable/dbo.NbaPlayer.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\nbaform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|solutionrelative:nbaform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E21EBA34-E4CB-45D4-B069-0D0EBA27FDAE}|Baker-Grillers-Group-Project-Part-I.csproj|C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -140,292 +166,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAmwFIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T03:03:27.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SettingsForm.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SettingsForm.cs",
-              "RelativeDocumentMoniker": "SettingsForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SettingsForm.cs",
-              "RelativeToolTip": "SettingsForm.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwDYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:31:56.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomListControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.cs",
-              "RelativeDocumentMoniker": "Navigation\\CustomListControl.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.cs [Design]",
-              "RelativeToolTip": "Navigation\\CustomListControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T02:48:16.691Z",
-              "EditorCaption": " [Design]"
+              "Title": "dbo.UserCredential.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_MICHAEL_DOCUMENTS_GITHUB_GROUP_PROJECT_PART_I_BAKER_GRILLERS_BAKER_GRILLERS_GROUP_PROJECT_PART_I_BGSPORTSSTATSDB.MDF/True/SqlTable/dbo.UserCredential.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_MICHAEL_DOCUMENTS_GITHUB_GROUP_PROJECT_PART_I_BAKER_GRILLERS_BAKER_GRILLERS_GROUP_PROJECT_PART_I_BGSPORTSSTATSDB.MDF/True/SqlTable/dbo.UserCredential.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-12T14:37:07.45Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CustomListControl.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.cs",
-              "RelativeDocumentMoniker": "Navigation\\CustomListControl.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.cs",
-              "RelativeToolTip": "Navigation\\CustomListControl.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAADwv6wAAABCAAAAAAAAAA==",
+              "Title": "Authenticator.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\UserAuthentication\\Authenticator.cs",
+              "RelativeDocumentMoniker": "..\\UserAuthentication\\Authenticator.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\UserAuthentication\\Authenticator.cs",
+              "RelativeToolTip": "..\\UserAuthentication\\Authenticator.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAJcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T22:57:01.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T14:36:48.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\MainForm.cs [Design]",
-              "RelativeToolTip": "MainForm.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "AccountUpdater.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\UserAuthentication\\AccountUpdater.cs",
+              "RelativeDocumentMoniker": "..\\UserAuthentication\\AccountUpdater.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\UserAuthentication\\AccountUpdater.cs",
+              "RelativeToolTip": "..\\UserAuthentication\\AccountUpdater.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAowG4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T03:03:26.712Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WelcomeForm.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\WelcomeForm.cs",
-              "RelativeDocumentMoniker": "WelcomeForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\WelcomeForm.cs",
-              "RelativeToolTip": "WelcomeForm.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAADwv1QAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T21:33:43.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T14:36:19.937Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "WelcomeForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\WelcomeForm.cs",
-              "RelativeDocumentMoniker": "WelcomeForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\WelcomeForm.cs [Design]",
-              "RelativeToolTip": "WelcomeForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T21:33:41.877Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SettingsForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SettingsForm.cs",
-              "RelativeDocumentMoniker": "SettingsForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SettingsForm.cs [Design]",
-              "RelativeToolTip": "SettingsForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T23:28:49.976Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NFLForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NFLForm.cs",
-              "RelativeDocumentMoniker": "NFLForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NFLForm.cs [Design]",
-              "RelativeToolTip": "NFLForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T02:58:55.412Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DataRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\DataManager\\DataRepository.cs",
-              "RelativeDocumentMoniker": "..\\DataManager\\DataRepository.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\DataManager\\DataRepository.cs",
-              "RelativeToolTip": "..\\DataManager\\DataRepository.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAuwKQAAABqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T02:47:51.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CustomListControl.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.Designer.cs",
-              "RelativeDocumentMoniker": "Navigation\\CustomListControl.Designer.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.Designer.cs",
-              "RelativeToolTip": "Navigation\\CustomListControl.Designer.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwEwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:44:02.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SettingsUtil.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Settings\\SettingsUtil.cs",
-              "RelativeDocumentMoniker": "Settings\\SettingsUtil.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Settings\\SettingsUtil.cs",
-              "RelativeToolTip": "Settings\\SettingsUtil.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:28:26.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CSGOForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CSGOForm.cs",
-              "RelativeDocumentMoniker": "CSGOForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CSGOForm.cs [Design]",
-              "RelativeToolTip": "CSGOForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T22:56:45.561Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GlobalSettings.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\DataManager\\GlobalSettings.cs",
-              "RelativeDocumentMoniker": "..\\DataManager\\GlobalSettings.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\DataManager\\GlobalSettings.cs",
-              "RelativeToolTip": "..\\DataManager\\GlobalSettings.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T23:49:16.532Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CSGOForm.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CSGOForm.cs",
-              "RelativeDocumentMoniker": "CSGOForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CSGOForm.cs",
-              "RelativeToolTip": "CSGOForm.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAwDUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T22:56:47.425Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\LoginForm.cs [Design]",
-              "RelativeToolTip": "LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:37:53.799Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CreateAccountForm.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CreateAccountForm.cs",
-              "RelativeDocumentMoniker": "CreateAccountForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CreateAccountForm.cs",
-              "RelativeToolTip": "CreateAccountForm.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:37:22.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CreateAccountForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CreateAccountForm.cs",
-              "RelativeDocumentMoniker": "CreateAccountForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CreateAccountForm.cs [Design]",
-              "RelativeToolTip": "CreateAccountForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:37:20.834Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ForgotPasswordForm.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\ForgotPasswordForm.cs",
-              "RelativeDocumentMoniker": "ForgotPasswordForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\ForgotPasswordForm.cs",
-              "RelativeToolTip": "ForgotPasswordForm.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:37:36.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ForgotPasswordForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\ForgotPasswordForm.cs",
-              "RelativeDocumentMoniker": "ForgotPasswordForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\ForgotPasswordForm.cs [Design]",
-              "RelativeToolTip": "ForgotPasswordForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:37:35.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SportPreferencesForm.cs",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SportPreferencesForm.cs",
-              "RelativeDocumentMoniker": "SportPreferencesForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SportPreferencesForm.cs",
-              "RelativeToolTip": "SportPreferencesForm.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAjwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:36:47.003Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "SportPreferencesForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SportPreferencesForm.cs",
-              "RelativeDocumentMoniker": "SportPreferencesForm.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SportPreferencesForm.cs [Design]",
-              "RelativeToolTip": "SportPreferencesForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:36:45.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "GeneralSettingsUserControl.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Settings\\GeneralSettingsUserControl.cs",
-              "RelativeDocumentMoniker": "Settings\\GeneralSettingsUserControl.cs",
-              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Settings\\GeneralSettingsUserControl.cs [Design]",
-              "RelativeToolTip": "Settings\\GeneralSettingsUserControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T23:28:55.004Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "dbo.NbaPlayer.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_MICHAEL_DOCUMENTS_GITHUB_GROUP_PROJECT_PART_I_BAKER_GRILLERS_BAKER_GRILLERS_GROUP_PROJECT_PART_I_BGSPORTSSTATSDB.MDF/True/SqlTable/dbo.NbaPlayer.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_MICHAEL_DOCUMENTS_GITHUB_GROUP_PROJECT_PART_I_BAKER_GRILLERS_BAKER_GRILLERS_GROUP_PROJECT_PART_I_BGSPORTSSTATSDB.MDF/True/SqlTable/dbo.NbaPlayer.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-03-12T00:14:38.488Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
               "Title": "NbaPlayerFullName.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Extensions\\NbaPlayerFullName.cs",
               "RelativeDocumentMoniker": "Extensions\\NbaPlayerFullName.cs",
@@ -437,20 +210,340 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 6,
+              "Title": "CustomListControl.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.cs",
+              "RelativeDocumentMoniker": "Navigation\\CustomListControl.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.cs",
+              "RelativeToolTip": "Navigation\\CustomListControl.cs",
+              "ViewState": "AgIAAL0AAAAAAAAAAADwvysAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T22:57:01.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WelcomeForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\WelcomeForm.cs",
+              "RelativeDocumentMoniker": "WelcomeForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\WelcomeForm.cs [Design]",
+              "RelativeToolTip": "WelcomeForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T21:33:41.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WelcomeForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\WelcomeForm.cs",
+              "RelativeDocumentMoniker": "WelcomeForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\WelcomeForm.cs",
+              "RelativeToolTip": "WelcomeForm.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T21:33:43.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomListControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.cs",
+              "RelativeDocumentMoniker": "Navigation\\CustomListControl.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.cs [Design]",
+              "RelativeToolTip": "Navigation\\CustomListControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T02:48:16.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GeneralSettingsUserControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Settings\\GeneralSettingsUserControl.cs",
+              "RelativeDocumentMoniker": "Settings\\GeneralSettingsUserControl.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Settings\\GeneralSettingsUserControl.cs [Design]",
+              "RelativeToolTip": "Settings\\GeneralSettingsUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T23:28:55.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SettingsForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SettingsForm.cs",
+              "RelativeDocumentMoniker": "SettingsForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SettingsForm.cs",
+              "RelativeToolTip": "SettingsForm.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:31:56.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SettingsForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SettingsForm.cs",
+              "RelativeDocumentMoniker": "SettingsForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SettingsForm.cs [Design]",
+              "RelativeToolTip": "SettingsForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T23:28:49.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "NFLForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NFLForm.cs",
+              "RelativeDocumentMoniker": "NFLForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NFLForm.cs",
+              "RelativeToolTip": "NFLForm.cs",
+              "ViewState": "AgIAAJQBAAAAAAAAAAAmwDYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T14:33:31.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NFLForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NFLForm.cs",
+              "RelativeDocumentMoniker": "NFLForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NFLForm.cs [Design]",
+              "RelativeToolTip": "NFLForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T02:58:55.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CSGOForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CSGOForm.cs",
+              "RelativeDocumentMoniker": "CSGOForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CSGOForm.cs",
+              "RelativeToolTip": "CSGOForm.cs",
+              "ViewState": "AgIAAN0BAAAAAAAAAAAuwMABAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T22:56:47.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CSGOForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CSGOForm.cs",
+              "RelativeDocumentMoniker": "CSGOForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CSGOForm.cs [Design]",
+              "RelativeToolTip": "CSGOForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T22:56:45.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAANgBAAAAAAAAAAAqwPcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T03:03:27.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T14:28:36.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T03:03:26.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:37:53.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAApwCQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T14:28:27.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "NBAForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NBAForm.cs",
+              "RelativeDocumentMoniker": "NBAForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NBAForm.cs",
+              "RelativeToolTip": "NBAForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T13:52:40.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "NBAForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NBAForm.cs",
+              "RelativeDocumentMoniker": "NBAForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NBAForm.cs [Design]",
+              "RelativeToolTip": "NBAForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T13:51:27.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "NBAForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NBAForm.Designer.cs",
               "RelativeDocumentMoniker": "NBAForm.Designer.cs",
               "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\NBAForm.Designer.cs",
               "RelativeToolTip": "NBAForm.Designer.cs",
-              "ViewState": "AgIAAHsEAAAAAAAAAAAtwI8EAABnAAAAAAAAAA==",
+              "ViewState": "AgIAAFYCAAAAAAAAAAAAAHECAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T23:58:09.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T13:53:34.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CustomListControl.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.Designer.cs",
+              "RelativeDocumentMoniker": "Navigation\\CustomListControl.Designer.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Navigation\\CustomListControl.Designer.cs",
+              "RelativeToolTip": "Navigation\\CustomListControl.Designer.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwEwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:44:02.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SettingsUtil.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Settings\\SettingsUtil.cs",
+              "RelativeDocumentMoniker": "Settings\\SettingsUtil.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Settings\\SettingsUtil.cs",
+              "RelativeToolTip": "Settings\\SettingsUtil.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:28:26.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GlobalSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\DataManager\\GlobalSettings.cs",
+              "RelativeDocumentMoniker": "..\\DataManager\\GlobalSettings.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\DataManager\\GlobalSettings.cs",
+              "RelativeToolTip": "..\\DataManager\\GlobalSettings.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T23:49:16.532Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
+              "Title": "CreateAccountForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CreateAccountForm.cs",
+              "RelativeDocumentMoniker": "CreateAccountForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CreateAccountForm.cs",
+              "RelativeToolTip": "CreateAccountForm.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:37:22.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CreateAccountForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CreateAccountForm.cs",
+              "RelativeDocumentMoniker": "CreateAccountForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\CreateAccountForm.cs [Design]",
+              "RelativeToolTip": "CreateAccountForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:37:20.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ForgotPasswordForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\ForgotPasswordForm.cs",
+              "RelativeDocumentMoniker": "ForgotPasswordForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\ForgotPasswordForm.cs",
+              "RelativeToolTip": "ForgotPasswordForm.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:37:36.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ForgotPasswordForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\ForgotPasswordForm.cs",
+              "RelativeDocumentMoniker": "ForgotPasswordForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\ForgotPasswordForm.cs [Design]",
+              "RelativeToolTip": "ForgotPasswordForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:37:35.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "SportPreferencesForm.cs",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SportPreferencesForm.cs",
+              "RelativeDocumentMoniker": "SportPreferencesForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SportPreferencesForm.cs",
+              "RelativeToolTip": "SportPreferencesForm.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAjwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:36:47.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SportPreferencesForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SportPreferencesForm.cs",
+              "RelativeDocumentMoniker": "SportPreferencesForm.cs",
+              "ToolTip": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\SportPreferencesForm.cs [Design]",
+              "RelativeToolTip": "SportPreferencesForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:36:45.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "dbo.NbaPlayer.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_MICHAEL_DOCUMENTS_GITHUB_GROUP_PROJECT_PART_I_BAKER_GRILLERS_BAKER_GRILLERS_GROUP_PROJECT_PART_I_BGSPORTSSTATSDB.MDF/True/SqlTable/dbo.NbaPlayer.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_MICHAEL_DOCUMENTS_GITHUB_GROUP_PROJECT_PART_I_BAKER_GRILLERS_BAKER_GRILLERS_GROUP_PROJECT_PART_I_BGSPORTSSTATSDB.MDF/True/SqlTable/dbo.NbaPlayer.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-12T00:14:38.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
@@ -458,12 +551,11 @@
               "RelativeToolTip": "MainForm.Designer.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAtwE8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T23:25:25.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T23:25:25.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "BGSportsStatsDB.designer.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\BGSportsStatsDB.designer.cs",
               "RelativeDocumentMoniker": "BGSportsStatsDB.designer.cs",
@@ -475,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 37,
               "Title": "BGSportsStatsDB.dbml",
               "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\BGSportsStatsDB.dbml",
               "RelativeDocumentMoniker": "BGSportsStatsDB.dbml",
@@ -486,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "NflPlayerFullName.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\Extensions\\NflPlayerFullName.cs",
               "RelativeDocumentMoniker": "Extensions\\NflPlayerFullName.cs",
@@ -498,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 36,
               "Title": "BGSportsStatsDB.cs",
               "DocumentMoniker": "C:\\Users\\Michael\\Documents\\GitHub\\group-project-part-i-baker-grillers\\Baker-Grillers-Group-Project-Part-I\\BGSportsStatsDB.cs",
               "RelativeDocumentMoniker": "BGSportsStatsDB.cs",

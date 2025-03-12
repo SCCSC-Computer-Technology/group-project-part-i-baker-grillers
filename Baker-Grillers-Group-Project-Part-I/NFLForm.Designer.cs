@@ -126,6 +126,8 @@
             this.viewTeamButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.exitButton = new System.Windows.Forms.Button();
+            this.teamSeasonYearLabel = new System.Windows.Forms.Label();
+            this.teamSeasonYearComboBox = new System.Windows.Forms.ComboBox();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nflTeamPlayersBindingSource)).BeginInit();
@@ -150,6 +152,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.teamSeasonYearLabel);
+            this.tabPage1.Controls.Add(this.teamSeasonYearComboBox);
             this.tabPage1.Controls.Add(this.teamReceivingTouchdowns);
             this.tabPage1.Controls.Add(this.teamRushingTouchdowns);
             this.tabPage1.Controls.Add(this.teamRushingYardsLabel);
@@ -204,7 +208,7 @@
             this.teamReceivingTouchdowns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teamReceivingTouchdowns.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.teamReceivingTouchdowns.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamReceivingTouchdowns.Location = new System.Drawing.Point(516, 251);
+            this.teamReceivingTouchdowns.Location = new System.Drawing.Point(516, 313);
             this.teamReceivingTouchdowns.Name = "teamReceivingTouchdowns";
             this.teamReceivingTouchdowns.Size = new System.Drawing.Size(113, 20);
             this.teamReceivingTouchdowns.TabIndex = 45;
@@ -216,7 +220,7 @@
             this.teamRushingTouchdowns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teamRushingTouchdowns.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.teamRushingTouchdowns.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamRushingTouchdowns.Location = new System.Drawing.Point(331, 274);
+            this.teamRushingTouchdowns.Location = new System.Drawing.Point(331, 336);
             this.teamRushingTouchdowns.Name = "teamRushingTouchdowns";
             this.teamRushingTouchdowns.Size = new System.Drawing.Size(113, 20);
             this.teamRushingTouchdowns.TabIndex = 43;
@@ -226,7 +230,7 @@
             // teamRushingYardsLabel
             // 
             this.teamRushingYardsLabel.AutoSize = true;
-            this.teamRushingYardsLabel.Location = new System.Drawing.Point(328, 160);
+            this.teamRushingYardsLabel.Location = new System.Drawing.Point(328, 222);
             this.teamRushingYardsLabel.Name = "teamRushingYardsLabel";
             this.teamRushingYardsLabel.Size = new System.Drawing.Size(128, 23);
             this.teamRushingYardsLabel.TabIndex = 48;
@@ -237,7 +241,7 @@
             this.teamRushingYards.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teamRushingYards.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.teamRushingYards.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamRushingYards.Location = new System.Drawing.Point(331, 175);
+            this.teamRushingYards.Location = new System.Drawing.Point(331, 237);
             this.teamRushingYards.Name = "teamRushingYards";
             this.teamRushingYards.Size = new System.Drawing.Size(113, 20);
             this.teamRushingYards.TabIndex = 49;
@@ -247,7 +251,7 @@
             // teamPassingYardsLabel
             // 
             this.teamPassingYardsLabel.AutoSize = true;
-            this.teamPassingYardsLabel.Location = new System.Drawing.Point(514, 160);
+            this.teamPassingYardsLabel.Location = new System.Drawing.Point(514, 222);
             this.teamPassingYardsLabel.Name = "teamPassingYardsLabel";
             this.teamPassingYardsLabel.Size = new System.Drawing.Size(124, 23);
             this.teamPassingYardsLabel.TabIndex = 46;
@@ -258,7 +262,7 @@
             this.teamPassingYards.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teamPassingYards.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.teamPassingYards.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamPassingYards.Location = new System.Drawing.Point(517, 175);
+            this.teamPassingYards.Location = new System.Drawing.Point(517, 237);
             this.teamPassingYards.Name = "teamPassingYards";
             this.teamPassingYards.Size = new System.Drawing.Size(113, 20);
             this.teamPassingYards.TabIndex = 47;
@@ -267,7 +271,7 @@
             // 
             // label17
             // 
-            this.label17.Location = new System.Drawing.Point(513, 209);
+            this.label17.Location = new System.Drawing.Point(513, 271);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(116, 49);
             this.label17.TabIndex = 44;
@@ -276,7 +280,7 @@
             // teamRushingTouchdownsLabel
             // 
             this.teamRushingTouchdownsLabel.AutoSize = true;
-            this.teamRushingTouchdownsLabel.Location = new System.Drawing.Point(327, 251);
+            this.teamRushingTouchdownsLabel.Location = new System.Drawing.Point(327, 313);
             this.teamRushingTouchdownsLabel.Name = "teamRushingTouchdownsLabel";
             this.teamRushingTouchdownsLabel.Size = new System.Drawing.Size(184, 23);
             this.teamRushingTouchdownsLabel.TabIndex = 42;
@@ -285,7 +289,7 @@
             // teamTouchdownsLabel
             // 
             this.teamTouchdownsLabel.AutoSize = true;
-            this.teamTouchdownsLabel.Location = new System.Drawing.Point(331, 200);
+            this.teamTouchdownsLabel.Location = new System.Drawing.Point(331, 262);
             this.teamTouchdownsLabel.Name = "teamTouchdownsLabel";
             this.teamTouchdownsLabel.Size = new System.Drawing.Size(112, 23);
             this.teamTouchdownsLabel.TabIndex = 40;
@@ -296,7 +300,7 @@
             this.teamTouchdowns.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teamTouchdowns.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.teamTouchdowns.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamTouchdowns.Location = new System.Drawing.Point(331, 223);
+            this.teamTouchdowns.Location = new System.Drawing.Point(331, 285);
             this.teamTouchdowns.Name = "teamTouchdowns";
             this.teamTouchdowns.Size = new System.Drawing.Size(113, 20);
             this.teamTouchdowns.TabIndex = 41;
@@ -406,7 +410,7 @@
             // teamWinsLabel
             // 
             this.teamWinsLabel.AutoSize = true;
-            this.teamWinsLabel.Location = new System.Drawing.Point(328, 66);
+            this.teamWinsLabel.Location = new System.Drawing.Point(328, 128);
             this.teamWinsLabel.Name = "teamWinsLabel";
             this.teamWinsLabel.Size = new System.Drawing.Size(52, 23);
             this.teamWinsLabel.TabIndex = 2;
@@ -524,7 +528,7 @@
             this.teamWins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teamWins.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.teamWins.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamWins.Location = new System.Drawing.Point(331, 81);
+            this.teamWins.Location = new System.Drawing.Point(331, 143);
             this.teamWins.Name = "teamWins";
             this.teamWins.Size = new System.Drawing.Size(113, 20);
             this.teamWins.TabIndex = 3;
@@ -534,7 +538,7 @@
             // teamLossesLabel
             // 
             this.teamLossesLabel.AutoSize = true;
-            this.teamLossesLabel.Location = new System.Drawing.Point(514, 66);
+            this.teamLossesLabel.Location = new System.Drawing.Point(514, 128);
             this.teamLossesLabel.Name = "teamLossesLabel";
             this.teamLossesLabel.Size = new System.Drawing.Size(67, 23);
             this.teamLossesLabel.TabIndex = 4;
@@ -556,7 +560,7 @@
             this.teamLosses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teamLosses.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.teamLosses.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamLosses.Location = new System.Drawing.Point(517, 81);
+            this.teamLosses.Location = new System.Drawing.Point(517, 143);
             this.teamLosses.Name = "teamLosses";
             this.teamLosses.Size = new System.Drawing.Size(113, 20);
             this.teamLosses.TabIndex = 5;
@@ -575,7 +579,7 @@
             // tiesLabel
             // 
             this.tiesLabel.AutoSize = true;
-            this.tiesLabel.Location = new System.Drawing.Point(328, 117);
+            this.tiesLabel.Location = new System.Drawing.Point(328, 179);
             this.tiesLabel.Name = "tiesLabel";
             this.tiesLabel.Size = new System.Drawing.Size(46, 23);
             this.tiesLabel.TabIndex = 6;
@@ -586,7 +590,7 @@
             this.teamTies.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teamTies.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.teamTies.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamTies.Location = new System.Drawing.Point(331, 132);
+            this.teamTies.Location = new System.Drawing.Point(331, 194);
             this.teamTies.Name = "teamTies";
             this.teamTies.Size = new System.Drawing.Size(113, 20);
             this.teamTies.TabIndex = 7;
@@ -605,7 +609,7 @@
             // teamWinPercentageLabel
             // 
             this.teamWinPercentageLabel.AutoSize = true;
-            this.teamWinPercentageLabel.Location = new System.Drawing.Point(514, 117);
+            this.teamWinPercentageLabel.Location = new System.Drawing.Point(514, 179);
             this.teamWinPercentageLabel.Name = "teamWinPercentageLabel";
             this.teamWinPercentageLabel.Size = new System.Drawing.Size(67, 23);
             this.teamWinPercentageLabel.TabIndex = 8;
@@ -629,7 +633,7 @@
             this.teamWinPercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.teamWinPercentage.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.teamWinPercentage.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.teamWinPercentage.Location = new System.Drawing.Point(517, 132);
+            this.teamWinPercentage.Location = new System.Drawing.Point(517, 194);
             this.teamWinPercentage.Name = "teamWinPercentage";
             this.teamWinPercentage.Size = new System.Drawing.Size(113, 20);
             this.teamWinPercentage.TabIndex = 9;
@@ -1230,6 +1234,27 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // teamSeasonYearLabel
+            // 
+            this.teamSeasonYearLabel.AutoSize = true;
+            this.teamSeasonYearLabel.Location = new System.Drawing.Point(410, 67);
+            this.teamSeasonYearLabel.Name = "teamSeasonYearLabel";
+            this.teamSeasonYearLabel.Size = new System.Drawing.Size(105, 23);
+            this.teamSeasonYearLabel.TabIndex = 53;
+            this.teamSeasonYearLabel.Text = "Select Year";
+            // 
+            // teamSeasonYearComboBox
+            // 
+            this.teamSeasonYearComboBox.DisplayMember = "TeamID";
+            this.teamSeasonYearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.teamSeasonYearComboBox.FormattingEnabled = true;
+            this.teamSeasonYearComboBox.Location = new System.Drawing.Point(413, 84);
+            this.teamSeasonYearComboBox.Name = "teamSeasonYearComboBox";
+            this.teamSeasonYearComboBox.Size = new System.Drawing.Size(121, 31);
+            this.teamSeasonYearComboBox.TabIndex = 52;
+            this.toolTip1.SetToolTip(this.teamSeasonYearComboBox, "Select a NBA team");
+            this.teamSeasonYearComboBox.SelectedIndexChanged += new System.EventHandler(this.teamSeasonYearComboBox_SelectedIndexChanged);
+            // 
             // NFLForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -1357,5 +1382,7 @@
         private System.Windows.Forms.Label playerRushAttempts;
         private System.Windows.Forms.Label playerRushFirstDownsLabel;
         private System.Windows.Forms.Label playerRushFirstDowns;
+        private System.Windows.Forms.Label teamSeasonYearLabel;
+        private System.Windows.Forms.ComboBox teamSeasonYearComboBox;
     }
 }
