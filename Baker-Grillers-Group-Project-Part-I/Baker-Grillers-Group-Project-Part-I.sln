@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Baker-Grillers-Group-Projec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAuthentication", "..\UserAuthentication\UserAuthentication.csproj", "{A81A149A-7CF0-44BE-95A3-F152120A8C4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManager", "..\DataManager\DataManager.csproj", "{B01CA8CB-4801-48C4-8398-021B85C9BC3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A81A149A-7CF0-44BE-95A3-F152120A8C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A81A149A-7CF0-44BE-95A3-F152120A8C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A81A149A-7CF0-44BE-95A3-F152120A8C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B01CA8CB-4801-48C4-8398-021B85C9BC3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01CA8CB-4801-48C4-8398-021B85C9BC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01CA8CB-4801-48C4-8398-021B85C9BC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01CA8CB-4801-48C4-8398-021B85C9BC3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

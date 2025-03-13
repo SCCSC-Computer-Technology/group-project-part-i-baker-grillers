@@ -1,0 +1,12 @@
+C:\Users\Michael\source\repos\DataManager\bin\Debug\DataManager.dll
+C:\Users\Michael\source\repos\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Michael\source\repos\DataManager\obj\Debug\DataManager.csproj.AssemblyReference.cache
+C:\Users\Michael\source\repos\DataManager\obj\Debug\DataManager.csproj.CoreCompileInputs.cache
+C:\Users\Michael\source\repos\DataManager\obj\Debug\DataManager.dll
+C:\Users\Michael\source\repos\DataManager\obj\Debug\DataManager.pdb
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\DataManager\bin\Debug\DataManager.dll
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\DataManager\bin\Debug\DataManager.pdb
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\DataManager\obj\Debug\DataManager.csproj.AssemblyReference.cache
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\DataManager\obj\Debug\DataManager.csproj.CoreCompileInputs.cache
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\DataManager\obj\Debug\DataManager.dll
+C:\Users\Michael\Documents\GitHub\group-project-part-i-baker-grillers\DataManager\obj\Debug\DataManager.pdb
