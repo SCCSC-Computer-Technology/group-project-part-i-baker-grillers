@@ -64,6 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BGSportsStatsDB.cs">
+      <DependentUpon>BGSportsStatsDB.dbml</DependentUpon>
+    </Compile>
     <Compile Include="BGSportsStatsDB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,6 +77,20 @@
     </Compile>
     <Compile Include="CreateAccountForm.Designer.cs">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\NbaPlayerFullName.cs" />
+    <Compile Include="Extensions\NflPlayerFullName.cs" />
+    <Compile Include="NBAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NBAForm.Designer.cs">
+      <DependentUpon>NBAForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NFLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFLForm.Designer.cs">
+      <DependentUpon>NFLForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CSGOForm.cs">
       <SubType>Form</SubType>
@@ -125,6 +142,7 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings\SettingsUtil.cs" />
     <Compile Include="Settings\CSGOPreferencesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +169,12 @@
     </Compile>
     <EmbeddedResource Include="CreateAccountForm.resx">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NBAForm.resx">
+      <DependentUpon>NBAForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFLForm.resx">
+      <DependentUpon>NFLForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CSGOForm.resx">
       <DependentUpon>CSGOForm.cs</DependentUpon>

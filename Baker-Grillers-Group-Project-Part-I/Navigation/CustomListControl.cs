@@ -11,6 +11,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using System.ComponentModel;
+using UserAuthentication;
 
 namespace Baker_Grillers_Group_Project_Part_I.Controls
 {
@@ -31,16 +32,24 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
 
         private void SetupEvents()
         {
+
             // Double click
             this.gridView.CellDoubleClick += GridView_CellDoubleClick;
 
             // Change cursor when hovering over rows to indicate they're clickable
             this.gridView.CellMouseEnter += GridView_CellMouseEnter;
             this.gridView.CellMouseLeave += GridView_CellMouseLeave;
-            this.gridView.EnableHeadersVisualStyles = false;
 
             // Visual feedback on row selection
             this.gridView.SelectionChanged += GridView_SelectionChanged;
+
+            // Hack to remove a persistent blue color on the grid
+            this.gridView.ClearSelection();
+            gridView.EnableHeadersVisualStyles = false;
+            Color headerColor = Color.FromArgb(221, 255, 230);
+            gridView.ColumnHeadersDefaultCellStyle.BackColor = headerColor; // Light gray
+            gridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = headerColor;
+            gridView.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
         // Custom row styling on selection
@@ -50,7 +59,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
             {
                 if (row.Selected)
                 {
-                    row.DefaultCellStyle.BackColor = Color.FromArgb(221, 255, 230);
+                    //row.DefaultCellStyle.BackColor = Color.FromArgb(221, 255, 230);
                     row.DefaultCellStyle.SelectionBackColor = Color.FromArgb(191, 255, 214);
                     row.DefaultCellStyle.SelectionForeColor = Color.Black;
                 }
@@ -127,6 +136,7 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
                         case "nfl":
                             gridView.Columns["WinPercentage"].HeaderText = "Win %";
                             gridView.Columns["TotalTD"].HeaderText = "Total TDs";
+                            gridView.Columns["WinPercentage"].DefaultCellStyle.Format = "P2";
                             break;
                         case "nba":
                             gridView.Columns["TeamAbbr"].HeaderText = "Abbr.";
@@ -134,6 +144,8 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
                             gridView.Columns["FGPercentage"].HeaderText = "Field Goal %";
                             gridView.Columns["ThreePtPercentage"].HeaderText = "3 Point %";
                             gridView.Columns["TotalRebounds"].HeaderText = "Rebounds";
+                            gridView.Columns["FGPercentage"].DefaultCellStyle.Format = "F1";
+                            gridView.Columns["ThreePtPercentage"].DefaultCellStyle.Format = "F1";
                             break;
                     }
                 }
@@ -153,10 +165,20 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
                             gridView.Columns["TotalRounds"].HeaderText = "Rounds Played";
                             break;
                         case "nfl":
-
+                            gridView.Columns["PassingYards"].HeaderText = "Passing Yards";
+                            gridView.Columns["TdPasses"].HeaderText = "Touchdown Passes";
+                            gridView.Columns["RushYards"].HeaderText = "Rush Yards";
+                            gridView.Columns["RushTds"].HeaderText = "Rush Touchdowns";
+                            gridView.Columns["ReceivingYards"].HeaderText = "Receiving Yards";
+                            gridView.Columns["ReceivingTds"].HeaderText = "Receiving Touchdowns";
                             break;
                         case "nba":
-
+                            gridView.Columns["TotalPoints"].HeaderText = "Points";
+                            gridView.Columns["TotalRebounds"].HeaderText = "Rebounds";
+                            gridView.Columns["FieldGoalPercentage"].HeaderText = "Field Goal %";
+                            gridView.Columns["ThreePointPercentage"].HeaderText = "3 Point %";
+                            gridView.Columns["FieldGoalPercentage"].DefaultCellStyle.Format = "F1";
+                            gridView.Columns["ThreePointPercentage"].DefaultCellStyle.Format = "F1";
                             break;
                     }
                 }
@@ -164,17 +186,20 @@ namespace Baker_Grillers_Group_Project_Part_I.Controls
 
                 // Customize grid
                 gridView.RowTemplate.Height = 30;
-                gridView.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10F);
+                //gridView.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10F);
                 gridView.DefaultCellStyle.Padding = new Padding(5);
-                gridView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
-                gridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
-                gridView.EnableHeadersVisualStyles = false;
+                //gridView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+                //gridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
 
                 // Enable alternatign colors
                 gridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(248, 248, 248);
             }
         }
 
+        private void gridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
     /// <summary>

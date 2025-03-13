@@ -19,7 +19,7 @@ namespace DataManager
             // Defaults
             string font = "Microsoft Sans Serif";
             int themeIndex = 2; // Use system theme
-            string enabledSports = "Football,Basketball,Baseball,Soccer";
+            string enabledSports = "CSGO,Football,Basketball";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -99,6 +99,7 @@ namespace DataManager
                        ts.TotalMaps, ts.KdDiff, ts.Kd, ts.Rating
                 FROM CsgoTeam t
                 LEFT JOIN CsgoTeamStat ts ON t.TeamID = ts.TeamID
+                WHERE ts.TotalMaps IS NOT NULL
                 ORDER BY t.TeamName";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -229,7 +230,6 @@ namespace DataManager
                            WHEN rush.RushYards IS NOT NULL AND rec.ReceivingYards IS NULL THEN 'RB'
                            WHEN rec.ReceivingYards IS NOT NULL THEN 'WR/TE'
                            WHEN sack.Sacks IS NOT NULL THEN 'Defense'
-                           WHEN kick.FieldGoals IS NOT NULL THEN 'Kicker'
                            ELSE 'Unknown'
                        END AS Position,
                        pass.PassingYards, pass.TdPasses, pass.Interceptions,
@@ -243,6 +243,11 @@ namespace DataManager
                 LEFT JOIN NflPlayerCareerSackStat sack ON p.PlayerID = sack.PlayerID
                 LEFT JOIN NflPlayerCareerKickStat kick ON p.PlayerID = kick.PlayerID
                 WHERE p.IsActive = 1
+                AND (pass.PassingYards IS NOT NULL 
+                     OR rush.RushYards IS NOT NULL 
+                     OR rec.ReceivingYards IS NOT NULL 
+                     OR sack.Sacks IS NOT NULL 
+                     OR kick.FieldGoals IS NOT NULL)
                 ORDER BY PlayerName";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))

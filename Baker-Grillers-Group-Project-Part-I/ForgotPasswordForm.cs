@@ -21,6 +21,8 @@ using UserAuthentication;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using Baker_Grillers_Group_Project_Part_I.Properties;
+using Baker_Grillers_Group_Project_Part_I.Settings;
+using DataManager;
 
 namespace Baker_Grillers_Group_Project_Part_I
 {
@@ -34,6 +36,8 @@ namespace Baker_Grillers_Group_Project_Part_I
             InitializeComponent();
             resetCode = -1;
             lastEmail = "";
+            DataRepository dataRepository = new DataRepository(Program.connectionString);
+            SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
         }
 
         private async void sendEmailButton_Click(object sender, EventArgs e)
@@ -156,6 +160,11 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             //set the image of the button to the corrosponding image
             seePasswordButton.BackgroundImage = (passwordTextBox.UseSystemPasswordChar) ? Resources.ClosedEye : Resources.OpenEye;
+        }
+
+        private void ForgotPasswordForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
