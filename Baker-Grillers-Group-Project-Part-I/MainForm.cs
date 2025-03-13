@@ -257,6 +257,18 @@ namespace Baker_Grillers_Group_Project_Part_I
                     NFLForm nflForm = new NFLForm(e.ItemId, null); // Open teams stats form
                     nflForm.Show();
                 }
+            } else if (selectedSport.Equals("nba"))
+            {
+                if (selectedNav.Equals("players"))
+                {
+                    NBAForm nbaForm = new NBAForm(null, e.ItemId); // Open players stats form
+                    nbaForm.Show();
+                }
+                else if (selectedNav.Equals("teams"))
+                {
+                    NBAForm nbaForm = new NBAForm(e.ItemId, null); // Open players stats form
+                    nbaForm.Show();
+                }
             }
         }
 
