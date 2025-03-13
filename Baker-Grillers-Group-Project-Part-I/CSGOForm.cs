@@ -1,4 +1,12 @@
-﻿using Baker_Grillers_Group_Project_Part_I;
+﻿/* Group Project Part 1
+ * Team Name: Baker - Grillers
+ * Members: Thomas Speich, Ashley Smith, Michael Lee
+ * CPT-206-A01S-2025 Spring Smester: Adv Event-Driven Program
+ * 
+ * CSGO Form
+ */
+
+using Baker_Grillers_Group_Project_Part_I;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,7 +91,6 @@ namespace UserAuthentication
                 teamRating.Text = "N/A";
                 return;
             }
-
 
             //select all players on the selected team and add them to the team players data source
             var playerIDs = db.CsgoPlayerTeams.Where(x => x.TeamID == teamID).Select(x => x.PlayerID).ToList();
@@ -608,6 +615,7 @@ namespace UserAuthentication
             UpdateTeamsDataSource();
         }
 
+        //Goes back to normal in the Players tab
         private void resetPlayerFilterButton_Click(object sender, EventArgs e)
         {
             PlayerFilterField = -1;
@@ -615,6 +623,12 @@ namespace UserAuthentication
             PlayerFilterValue = -1;
             UpdatePlayersDataSource();
         }
-    }
+
+        //Closes the CSGO Form
+		private void exitButton_Click(object sender, EventArgs e)
+		{
+            this.Close();
+		}
+	}
 }
 

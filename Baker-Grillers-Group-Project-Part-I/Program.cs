@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GroupProjectTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,10 @@ namespace Baker_Grillers_Group_Project_Part_I
 {
     internal static class Program
     {
+
+        public static string CurrentSettingsUserEmail = "";
+        public static string connectionString = @"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\BGSportsStatsDB.mdf;Integrated Security=True;";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +21,7 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new MainForm(true));
         }
     }
 }

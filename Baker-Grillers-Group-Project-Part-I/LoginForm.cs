@@ -1,4 +1,12 @@
-﻿using Baker_Grillers_Group_Project_Part_I.Properties;
+﻿/* Group Project Part 1
+ * Team Name: Baker - Grillers
+ * Members: Thomas Speich, Ashley Smith, Michael Lee
+ * CPT-206-A01S-2025 Spring Smester: Adv Event-Driven Program
+ * 
+ * Login Form
+ */
+
+using Baker_Grillers_Group_Project_Part_I.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +24,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 {
     public partial class LoginForm : Form
     {
-        //private string credentialsConnection = @"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Users.mdf;Integrated Security=True;";
+        //private string connectionString = @"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Users.mdf;Integrated Security=True;";
         public LoginForm()
         {
             InitializeComponent();
@@ -24,6 +32,9 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void continueWithoutLoginButton_Click(object sender, EventArgs e)
         {
+            // Change current user email - for applying settings
+            Program.CurrentSettingsUserEmail = "guest@local.app";
+
             //closes the login form with the cancel result
             DialogResult = DialogResult.Cancel;
             this.Close();
@@ -54,6 +65,9 @@ namespace Baker_Grillers_Group_Project_Part_I
             bool isValid = await Task.Run(() => Authenticator.IsValidCredentials(MainForm.conn, emailTextBox.Text, passwordTextBox.Text));
             if (isValid)
             {
+                // Set user email
+                Program.CurrentSettingsUserEmail = emailTextBox.Text.ToLower();
+
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -85,6 +99,11 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
             ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
             forgotPasswordForm.ShowDialog();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
