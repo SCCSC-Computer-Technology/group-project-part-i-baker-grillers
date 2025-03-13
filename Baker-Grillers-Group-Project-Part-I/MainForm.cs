@@ -1,12 +1,5 @@
-﻿/* Group Project Part 1
- * Team Name: Baker - Grillers
- * Members: Thomas Speich, Ashley Smith, Michael Lee
- * CPT-206-A01S-2025 Spring Smester: Adv Event-Driven Program
- * 
- * Main Form
- */
-
-using Baker_Grillers_Group_Project_Part_I.Controls;
+﻿using Baker_Grillers_Group_Project_Part_I.Controls;
+using Baker_Grillers_Group_Project_Part_I.Settings;
 using DataManager;
 using GroupProjectTesting;
 using System;
@@ -30,10 +23,11 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private ContextMenuStrip userContextMenu;
         private ToolStripMenuItem logoutMenuItem;
+        private CustomListControl enhancedListView;
 
         Color buttonHighlightColor = Color.FromArgb(192, 255, 192);
         Color navButtonStandardBackColor = Color.FromArgb(245, 247, 245);
-        Color buttonDefaultColor = Color.White;
+        Color selectColor = Color.FromArgb(19, 94, 57);
 
         string selectedNav = "teams"; // players, statistics, teams, favorites
         string selectedSport = "csgo"; // csgo, nfl, nba, custom
@@ -48,6 +42,8 @@ namespace Baker_Grillers_Group_Project_Part_I
             this.selectedSport = selectedSport;
             this.triggerLogin = triggerLogin;
             dataRepository = new DataRepository(Program.connectionString);
+
+            SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -55,17 +51,20 @@ namespace Baker_Grillers_Group_Project_Part_I
             // Begin connection
             conn = new SqlConnection(Program.connectionString);
 
-            if (triggerLogin) Login();
+            if (triggerLogin) Login(true);
 
             UpdateUserEmailLabel();
             NavigationItemSelected();
             SideBarItemSelected();
+
+            UpdateEnableSports();
             
         }
 
         public void UpdateSelectedSport(string sport)
         {
             selectedSport = sport;
+            NavigationItemSelected();
             SideBarItemSelected();
         }
 
@@ -75,7 +74,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             welcomeForm.ShowDialog();
         }
 
-        private void Login()
+        private void Login(bool shouldShowWelcome)
         {
             //load the login form
             LoginForm loginForm = new LoginForm();
@@ -84,15 +83,18 @@ namespace Baker_Grillers_Group_Project_Part_I
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
                 //placeholder for unlocking features
-                loginButton.Visible = false;
+                loginButton.Visible = false;   
             }
             else
             {
                 loginButton.Visible = true;
             }
             UpdateUserEmailLabel();
-
-            ShowWelcome();
+            UpdateEnableSports();
+            if (shouldShowWelcome)
+            {
+                ShowWelcome();
+            }
         }
 
         // Perform logout
@@ -117,7 +119,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            SettingsForm settingsForm = new SettingsForm();
+            SettingsForm settingsForm = new SettingsForm(this);
 
             settingsForm.ShowDialog();
 
@@ -178,8 +180,10 @@ namespace Baker_Grillers_Group_Project_Part_I
                 teamsNavButton.BackColor = buttonHighlightColor;
                 teamsNavButton.IsSelected = true;
                 // Change active panel
-                CustomListControl enhancedListView = new CustomListControl();
+                enhancedListView = new CustomListControl();
                 enhancedListView.SetData(LoadTeamsData(), selectedSport);
+                enhancedListView.ItemSelected += CustomList_ItemSelected;
+                enhancedListView.Dock = DockStyle.Fill;
                 contentPanel.Controls.Add(enhancedListView);
             }
             else
@@ -192,8 +196,10 @@ namespace Baker_Grillers_Group_Project_Part_I
                 playersNavButton.BackColor = buttonHighlightColor;
                 playersNavButton.IsSelected = true;
                 // Change active panel
-                CustomListControl enhancedListView = new CustomListControl();
+                enhancedListView = new CustomListControl();
                 enhancedListView.SetData(LoadPlayersData(), selectedSport);
+                enhancedListView.ItemSelected += CustomList_ItemSelected;
+                enhancedListView.Dock = DockStyle.Fill;
                 contentPanel.Controls.Add(enhancedListView);
             } else
             {
@@ -211,7 +217,7 @@ namespace Baker_Grillers_Group_Project_Part_I
                 statisticsNavButton.BackColor = navButtonStandardBackColor;
                 statisticsNavButton.IsSelected = false;
             }
-            if (selectedNav.Equals("favorites"))
+            /*if (selectedNav.Equals("favorites"))
             {
                 favoritesNavButton.BackColor = buttonHighlightColor;
                 favoritesNavButton.IsSelected = true;
@@ -220,12 +226,51 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 favoritesNavButton.BackColor = navButtonStandardBackColor;
                 favoritesNavButton.IsSelected = false;
-            }
-            // Change active panel
+            }*/
 
         }
 
-        Color selectColor = Color.FromArgb(19, 94, 57);
+        // Launches applicable stats forms
+        private void CustomList_ItemSelected(object sender, ItemSelectedEventArgs e)
+        {
+            if (selectedSport.Equals("csgo"))
+            {
+                if (selectedNav.Equals("players"))
+                {
+                    CSGOForm csgoForm = new CSGOForm(null, e.ItemId); // Open players stats form
+                    csgoForm.Show();
+                } else if (selectedNav.Equals("teams"))
+                {
+                    CSGOForm csgoForm = new CSGOForm(e.ItemId, null); // Open teams stats form
+                    csgoForm.Show();
+                }
+            }
+            else if (selectedSport.Equals("nfl"))
+            {
+                if (selectedNav.Equals("players"))
+                {
+                    NFLForm nflForm = new NFLForm(null, e.ItemId); // Open players stats form
+                    nflForm.Show();
+                }
+                else if (selectedNav.Equals("teams"))
+                {
+                    NFLForm nflForm = new NFLForm(e.ItemId, null); // Open teams stats form
+                    nflForm.Show();
+                }
+            } else if (selectedSport.Equals("nba"))
+            {
+                if (selectedNav.Equals("players"))
+                {
+                    NBAForm nbaForm = new NBAForm(null, e.ItemId); // Open players stats form
+                    nbaForm.Show();
+                }
+                else if (selectedNav.Equals("teams"))
+                {
+                    NBAForm nbaForm = new NBAForm(e.ItemId, null); // Open players stats form
+                    nbaForm.Show();
+                }
+            }
+        }
 
         // Updates the background colors for the currently selected sidebar button
         public void SideBarItemSelected()
@@ -233,7 +278,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             csgoSideBarButton.ApplyImageColor = true;
             nflSideBarButton.ApplyImageColor = true;
             nbaSideBarButton.ApplyImageColor = true;
-            customSideBarButton.ApplyImageColor = true;
+            //customSideBarButton.ApplyImageColor = true;
             if (selectedSport.Equals("csgo"))
             {
                 csgoSideBarButton.IsSelected = true;
@@ -266,7 +311,7 @@ namespace Baker_Grillers_Group_Project_Part_I
                 nbaSideBarButton.IsSelected = false;
                 nbaSideBarButton.ImageColor = selectColor;
             }
-            if (selectedSport.Equals("custom"))
+            /*if (selectedSport.Equals("custom"))
             {
                 customSideBarButton.IsSelected = true;
                 customSideBarButton.ImageColor = Color.White;
@@ -275,7 +320,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             {
                 customSideBarButton.IsSelected = false;
                 customSideBarButton.ImageColor = selectColor;
-            }
+            }*/
             selectedSportLabel.Text = GetSportsLabel();
         }
 
@@ -325,20 +370,29 @@ namespace Baker_Grillers_Group_Project_Part_I
 
         private void statisticsNavButton_Click(object sender, EventArgs e)
         {
-            selectedNav = "statistics";
-            NavigationItemSelected();
+            //selectedNav = "statistics";
+            //NavigationItemSelected();
+            switch(selectedSport)
+            {
+                case "csgo":
+                    CSGOForm csgoForm = new CSGOForm();
+                    csgoForm.ShowDialog();
+                    break;
+                case "nfl":
+                    NFLForm nflForm = new NFLForm();
+                    nflForm.ShowDialog();
+                    break;
+                case "nba":
+                    NBAForm nBAForm = new NBAForm();
+                    nBAForm.ShowDialog();
+                    break;
+            }
         }
 
         private void favoritesNavButton_Click(object sender, EventArgs e)
         {
-            //selectedNav = "favorites";
-            //NavigationItemSelected();
-
-
-            // Testing
-
-            NBAForm nbaForm = new NBAForm();
-            nbaForm.ShowDialog();
+            NBAForm nBAForm = new NBAForm();
+            nBAForm.ShowDialog();
         }
 
         private void InitializeDropDown()
@@ -372,7 +426,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             if (Program.CurrentSettingsUserEmail.Equals("guest@local.app")) // User is a guest
             {
-                Login();
+                Login(false);
             }
             else
             {
@@ -421,9 +475,43 @@ namespace Baker_Grillers_Group_Project_Part_I
             return "CS:GO"; // default
         }
 
+        public void UpdateEnableSports()
+        {
+            string enabledSports = dataRepository.GetGlobalSettings(Program.CurrentSettingsUserEmail).EnabledSports;
+            if (enabledSports.Contains("CSGO"))
+            {
+                csgoSideBarButton.Visible = true;
+            }
+            else
+            {
+                csgoSideBarButton.Visible = false;
+            }
+            if (enabledSports.Contains("Football"))
+            {
+                nflSideBarButton.Visible = true;
+            }
+            else
+            {
+                nflSideBarButton.Visible = false;
+            }
+            if (enabledSports.Contains("Basketball"))
+            {
+                nbaSideBarButton.Visible = true;
+            }
+            else
+            {
+                nbaSideBarButton.Visible = false;
+            }
+        }
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void nameLabel_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
