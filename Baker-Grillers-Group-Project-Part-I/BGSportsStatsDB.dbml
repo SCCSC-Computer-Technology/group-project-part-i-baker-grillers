@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BGSportsStatsDB" Class="BGSportsStatsDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\BGSportsStatsDB.mdf;Integrated Security=True" SettingsObjectName="Baker_Grillers_Group_Project_Part_I.Properties.Settings" SettingsPropertyName="BGSportsStatsDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CsgoPlayer" Member="CsgoPlayers">
+    <Type Name="CsgoPlayer">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlayerName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CsgoPlayer_CsgoPlayerStat" Member="CsgoPlayerStat" ThisKey="PlayerID" OtherKey="PlayerID" Type="CsgoPlayerStat" Cardinality="One" />
+      <Association Name="CsgoPlayer_CsgoPlayerTeam" Member="CsgoPlayerTeams" ThisKey="PlayerID" OtherKey="PlayerID" Type="CsgoPlayerTeam" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NflTeamSeasonStat" Member="NflTeamSeasonStats">
+    <Type Name="NflTeamSeasonStat">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SeasonYear" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RushingTD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReceivingTD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalTD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TwoPoints" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Wins" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Losses" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ties" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FieldGoalsMade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldGoalAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ExtraPointsMade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RushYards" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PassingYards" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Interceptions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NflTeam_NflTeamSeasonStat" Member="NflTeam" ThisKey="TeamID" OtherKey="TeamID" Type="NflTeam" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CsgoPlayerStat" Member="CsgoPlayerStats">
+    <Type Name="CsgoPlayerStat">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TotalMaps" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalRounds" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KdDiff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Kd" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Association Name="CsgoPlayer_CsgoPlayerStat" Member="CsgoPlayer" ThisKey="PlayerID" OtherKey="PlayerID" Type="CsgoPlayer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CsgoPlayerTeam" Member="CsgoPlayerTeams">
+    <Type Name="CsgoPlayerTeam">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="CsgoPlayer_CsgoPlayerTeam" Member="CsgoPlayer" ThisKey="PlayerID" OtherKey="PlayerID" Type="CsgoPlayer" IsForeignKey="true" />
+      <Association Name="CsgoTeam_CsgoPlayerTeam" Member="CsgoTeam" ThisKey="TeamID" OtherKey="TeamID" Type="CsgoTeam" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CsgoTeam" Member="CsgoTeams">
+    <Type Name="CsgoTeam">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CsgoTeam_CsgoPlayerTeam" Member="CsgoPlayerTeams" ThisKey="TeamID" OtherKey="TeamID" Type="CsgoPlayerTeam" />
+      <Association Name="CsgoTeam_CsgoTeamStat" Member="CsgoTeamStat" ThisKey="TeamID" OtherKey="TeamID" Type="CsgoTeamStat" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CsgoTeamStat" Member="CsgoTeamStats">
+    <Type Name="CsgoTeamStat">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TotalMaps" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KdDiff" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Kd" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Rating" Type="System.Decimal" DbType="Decimal(4,2) NOT NULL" CanBeNull="false" />
+      <Association Name="CsgoTeam_CsgoTeamStat" Member="CsgoTeam" ThisKey="TeamID" OtherKey="TeamID" Type="CsgoTeam" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NbaPlayer" Member="NbaPlayers">
+    <Type Name="NbaPlayer">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="NbaPlayer_NbaPlayerCareerStat" Member="NbaPlayerCareerStat" ThisKey="PlayerID" OtherKey="PlayerID" Type="NbaPlayerCareerStat" Cardinality="One" />
+      <Association Name="NbaTeam_NbaPlayer" Member="NbaTeam" ThisKey="TeamID" OtherKey="TeamID" Type="NbaTeam" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NbaPlayerCareerStat" Member="NbaPlayerCareerStats">
+    <Type Name="NbaPlayerCareerStat">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FieldGoals" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldGoalAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThreePoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThreePointAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TwoPoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TwoPointsAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FreeThrows" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FreeThrowAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OffensiveRebounds" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefensiveRebounds" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Assists" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Steals" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Blocks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Turnovers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PersonalFouls" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalPoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NbaPlayer_NbaPlayerCareerStat" Member="NbaPlayer" ThisKey="PlayerID" OtherKey="PlayerID" Type="NbaPlayer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NbaTeam" Member="NbaTeams">
+    <Type Name="NbaTeam">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TeamAbreviation" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Association Name="NbaTeam_NbaPlayer" Member="NbaPlayers" ThisKey="TeamID" OtherKey="TeamID" Type="NbaPlayer" />
+      <Association Name="NbaTeam_NbaTeamSeasonStat" Member="NbaTeamSeasonStats" ThisKey="TeamID" OtherKey="TeamID" Type="NbaTeamSeasonStat" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NbaTeamSeasonStat" Member="NbaTeamSeasonStats">
+    <Type Name="NbaTeamSeasonStat">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SeasonYear" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FieldGoals" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldGoalAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThreePoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThreePointAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TwoPoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TwoPointAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FreeThrows" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FreeThrowAttempts" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OffensiveRebounds" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefensiveRebounds" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Assists" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Steals" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Blocks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Turnovers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PersonalFouls" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalPoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NbaTeam_NbaTeamSeasonStat" Member="NbaTeam" ThisKey="TeamID" OtherKey="TeamID" Type="NbaTeam" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NflPlayer" Member="NflPlayers">
+    <Type Name="NflPlayer">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="NflPlayer_NflPlayerCareerFumbleStat" Member="NflPlayerCareerFumbleStat" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayerCareerFumbleStat" Cardinality="One" />
+      <Association Name="NflPlayer_NflPlayerCareerKickStat" Member="NflPlayerCareerKickStat" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayerCareerKickStat" Cardinality="One" />
+      <Association Name="NflPlayer_NflPlayerCareerPassStat" Member="NflPlayerCareerPassStat" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayerCareerPassStat" Cardinality="One" />
+      <Association Name="NflPlayer_NflPlayerCareerReceiveStat" Member="NflPlayerCareerReceiveStat" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayerCareerReceiveStat" Cardinality="One" />
+      <Association Name="NflPlayer_NflPlayerCareerRushStat" Member="NflPlayerCareerRushStat" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayerCareerRushStat" Cardinality="One" />
+      <Association Name="NflPlayer_NflPlayerCareerSackStat" Member="NflPlayerCareerSackStat" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayerCareerSackStat" Cardinality="One" />
+      <Association Name="NflTeam_NflPlayer" Member="NflTeam" ThisKey="TeamID" OtherKey="TeamID" Type="NflTeam" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NflPlayerCareerFumbleStat" Member="NflPlayerCareerFumbleStats">
+    <Type Name="NflPlayerCareerFumbleStat">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Fumbles" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="NflPlayer_NflPlayerCareerFumbleStat" Member="NflPlayer" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NflPlayerCareerKickStat" Member="NflPlayerCareerKickStats">
+    <Type Name="NflPlayerCareerKickStat">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FieldGoalAttempts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FieldGoals" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExtraPointAttempts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExtraPoints" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="NflPlayer_NflPlayerCareerKickStat" Member="NflPlayer" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NflPlayerCareerPassStat" Member="NflPlayerCareerPassStats">
+    <Type Name="NflPlayerCareerPassStat">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PassAttempts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompletePasses" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PassingYards" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TdPasses" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Interceptions" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LongestPass" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NflPlayer_NflPlayerCareerPassStat" Member="NflPlayer" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NflPlayerCareerReceiveStat" Member="NflPlayerCareerReceiveStats">
+    <Type Name="NflPlayerCareerReceiveStat">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Receptions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReceivingYards" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReceivingTds" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NflPlayer_NflPlayerCareerReceiveStat" Member="NflPlayer" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NflPlayerCareerRushStat" Member="NflPlayerCareerRushStats">
+    <Type Name="NflPlayerCareerRushStat">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RushAttempts" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RushYards" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RushTds" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RushFirstdowns" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NflPlayer_NflPlayerCareerRushStat" Member="NflPlayer" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NflPlayerCareerSackStat" Member="NflPlayerCareerSackStats">
+    <Type Name="NflPlayerCareerSackStat">
+      <Column Name="PlayerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sacks" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YardsLostToSacks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="NflPlayer_NflPlayerCareerSackStat" Member="NflPlayer" ThisKey="PlayerID" OtherKey="PlayerID" Type="NflPlayer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NflTeam" Member="NflTeams">
+    <Type Name="NflTeam">
+      <Column Name="TeamID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TeamName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="NflTeam_NflTeamSeasonStat" Member="NflTeamSeasonStats" ThisKey="TeamID" OtherKey="TeamID" Type="NflTeamSeasonStat" />
+      <Association Name="NflTeam_NflPlayer" Member="NflPlayers" ThisKey="TeamID" OtherKey="TeamID" Type="NflPlayer" />
+    </Type>
+  </Table>
+</Database>

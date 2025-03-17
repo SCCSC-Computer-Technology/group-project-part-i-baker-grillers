@@ -13,20 +13,23 @@ using UserAuthentication;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using Baker_Grillers_Group_Project_Part_I.Properties;
+using Baker_Grillers_Group_Project_Part_I.Settings;
+using DataManager;
 
 namespace Baker_Grillers_Group_Project_Part_I
 {
     public partial class ForgotPasswordForm : Form
     {
-        private string connectionString;
+       // private string connectionString;
         private string lastEmail;
         private int resetCode;
-        public ForgotPasswordForm(string connection)
+        public ForgotPasswordForm()
         {
             InitializeComponent();
-            connectionString = connection;
             resetCode = -1;
             lastEmail = "";
+            DataRepository dataRepository = new DataRepository(Program.connectionString);
+            SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
         }
 
         private async void sendEmailButton_Click(object sender, EventArgs e)
@@ -45,7 +48,7 @@ namespace Baker_Grillers_Group_Project_Part_I
             sendEmailButton.Enabled = false;
 
             //check if the email belongs to a registered account (ASYNC)
-            isRegistered = await Task.Run(() => AccountUpdater.CheckForExistingEmail(connectionString, email));
+            isRegistered = await Task.Run(() => AccountUpdater.CheckForExistingEmail(MainForm.conn, email));
 
 
             //if the email belongs to a registered account, send them an email with a reset code
@@ -125,7 +128,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             //change the password and store the result as a boolean
             //true for changed, false for unchanged
-            bool passwordChanged = await AccountUpdater.ChangePassword(connectionString, lastEmail, password, Guid.NewGuid().ToString());
+            bool passwordChanged = await AccountUpdater.ChangePassword(MainForm.conn, lastEmail, password, Guid.NewGuid().ToString());
             
             resetPasswordButton.Enabled = true;
 
@@ -149,6 +152,11 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             //set the image of the button to the corrosponding image
             seePasswordButton.BackgroundImage = (passwordTextBox.UseSystemPasswordChar) ? Resources.ClosedEye : Resources.OpenEye;
+        }
+
+        private void ForgotPasswordForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

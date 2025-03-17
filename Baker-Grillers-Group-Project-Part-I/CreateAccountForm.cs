@@ -1,4 +1,6 @@
 ﻿using Baker_Grillers_Group_Project_Part_I.Properties;
+using Baker_Grillers_Group_Project_Part_I.Settings;
+using DataManager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +17,13 @@ namespace Baker_Grillers_Group_Project_Part_I
 {
     public partial class CreateAccountForm : Form
     {
-        private string Connection;
-        public CreateAccountForm(string connection)
+        //private string Connection;
+        public CreateAccountForm()
         {
             InitializeComponent();
-            Connection = connection;
+            //Connection = connection;
+            DataRepository dataRepository = new DataRepository(Program.connectionString);
+            SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
         }
 
         private async void createAccountButton_Click(object sender, EventArgs e)
@@ -50,7 +54,7 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             createAccountButton.Enabled = false;
             //try to add the credentials and check if it was successful
-            bool isSuccessful = await Task.Run(() => Authenticator.AddCredentials(Connection, email, password, salt));
+            bool isSuccessful = await Task.Run(() => Authenticator.AddCredentials(MainForm.conn, email, password, salt));
             if (isSuccessful)
             {
                 MessageBox.Show("Account Created!");
@@ -71,6 +75,11 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             //set the image of the button to the corrosponding image
             seePasswordButton.BackgroundImage = (passwordTextBox.UseSystemPasswordChar) ? Resources.ClosedEye : Resources.OpenEye;
+        }
+
+        private void CreateAccountForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

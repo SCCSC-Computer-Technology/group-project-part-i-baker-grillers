@@ -12,37 +12,36 @@ namespace UserAuthentication
 {
     public class AccountUpdater
     {
-        public async static Task<bool> ChangePassword(string connection, string userEmail, string password, string salt)
+        public async static Task<bool> ChangePassword(SqlConnection conn, string userEmail, string password, string salt)
         {
-            return await ChangePassword(connection, userEmail, password, salt, "Credentials", "Email", "HashedPassword", "Salt");
+            return await ChangePassword(conn, userEmail, password, salt, "UserCredential", "Email", "HashedPassword", "Salt");
         }
-        public async static Task<bool> ChangePassword(string connection, string userEmail, string password, string salt, string tableName, string emailColumn, string passwordColumn, string saltColumn)
+        public async static Task<bool> ChangePassword(SqlConnection conn, string userEmail, string password, string salt, string tableName, string emailColumn, string passwordColumn, string saltColumn)
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connection))
+                
+                if(conn.State != System.Data.ConnectionState.Open) conn.Open();
+                try
                 {
-                    conn.Open();
-                    try
+                    using (SqlCommand cmd = new SqlCommand($"UPDATE {tableName} " +
+                                                            $"SET {passwordColumn} = @password, {saltColumn} = @salt " +
+                                                            $"WHERE {emailColumn} = @email;", conn))
                     {
-                        using (SqlCommand cmd = new SqlCommand($"UPDATE {tableName} " +
-                                                               $"SET {passwordColumn} = @password, {saltColumn} = @salt " +
-                                                               $"WHERE {emailColumn} = @email;", conn))
-                        {
-                            byte[] passAndSalt = Authenticator.HashPassword(password, salt);
-                            cmd.Parameters.AddWithValue("@password", passAndSalt);
-                            cmd.Parameters.AddWithValue("@salt", salt);
-                            cmd.Parameters.AddWithValue("@email", userEmail);
+                        byte[] passAndSalt = Authenticator.HashPassword(password, salt);
+                        cmd.Parameters.AddWithValue("@password", passAndSalt);
+                        cmd.Parameters.AddWithValue("@salt", salt);
+                        cmd.Parameters.AddWithValue("@email", userEmail);
 
-                            return cmd.ExecuteNonQuery() != 0;
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
-                        return false;
+                        return cmd.ExecuteNonQuery() != 0;
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
+                    return false;
+                }
+                
             }
             catch (Exception ex)
             {
@@ -51,37 +50,47 @@ namespace UserAuthentication
             }
         }
 
-        public async static Task<bool> CheckForExistingEmail(string connection, string userEmail)
+        public async static Task<bool> CheckForExistingEmail(SqlConnection conn, string userEmail)
         {
-            return await CheckForExistingEmail(connection, userEmail, "Credentials", "Email");
+            return await CheckForExistingEmail(conn, userEmail, "UserCredential", "Email");
         }
-        public async static Task<bool> CheckForExistingEmail(string connection, string userEmail, string tableName, string emailColumn)
+        public async static Task<bool> CheckForExistingEmail(SqlConnection conn, string userEmail, string tableName, string emailColumn)
         {
 
             try
             {
-                //create a connection to the SQL server
-                using (SqlConnection conn = new SqlConnection(connection))
-                {
-                    //open the connection
-                    conn.Open();
+                
+                //open the connection
+                if(conn.State != System.Data.ConnectionState.Open) conn.Open();
 
-                    try
+                try
+                {
+                    //create and run a SQL command to check if the email exists
+                    using (SqlCommand cmd = new SqlCommand($"SELECT 1 FROM {tableName} WHERE {emailColumn} = @email", conn))
                     {
-                        //create and run a SQL command to check if the email exists
-                        using (SqlCommand cmd = new SqlCommand($"SELECT 1 FROM {tableName} WHERE {emailColumn} = @email", conn))
+                        cmd.Parameters.AddWithValue("@email", userEmail);
+                        SqlDataReader reader = null;
+                        try
                         {
-                            cmd.Parameters.AddWithValue("@email", userEmail);
-                            SqlDataReader reader = cmd.ExecuteReader();
-                            return reader.HasRows;
+                           reader = cmd.ExecuteReader();
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
-                        return false;
+                        catch(Exception ex)
+                        {
+                            MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
+                            if (reader != null) reader.Close();
+                            return false;
+                        }
+                        bool emailFound = reader.HasRows;
+                        reader.Close();
+                        return emailFound;
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
+                    return false;
+                }
+                
             }
             catch (Exception ex)
             {

@@ -15,90 +15,45 @@ namespace UserAuthentication
     public class Authenticator
     {
         
-        public async static Task<bool> AddCredentials(string connectionString, string email, string password, string salt)
+        public async static Task<bool> AddCredentials(SqlConnection conn, string email, string password, string salt)
         {
-            return await AddCredentials(connectionString, email, password, salt, "CREDENTIALS");
-
-            /*try
-            {
-                //open a connection to the DB
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    try
-                    {
-                        //create and execute a SQL query
-                        using (SqlCommand cmd = new SqlCommand("INSERT INTO CREDENTIALS VALUES(@email, @hashedPassword, @salt)", conn))
-                        {
-                            byte[] hashedPassword = HashPassword(password, salt);
-
-                            cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
-                            cmd.Parameters.AddWithValue("@hashedPassword", hashedPassword);
-                            cmd.Parameters.AddWithValue("@salt", salt);
-
-                            cmd.ExecuteNonQuery();
-
-                            return true;
-                        }
-                    }
-                    catch (SqlException ex)
-                    {
-                        if (ex.Number == 2627) //the insert violated the primary key constraint
-                        {
-                            MessageBox.Show("An account already exists with that email");
-                        }
-                        else
-                        {
-                            MessageBox.Show($"{ex.GetType()}\n{ex.Number}\n{ex.Message}");
-                        }
-                        return false;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
-                return false;
-            }*/
+            return await AddCredentials(conn, email, password, salt, "UserCredential");
         }
 
-        //used if the table name is not "Credentials"
-        public async static Task<bool> AddCredentials(string connectionString, string email, string password, string salt, string tableName)
+        //used if the table name is not "BGSportsStatsDB"
+        public async static Task<bool> AddCredentials(SqlConnection conn, string email, string password, string salt, string tableName)
         {
             try
             {
-                //open a connection to the DB
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                if(conn.State != System.Data.ConnectionState.Open)conn.Open();
+
+                try
                 {
-                    conn.Open();
-                    try
+                    //create and execute a SQL query
+                    using (SqlCommand cmd = new SqlCommand($"INSERT INTO {tableName} VALUES(@email, @hashedPassword, @salt)", conn))
                     {
-                        //create and execute a SQL query
-                        using (SqlCommand cmd = new SqlCommand($"INSERT INTO {tableName} VALUES(@email, @hashedPassword, @salt)", conn))
-                        {
-                            byte[] hashedPassword = Authenticator.HashPassword(password, salt);
+                        byte[] hashedPassword = HashPassword(password, salt);
 
-                            cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
-                            cmd.Parameters.AddWithValue("@hashedPassword", hashedPassword);
-                            cmd.Parameters.AddWithValue("@salt", salt);
+                        cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
+                        cmd.Parameters.AddWithValue("@hashedPassword", hashedPassword);
+                        cmd.Parameters.AddWithValue("@salt", salt);
 
-                            cmd.ExecuteNonQuery();
+                        cmd.ExecuteNonQuery();
 
-                            return true;
-                        }
+                        return true;
                     }
-                    catch (SqlException ex)
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 2627) //the insert violated the primary key constraint
                     {
-                        if (ex.Number == 2627) //the insert violated the primary key constraint
-                        {
-                            MessageBox.Show("An account already exists with that email");
-                        }
-                        else
-                        {
-                            MessageBox.Show($"{ex.GetType()}\n{ex.Number}\n{ex.Message}");
-                        }
-                        return false;
+                        MessageBox.Show("An account already exists with that email");
                     }
+                    else
+                    {
+                        MessageBox.Show($"{ex.GetType()}\n{ex.Number}\n{ex.Message}");
+                    }
+                    return false;
                 }
             }
             catch (Exception ex)
@@ -108,55 +63,54 @@ namespace UserAuthentication
             }
         }
 
-        public async static Task<bool> IsValidCredentials(string connectionString, string email, string password)
+        public async static Task<bool> IsValidCredentials(SqlConnection conn, string email, string password)
         {
-            return await IsValidCredentials(connectionString, email, password, "Credentials", "Email", "Salt", "HashedPassword");
+            return await IsValidCredentials(conn, email, password, "UserCredential", "Email", "Salt", "HashedPassword");
         }
 
-        public async static Task<bool> IsValidCredentials(string connectionString, string email, string password, string tableName, string emailColumn, string saltColumn, string hashedPasswordColumn)
+        public async static Task<bool> IsValidCredentials(SqlConnection conn, string email, string password, string tableName, string emailColumn, string saltColumn, string hashedPasswordColumn)
         {
             try
             {
-                //instantiate a SQL connection object
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                if(conn.State != System.Data.ConnectionState.Open) conn.Open();
+                try
                 {
-                    //open the connect
-                    conn.Open();
-                    try
+                    //instantiate a SQL command object with a query to get the hashed password and salt
+                    using (SqlCommand cmd = new SqlCommand($"SELECT {hashedPasswordColumn}, {saltColumn} FROM {tableName} WHERE {emailColumn}= @email", conn))
                     {
-                        //instantiate a SQL command object with a query to get the hashed password and salt
-                        using (SqlCommand cmd = new SqlCommand($"SELECT {hashedPasswordColumn}, {saltColumn} FROM {tableName} WHERE {emailColumn}= @email", conn))
+                        //add the email from the textbox as the @email parameter
+                        cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
+                        SqlDataReader reader = null;
+                        try
                         {
-                            //add the email from the textbox as the @email parameter
-                            cmd.Parameters.AddWithValue("@email", email.Trim().ToLower());
-
                             //execute the query and store the results in a reader
-                            SqlDataReader reader = cmd.ExecuteReader();
+                            reader = cmd.ExecuteReader();
+                        }
+                        catch(Exception ex)
+                        {
+                            MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
+                            if(reader != null) reader.Close();
+                            return false;
+                        }
 
-                            if (reader.HasRows)
+                        if (reader.HasRows)
+                        {
+                            //move to the first (and only) row in the reader
+                            reader.Read();
+
+
+                            //hash the entered password with the salt associated with the email
+                            byte[] passAndSalt = HashPassword(password, reader["Salt"].ToString());
+
+                            //get the hashed password from the user record
+                            byte[] hashedPass = (byte[])reader[hashedPasswordColumn];
+                            reader.Close();
+
+
+                            //check if the entered password hash matches the one stored in the DB
+                            if (passAndSalt.SequenceEqual(hashedPass))
                             {
-                                //move to the first (and only) row in the reader
-                                reader.Read();
-
-
-                                //hash the entered password with the salt associated with the email
-                                byte[] passAndSalt = HashPassword(password, reader["Salt"].ToString());
-
-                                //get the hashed password from the user record
-                                byte[] hashedPass = (byte[])reader[hashedPasswordColumn];
-                                reader.Close();
-
-
-                                //check if the entered password hash matches the one stored in the DB
-                                if (passAndSalt.SequenceEqual(hashedPass))
-                                {
-                                    return true;
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Credentials do not match any existing user accounts");
-                                    return false;
-                                }
+                                return true;
                             }
                             else
                             {
@@ -164,13 +118,20 @@ namespace UserAuthentication
                                 return false;
                             }
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
-                        return false;
+                        else
+                        {
+                            MessageBox.Show("Credentials do not match any existing user accounts");
+                            reader.Close();
+                            return false;
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"{ex.GetType()}\n{ex.Message}");
+                    return false;
+                }
+                
             }
             catch (Exception ex)
             {
