@@ -64,6 +64,7 @@
             this.csgoTeamSelectComboBox = new System.Windows.Forms.ComboBox();
             this.teamRating = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.resetPlayerFilterButton = new System.Windows.Forms.Button();
             this.playerTotalMaps = new System.Windows.Forms.Label();
             this.playerTotalMapsLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -99,8 +100,6 @@
             this.viewTeamButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.exitButton = new System.Windows.Forms.Button();
-            this.resetPlayerFilterButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.csgoTeamPlayersBindingSource)).BeginInit();
@@ -125,7 +124,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.csgoTeamPlayersListBox);
             this.tabPage1.Controls.Add(this.viewPlayerButton);
             this.tabPage1.Controls.Add(this.label1);
@@ -156,11 +154,11 @@
             this.tabPage1.Controls.Add(this.teamRatingLabel);
             this.tabPage1.Controls.Add(this.csgoTeamSelectComboBox);
             this.tabPage1.Controls.Add(this.teamRating);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage1.Size = new System.Drawing.Size(793, 549);
+            this.tabPage1.Size = new System.Drawing.Size(793, 541);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Teams";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -169,10 +167,10 @@
             // 
             this.csgoTeamPlayersListBox.DataSource = this.csgoTeamPlayersBindingSource;
             this.csgoTeamPlayersListBox.FormattingEnabled = true;
-            this.csgoTeamPlayersListBox.ItemHeight = 15;
+            this.csgoTeamPlayersListBox.ItemHeight = 23;
             this.csgoTeamPlayersListBox.Location = new System.Drawing.Point(491, 28);
             this.csgoTeamPlayersListBox.Name = "csgoTeamPlayersListBox";
-            this.csgoTeamPlayersListBox.Size = new System.Drawing.Size(236, 334);
+            this.csgoTeamPlayersListBox.Size = new System.Drawing.Size(236, 326);
             this.csgoTeamPlayersListBox.TabIndex = 10;
             this.toolTip1.SetToolTip(this.csgoTeamPlayersListBox, "A list of all players on the selected team");
             // 
@@ -192,7 +190,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(488, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 15);
+            this.label1.Size = new System.Drawing.Size(219, 23);
             this.label1.TabIndex = 14;
             this.label1.Text = "Players on selected team";
             // 
@@ -223,7 +221,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(340, 423);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 15);
+            this.label12.Size = new System.Drawing.Size(57, 23);
             this.label12.TabIndex = 36;
             this.label12.Text = "Value";
             // 
@@ -243,7 +241,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(340, 382);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 15);
+            this.label13.Size = new System.Drawing.Size(110, 23);
             this.label13.TabIndex = 35;
             this.label13.Text = "Comparison";
             // 
@@ -252,7 +250,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(126, 431);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(90, 15);
+            this.label15.Size = new System.Drawing.Size(138, 23);
             this.label15.TabIndex = 37;
             this.label15.Text = "Name Contains";
             // 
@@ -261,7 +259,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(340, 338);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 15);
+            this.label14.Size = new System.Drawing.Size(79, 23);
             this.label14.TabIndex = 34;
             this.label14.Text = "Statistic";
             // 
@@ -270,7 +268,7 @@
             this.teamTotalMapsLabel.AutoSize = true;
             this.teamTotalMapsLabel.Location = new System.Drawing.Point(327, 76);
             this.teamTotalMapsLabel.Name = "teamTotalMapsLabel";
-            this.teamTotalMapsLabel.Size = new System.Drawing.Size(66, 15);
+            this.teamTotalMapsLabel.Size = new System.Drawing.Size(104, 23);
             this.teamTotalMapsLabel.TabIndex = 2;
             this.teamTotalMapsLabel.Text = "Total Maps";
             // 
@@ -284,7 +282,7 @@
             ">"});
             this.teamFilterOperatorComboBox.Location = new System.Drawing.Point(343, 397);
             this.teamFilterOperatorComboBox.Name = "teamFilterOperatorComboBox";
-            this.teamFilterOperatorComboBox.Size = new System.Drawing.Size(100, 23);
+            this.teamFilterOperatorComboBox.Size = new System.Drawing.Size(100, 31);
             this.teamFilterOperatorComboBox.TabIndex = 25;
             // 
             // teamSearchButton
@@ -318,7 +316,7 @@
             0,
             -2147483648});
             this.teamFilterNumUpDown.Name = "teamFilterNumUpDown";
-            this.teamFilterNumUpDown.Size = new System.Drawing.Size(100, 22);
+            this.teamFilterNumUpDown.Size = new System.Drawing.Size(100, 30);
             this.teamFilterNumUpDown.TabIndex = 24;
             this.teamFilterNumUpDown.ThousandsSeparator = true;
             // 
@@ -333,14 +331,14 @@
             "Rating"});
             this.teamFilterStatComboBox.Location = new System.Drawing.Point(343, 356);
             this.teamFilterStatComboBox.Name = "teamFilterStatComboBox";
-            this.teamFilterStatComboBox.Size = new System.Drawing.Size(100, 23);
+            this.teamFilterStatComboBox.Size = new System.Drawing.Size(100, 31);
             this.teamFilterStatComboBox.TabIndex = 23;
             // 
             // teamSearchTextBox
             // 
             this.teamSearchTextBox.Location = new System.Drawing.Point(129, 449);
             this.teamSearchTextBox.Name = "teamSearchTextBox";
-            this.teamSearchTextBox.Size = new System.Drawing.Size(100, 22);
+            this.teamSearchTextBox.Size = new System.Drawing.Size(100, 30);
             this.teamSearchTextBox.TabIndex = 21;
             // 
             // teamFilterButton
@@ -359,7 +357,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(5, 436);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 15);
+            this.label16.Size = new System.Drawing.Size(103, 23);
             this.label16.TabIndex = 36;
             this.label16.Text = "Sort Order";
             // 
@@ -372,7 +370,7 @@
             "Descending"});
             this.teamSortComboBox.Location = new System.Drawing.Point(8, 454);
             this.teamSortComboBox.Name = "teamSortComboBox";
-            this.teamSortComboBox.Size = new System.Drawing.Size(100, 23);
+            this.teamSortComboBox.Size = new System.Drawing.Size(100, 31);
             this.teamSortComboBox.TabIndex = 19;
             this.toolTip1.SetToolTip(this.teamSortComboBox, "Select an order to sort the teams by");
             // 
@@ -393,7 +391,7 @@
             this.teamKdDiffLabel.AutoSize = true;
             this.teamKdDiffLabel.Location = new System.Drawing.Point(327, 139);
             this.teamKdDiffLabel.Name = "teamKdDiffLabel";
-            this.teamKdDiffLabel.Size = new System.Drawing.Size(53, 15);
+            this.teamKdDiffLabel.Size = new System.Drawing.Size(82, 23);
             this.teamKdDiffLabel.TabIndex = 4;
             this.teamKdDiffLabel.Text = "K/D Diff";
             // 
@@ -401,10 +399,10 @@
             // 
             this.csgoTeamListBox.DataSource = this.csgoTeamBindingSource;
             this.csgoTeamListBox.FormattingEnabled = true;
-            this.csgoTeamListBox.ItemHeight = 15;
+            this.csgoTeamListBox.ItemHeight = 23;
             this.csgoTeamListBox.Location = new System.Drawing.Point(6, 21);
             this.csgoTeamListBox.Name = "csgoTeamListBox";
-            this.csgoTeamListBox.Size = new System.Drawing.Size(310, 394);
+            this.csgoTeamListBox.Size = new System.Drawing.Size(310, 372);
             this.csgoTeamListBox.TabIndex = 11;
             this.toolTip1.SetToolTip(this.csgoTeamListBox, "A list of all CSGO teams");
             // 
@@ -425,7 +423,7 @@
             this.teamLabel.AutoSize = true;
             this.teamLabel.Location = new System.Drawing.Point(3, 3);
             this.teamLabel.Name = "teamLabel";
-            this.teamLabel.Size = new System.Drawing.Size(42, 15);
+            this.teamLabel.Size = new System.Drawing.Size(64, 23);
             this.teamLabel.TabIndex = 13;
             this.teamLabel.Text = "Teams";
             // 
@@ -434,7 +432,7 @@
             this.teamKdLabel.AutoSize = true;
             this.teamKdLabel.Location = new System.Drawing.Point(327, 203);
             this.teamKdLabel.Name = "teamKdLabel";
-            this.teamKdLabel.Size = new System.Drawing.Size(61, 15);
+            this.teamKdLabel.Size = new System.Drawing.Size(95, 23);
             this.teamKdLabel.TabIndex = 6;
             this.teamKdLabel.Text = "K/D Ratio";
             // 
@@ -455,7 +453,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(320, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 15);
+            this.label2.Size = new System.Drawing.Size(113, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Select Team";
             // 
@@ -464,7 +462,7 @@
             this.teamRatingLabel.AutoSize = true;
             this.teamRatingLabel.Location = new System.Drawing.Point(327, 264);
             this.teamRatingLabel.Name = "teamRatingLabel";
-            this.teamRatingLabel.Size = new System.Drawing.Size(44, 15);
+            this.teamRatingLabel.Size = new System.Drawing.Size(66, 23);
             this.teamRatingLabel.TabIndex = 8;
             this.teamRatingLabel.Text = "Rating";
             // 
@@ -476,7 +474,7 @@
             this.csgoTeamSelectComboBox.FormattingEnabled = true;
             this.csgoTeamSelectComboBox.Location = new System.Drawing.Point(323, 25);
             this.csgoTeamSelectComboBox.Name = "csgoTeamSelectComboBox";
-            this.csgoTeamSelectComboBox.Size = new System.Drawing.Size(121, 23);
+            this.csgoTeamSelectComboBox.Size = new System.Drawing.Size(121, 31);
             this.csgoTeamSelectComboBox.TabIndex = 1;
             this.toolTip1.SetToolTip(this.csgoTeamSelectComboBox, "Select a CSGO team");
             this.csgoTeamSelectComboBox.SelectedValueChanged += new System.EventHandler(this.teamSelectComboBox_SelectedValueChanged);
@@ -527,14 +525,25 @@
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.viewTeamButton);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabPage2.Size = new System.Drawing.Size(793, 549);
+            this.tabPage2.Size = new System.Drawing.Size(793, 541);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Players";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // resetPlayerFilterButton
+            // 
+            this.resetPlayerFilterButton.Location = new System.Drawing.Point(321, 504);
+            this.resetPlayerFilterButton.Name = "resetPlayerFilterButton";
+            this.resetPlayerFilterButton.Size = new System.Drawing.Size(97, 23);
+            this.resetPlayerFilterButton.TabIndex = 37;
+            this.resetPlayerFilterButton.Text = "&Reset";
+            this.toolTip1.SetToolTip(this.resetPlayerFilterButton, "Reset the filter");
+            this.resetPlayerFilterButton.UseVisualStyleBackColor = true;
+            this.resetPlayerFilterButton.Click += new System.EventHandler(this.resetPlayerFilterButton_Click);
             // 
             // playerTotalMaps
             // 
@@ -553,7 +562,7 @@
             this.playerTotalMapsLabel.AutoSize = true;
             this.playerTotalMapsLabel.Location = new System.Drawing.Point(328, 113);
             this.playerTotalMapsLabel.Name = "playerTotalMapsLabel";
-            this.playerTotalMapsLabel.Size = new System.Drawing.Size(66, 15);
+            this.playerTotalMapsLabel.Size = new System.Drawing.Size(104, 23);
             this.playerTotalMapsLabel.TabIndex = 13;
             this.playerTotalMapsLabel.Text = "Total Maps";
             // 
@@ -562,7 +571,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(318, 427);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 15);
+            this.label9.Size = new System.Drawing.Size(57, 23);
             this.label9.TabIndex = 36;
             this.label9.Text = "Value";
             // 
@@ -571,7 +580,7 @@
             this.playerKdDiffLabel.AutoSize = true;
             this.playerKdDiffLabel.Location = new System.Drawing.Point(328, 199);
             this.playerKdDiffLabel.Name = "playerKdDiffLabel";
-            this.playerKdDiffLabel.Size = new System.Drawing.Size(53, 15);
+            this.playerKdDiffLabel.Size = new System.Drawing.Size(82, 23);
             this.playerKdDiffLabel.TabIndex = 15;
             this.playerKdDiffLabel.Text = "K/D Diff";
             // 
@@ -603,7 +612,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(318, 386);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 15);
+            this.label8.Size = new System.Drawing.Size(110, 23);
             this.label8.TabIndex = 35;
             this.label8.Text = "Comparison";
             // 
@@ -612,7 +621,7 @@
             this.playerKdLabel.AutoSize = true;
             this.playerKdLabel.Location = new System.Drawing.Point(328, 248);
             this.playerKdLabel.Name = "playerKdLabel";
-            this.playerKdLabel.Size = new System.Drawing.Size(61, 15);
+            this.playerKdLabel.Size = new System.Drawing.Size(95, 23);
             this.playerKdLabel.TabIndex = 17;
             this.playerKdLabel.Text = "K/D Ratio";
             // 
@@ -621,7 +630,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(20, 441);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 15);
+            this.label10.Size = new System.Drawing.Size(103, 23);
             this.label10.TabIndex = 34;
             this.label10.Text = "Sort Order";
             // 
@@ -642,7 +651,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(318, 342);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 15);
+            this.label7.Size = new System.Drawing.Size(79, 23);
             this.label7.TabIndex = 34;
             this.label7.Text = "Statistic";
             // 
@@ -668,7 +677,7 @@
             ">"});
             this.playerFilterOperatorComboBox.Location = new System.Drawing.Point(321, 401);
             this.playerFilterOperatorComboBox.Name = "playerFilterOperatorComboBox";
-            this.playerFilterOperatorComboBox.Size = new System.Drawing.Size(100, 23);
+            this.playerFilterOperatorComboBox.Size = new System.Drawing.Size(100, 31);
             this.playerFilterOperatorComboBox.TabIndex = 25;
             // 
             // playerRatingLabel
@@ -676,7 +685,7 @@
             this.playerRatingLabel.AutoSize = true;
             this.playerRatingLabel.Location = new System.Drawing.Point(328, 294);
             this.playerRatingLabel.Name = "playerRatingLabel";
-            this.playerRatingLabel.Size = new System.Drawing.Size(44, 15);
+            this.playerRatingLabel.Size = new System.Drawing.Size(66, 23);
             this.playerRatingLabel.TabIndex = 19;
             this.playerRatingLabel.Text = "Rating";
             // 
@@ -685,7 +694,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(162, 441);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 15);
+            this.label11.Size = new System.Drawing.Size(138, 23);
             this.label11.TabIndex = 35;
             this.label11.Text = "Name Contains";
             // 
@@ -694,7 +703,7 @@
             this.totalRoundsLabel.AutoSize = true;
             this.totalRoundsLabel.Location = new System.Drawing.Point(328, 154);
             this.totalRoundsLabel.Name = "totalRoundsLabel";
-            this.totalRoundsLabel.Size = new System.Drawing.Size(78, 15);
+            this.totalRoundsLabel.Size = new System.Drawing.Size(120, 23);
             this.totalRoundsLabel.TabIndex = 23;
             this.totalRoundsLabel.Text = "Total Rounds";
             // 
@@ -718,7 +727,7 @@
             0,
             -2147483648});
             this.playerFilterNumUpDown.Name = "playerFilterNumUpDown";
-            this.playerFilterNumUpDown.Size = new System.Drawing.Size(100, 22);
+            this.playerFilterNumUpDown.Size = new System.Drawing.Size(100, 30);
             this.playerFilterNumUpDown.TabIndex = 24;
             this.playerFilterNumUpDown.ThousandsSeparator = true;
             // 
@@ -746,7 +755,7 @@
             "Rating"});
             this.playerFilterFieldComboBox.Location = new System.Drawing.Point(321, 360);
             this.playerFilterFieldComboBox.Name = "playerFilterFieldComboBox";
-            this.playerFilterFieldComboBox.Size = new System.Drawing.Size(100, 23);
+            this.playerFilterFieldComboBox.Size = new System.Drawing.Size(100, 31);
             this.playerFilterFieldComboBox.TabIndex = 23;
             // 
             // playerSearchButton
@@ -775,7 +784,7 @@
             // 
             this.playerSearchTextBox.Location = new System.Drawing.Point(165, 459);
             this.playerSearchTextBox.Name = "playerSearchTextBox";
-            this.playerSearchTextBox.Size = new System.Drawing.Size(100, 22);
+            this.playerSearchTextBox.Size = new System.Drawing.Size(100, 30);
             this.playerSearchTextBox.TabIndex = 21;
             // 
             // playerSortButton
@@ -794,7 +803,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(516, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 15);
+            this.label5.Size = new System.Drawing.Size(138, 23);
             this.label5.TabIndex = 27;
             this.label5.Text = "Player\'s Teams";
             // 
@@ -807,7 +816,7 @@
             "Descending"});
             this.playerSortComboBox.Location = new System.Drawing.Point(23, 459);
             this.playerSortComboBox.Name = "playerSortComboBox";
-            this.playerSortComboBox.Size = new System.Drawing.Size(97, 23);
+            this.playerSortComboBox.Size = new System.Drawing.Size(97, 31);
             this.playerSortComboBox.TabIndex = 19;
             this.toolTip1.SetToolTip(this.playerSortComboBox, "Select an order to sort the teams by");
             // 
@@ -818,7 +827,7 @@
             this.csgoPlayerSelectComboBox.FormattingEnabled = true;
             this.csgoPlayerSelectComboBox.Location = new System.Drawing.Point(321, 21);
             this.csgoPlayerSelectComboBox.Name = "csgoPlayerSelectComboBox";
-            this.csgoPlayerSelectComboBox.Size = new System.Drawing.Size(121, 23);
+            this.csgoPlayerSelectComboBox.Size = new System.Drawing.Size(121, 31);
             this.csgoPlayerSelectComboBox.TabIndex = 12;
             this.toolTip1.SetToolTip(this.csgoPlayerSelectComboBox, "Select CSGO players");
             this.csgoPlayerSelectComboBox.SelectedIndexChanged += new System.EventHandler(this.csgoPlayerSelectComboBox_SelectedValueChanged);
@@ -828,10 +837,10 @@
             // 
             this.csgoPlayerTeamsListBox.DataSource = this.csgoPlayerTeamsBindingSource;
             this.csgoPlayerTeamsListBox.FormattingEnabled = true;
-            this.csgoPlayerTeamsListBox.ItemHeight = 15;
+            this.csgoPlayerTeamsListBox.ItemHeight = 23;
             this.csgoPlayerTeamsListBox.Location = new System.Drawing.Point(519, 19);
             this.csgoPlayerTeamsListBox.Name = "csgoPlayerTeamsListBox";
-            this.csgoPlayerTeamsListBox.Size = new System.Drawing.Size(236, 334);
+            this.csgoPlayerTeamsListBox.Size = new System.Drawing.Size(236, 326);
             this.csgoPlayerTeamsListBox.TabIndex = 21;
             this.toolTip1.SetToolTip(this.csgoPlayerTeamsListBox, "A list of all teams that the selected player is a part of");
             // 
@@ -839,10 +848,10 @@
             // 
             this.csgoPlayerListBox.DataSource = this.csgoPlayerBindingSource;
             this.csgoPlayerListBox.FormattingEnabled = true;
-            this.csgoPlayerListBox.ItemHeight = 15;
+            this.csgoPlayerListBox.ItemHeight = 23;
             this.csgoPlayerListBox.Location = new System.Drawing.Point(7, 21);
             this.csgoPlayerListBox.Name = "csgoPlayerListBox";
-            this.csgoPlayerListBox.Size = new System.Drawing.Size(308, 394);
+            this.csgoPlayerListBox.Size = new System.Drawing.Size(308, 372);
             this.csgoPlayerListBox.TabIndex = 22;
             this.toolTip1.SetToolTip(this.csgoPlayerListBox, "A list of all CSGO players");
             // 
@@ -851,7 +860,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(318, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 15);
+            this.label4.Size = new System.Drawing.Size(122, 23);
             this.label4.TabIndex = 28;
             this.label4.Text = "Select Player";
             // 
@@ -860,7 +869,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(4, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 15);
+            this.label6.Size = new System.Drawing.Size(73, 23);
             this.label6.TabIndex = 26;
             this.label6.Text = "Players";
             // 
@@ -884,31 +893,11 @@
             this.exitButton.Text = "E&xit";
             this.toolTip1.SetToolTip(this.exitButton, "Close this window and return to the main menu");
             this.exitButton.UseVisualStyleBackColor = true;
-            // 
-            // resetPlayerFilterButton
-            // 
-            this.resetPlayerFilterButton.Location = new System.Drawing.Point(321, 504);
-            this.resetPlayerFilterButton.Name = "resetPlayerFilterButton";
-            this.resetPlayerFilterButton.Size = new System.Drawing.Size(97, 23);
-            this.resetPlayerFilterButton.TabIndex = 37;
-            this.resetPlayerFilterButton.Text = "&Reset";
-            this.toolTip1.SetToolTip(this.resetPlayerFilterButton, "Reset the filter");
-            this.resetPlayerFilterButton.UseVisualStyleBackColor = true;
-            this.resetPlayerFilterButton.Click += new System.EventHandler(this.resetPlayerFilterButton_Click);
-            // 
-            // label3
-            // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(491, 413);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 87);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Feel free to redesign this in any way you see fit.";
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // CSGOForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 604);
             this.Controls.Add(this.exitButton);
@@ -1007,6 +996,5 @@
         private System.Windows.Forms.Button teamSearchResetButton;
         private System.Windows.Forms.Button resetTeamFilterButton;
         private System.Windows.Forms.Button resetPlayerFilterButton;
-        private System.Windows.Forms.Label label3;
     }
 }

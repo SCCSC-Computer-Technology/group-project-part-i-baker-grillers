@@ -1,4 +1,6 @@
 ﻿using Baker_Grillers_Group_Project_Part_I.Properties;
+using Baker_Grillers_Group_Project_Part_I.Settings;
+using DataManager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +22,8 @@ namespace Baker_Grillers_Group_Project_Part_I
         {
             InitializeComponent();
             //Connection = connection;
+            DataRepository dataRepository = new DataRepository(Program.connectionString);
+            SettingsUtil.SetFormTheme(this, dataRepository, Program.CurrentSettingsUserEmail);
         }
 
         private async void createAccountButton_Click(object sender, EventArgs e)
@@ -71,6 +75,11 @@ namespace Baker_Grillers_Group_Project_Part_I
 
             //set the image of the button to the corrosponding image
             seePasswordButton.BackgroundImage = (passwordTextBox.UseSystemPasswordChar) ? Resources.ClosedEye : Resources.OpenEye;
+        }
+
+        private void CreateAccountForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

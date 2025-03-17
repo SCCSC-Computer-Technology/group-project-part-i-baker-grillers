@@ -46,14 +46,14 @@
             // 
             this.emailTextBox.Location = new System.Drawing.Point(65, 60);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(225, 22);
+            this.emailTextBox.Size = new System.Drawing.Size(225, 30);
             this.emailTextBox.TabIndex = 0;
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(65, 115);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(225, 22);
+            this.passwordTextBox.Size = new System.Drawing.Size(225, 30);
             this.passwordTextBox.TabIndex = 1;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
@@ -85,7 +85,7 @@
             this.emailLabel.AutoSize = true;
             this.emailLabel.Location = new System.Drawing.Point(62, 42);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(38, 15);
+            this.emailLabel.Size = new System.Drawing.Size(58, 23);
             this.emailLabel.TabIndex = 4;
             this.emailLabel.Text = "Email";
             // 
@@ -94,7 +94,7 @@
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Location = new System.Drawing.Point(62, 97);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(59, 15);
+            this.passwordLabel.Size = new System.Drawing.Size(90, 23);
             this.passwordLabel.TabIndex = 5;
             this.passwordLabel.Text = "Password";
             // 
@@ -147,7 +147,7 @@
             // LoginForm
             // 
             this.AcceptButton = this.loginButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(361, 321);
@@ -166,6 +166,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
